@@ -14,7 +14,7 @@ TagManager:
   - 
   - 
   - Player
-  - 
+  - Ground
   - 
   - 
   - 
@@ -43,6 +43,9 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 3589235689
+    locked: 0
+  - name: Mid
+    uniqueID: 3235528187
     locked: 0
   - name: Player
     uniqueID: 3702357849
