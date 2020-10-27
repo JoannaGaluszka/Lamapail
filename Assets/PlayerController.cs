@@ -4,18 +4,36 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public Rigidbody2D rigidbody;
+    private Rigidbody2D rb;
+        public float speed;
+    private float moveInput;
+    private bool ground;
+    public Transform feetPos;
+    public float radius;
+    public LayerMask whatIsGround;
+    public float ForceJump;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+
+    }
+
+    private void FixedUpdate()
+    {
+        moveInput = Input.GetAxis("Horizontal");
+        rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+    }
 
     private void Update()
     {
-        if(Input.GetKey(KeyCode.A))
+        ground = Physics2D.OverlapCircle(feetPos.position, radius, whatIsGround);
+
+        if(ground == true && Input.GetKeyDown(KeyCode.Space))
         {
-            rigidbody.velocity = new Vector2(-5, 0);
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            rigidbody.velocity = new Vector2(5, 0);
+            rb.velocity = Vector2.up * ForceJump;
         }
     }
-
 }
+
+
