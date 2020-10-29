@@ -15,7 +15,7 @@ TagManager:
   - 
   - Player
   - Ground
-  - 
+  - Props
   - 
   - 
   - 
@@ -47,9 +47,12 @@ TagManager:
   - name: Mid
     uniqueID: 3235528187
     locked: 0
+  - name: Foreground
+    uniqueID: 3932538697
+    locked: 0
   - name: Player
     uniqueID: 3702357849
     locked: 0
-  - name: Foreground
-    uniqueID: 3932538697
+  - name: Props
+    uniqueID: 1538855929
     locked: 0
