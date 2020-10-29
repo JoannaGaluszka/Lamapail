@@ -15,7 +15,11 @@ TagManager:
   - 
   - Player
   - Ground
+<<<<<<< HEAD
   - Props
+=======
+  - Props Physic
+>>>>>>> origin/Arr
   - 
   - 
   - 
