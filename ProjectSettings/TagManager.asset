@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - FeetPos
   layers:
   - Default
   - TransparentFX
@@ -13,13 +14,9 @@ TagManager:
   - UI
   - 
   - 
-  - Player
-  - Ground
-<<<<<<< HEAD
   - Props
-=======
-  - Props Physic
->>>>>>> origin/Arr
+  - Ground
+  - 
   - 
   - 
   - 
@@ -46,17 +43,17 @@ TagManager:
     uniqueID: 0
     locked: 0
   - name: Background
-    uniqueID: 3589235689
+    uniqueID: 431903077
     locked: 0
   - name: Mid
-    uniqueID: 3235528187
+    uniqueID: 2733009777
     locked: 0
   - name: Foreground
-    uniqueID: 3932538697
+    uniqueID: 3040133883
     locked: 0
   - name: Props
-    uniqueID: 1538855929
+    uniqueID: 1546938395
     locked: 0
   - name: Player
-    uniqueID: 3702357849
+    uniqueID: 414160607
     locked: 0
