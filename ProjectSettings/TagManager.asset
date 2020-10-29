@@ -50,9 +50,9 @@ TagManager:
   - name: Foreground
     uniqueID: 3932538697
     locked: 0
-  - name: Player
-    uniqueID: 3702357849
-    locked: 0
   - name: Props
     uniqueID: 1538855929
+    locked: 0
+  - name: Player
+    uniqueID: 3702357849
     locked: 0
