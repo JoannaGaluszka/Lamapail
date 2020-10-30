@@ -4,7 +4,12 @@
 TagManager:
   serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
   tags: []
+=======
+  tags:
+  - FeetPos
+>>>>>>> 12fad648197a89d1eb5d16a9735a2b87e77f1135
 =======
   tags:
   - FeetPos
@@ -19,15 +24,21 @@ TagManager:
   - 
   - 
 <<<<<<< HEAD
+<<<<<<< HEAD
   - Player
   - Ground
   - Props Physic
   - Enemy
 =======
+=======
+>>>>>>> 12fad648197a89d1eb5d16a9735a2b87e77f1135
   - Props
   - Ground
   - 
   - 
+<<<<<<< HEAD
+>>>>>>> 12fad648197a89d1eb5d16a9735a2b87e77f1135
+=======
 >>>>>>> 12fad648197a89d1eb5d16a9735a2b87e77f1135
   - 
   - 
@@ -55,6 +66,7 @@ TagManager:
     locked: 0
   - name: Background
 <<<<<<< HEAD
+<<<<<<< HEAD
     uniqueID: 3589235689
     locked: 0
   - name: Mid
@@ -69,6 +81,8 @@ TagManager:
   - name: Foreground
     uniqueID: 3932538697
 =======
+=======
+>>>>>>> 12fad648197a89d1eb5d16a9735a2b87e77f1135
     uniqueID: 431903077
     locked: 0
   - name: Mid
@@ -82,5 +96,8 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 414160607
+<<<<<<< HEAD
+>>>>>>> 12fad648197a89d1eb5d16a9735a2b87e77f1135
+=======
 >>>>>>> 12fad648197a89d1eb5d16a9735a2b87e77f1135
     locked: 0

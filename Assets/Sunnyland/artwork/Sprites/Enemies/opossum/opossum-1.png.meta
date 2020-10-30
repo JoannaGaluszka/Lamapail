@@ -46,7 +46,11 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
 <<<<<<< HEAD
+<<<<<<< HEAD
   spritePixelsToUnits: 16
+=======
+  spritePixelsToUnits: 100
+>>>>>>> 12fad648197a89d1eb5d16a9735a2b87e77f1135
 =======
   spritePixelsToUnits: 100
 >>>>>>> 12fad648197a89d1eb5d16a9735a2b87e77f1135
@@ -75,7 +79,11 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     forceMaximumCompressionQuality_BC6H_BC7: 0
+=======
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+>>>>>>> 12fad648197a89d1eb5d16a9735a2b87e77f1135
 =======
     forceMaximumCompressionQuality_BC6H_BC7: 1
 >>>>>>> 12fad648197a89d1eb5d16a9735a2b87e77f1135
@@ -91,7 +99,11 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     forceMaximumCompressionQuality_BC6H_BC7: 0
+=======
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+>>>>>>> 12fad648197a89d1eb5d16a9735a2b87e77f1135
 =======
     forceMaximumCompressionQuality_BC6H_BC7: 1
 >>>>>>> 12fad648197a89d1eb5d16a9735a2b87e77f1135

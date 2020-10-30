@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
     {
         ground = Physics2D.OverlapCircle(feetPos.position, radius, whatIsGround);
 <<<<<<< HEAD
+<<<<<<< HEAD
         if(moveInput > 0)
         {
             transform.eulerAngles = new Vector2(0, 0);
@@ -37,6 +38,8 @@ public class PlayerController : MonoBehaviour
             transform.eulerAngles = new Vector2(0, 180);
         }
         
+=======
+>>>>>>> 12fad648197a89d1eb5d16a9735a2b87e77f1135
 =======
 >>>>>>> 12fad648197a89d1eb5d16a9735a2b87e77f1135
 
