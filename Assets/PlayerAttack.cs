@@ -1,0 +1,40 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerAttack : MonoBehaviour
+{
+    private float CzasMiedzyAtakiem;
+    private float StartTime;
+
+    public Transform AttackPos;
+    public LayerMask Enemies;
+    public float RangeAttack;
+    public int damage;
+
+    private void Update()
+    {
+        if (CzasMiedzyAtakiem <= 0)
+        //mozna atakowac
+        {
+
+            if (Input.GetKey(KeyCode.F))
+            {
+                Collider2D[] DealingDamage = Physics2D.OverlapCircleAll(AttackPos.position, RangeAttack, Enemies);
+                for (int i = 0; i < DealingDamage.Length; i++)
+                {
+                    
+                }
+            }
+
+
+            CzasMiedzyAtakiem = StartTime;
+        }
+        else
+        {
+            CzasMiedzyAtakiem -= Time.deltaTime;
+
+
+        }
+    }
+}

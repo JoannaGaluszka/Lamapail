@@ -29,6 +29,16 @@ public class PlayerController : MonoBehaviour
     {
         ground = Physics2D.OverlapCircle(feetPos.position, radius, whatIsGround);
 
+        if(moveInput > 0)
+        {
+            transform.eulerAngles = new Vector2(0, 0);
+        } else if(moveInput < 0)
+        {
+            transform.eulerAngles = new Vector2(0, 180);
+        }
+        
+
+
         if(ground == true && Input.GetKeyDown(KeyCode.Space))
         {
             rb.velocity = Vector2.up * ForceJump;
