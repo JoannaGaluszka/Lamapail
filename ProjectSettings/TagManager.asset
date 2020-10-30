@@ -84,3 +84,6 @@ TagManager:
     uniqueID: 414160607
 >>>>>>> 12fad648197a89d1eb5d16a9735a2b87e77f1135
     locked: 0
+  - name: Enemy
+    uniqueID: 1983815937
+    locked: 0
