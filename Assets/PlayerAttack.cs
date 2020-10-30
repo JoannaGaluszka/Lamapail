@@ -18,7 +18,7 @@ public class PlayerAttack : MonoBehaviour
         //mozna atakowac
         {
 
-            if (Input.GetKey(KeyCode.F))
+            if (Input.GetKeyDown(KeyCode.F))
             {
                 Collider2D[] DealingDamage = Physics2D.OverlapCircleAll(AttackPos.position, RangeAttack, Enemies);
                 for (int i = 0; i < DealingDamage.Length; i++)
