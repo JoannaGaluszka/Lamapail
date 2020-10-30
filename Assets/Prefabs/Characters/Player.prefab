@@ -42,9 +42,7 @@ GameObject:
   - component: {fileID: 7275880242170135627}
   - component: {fileID: 7275880242170135629}
   - component: {fileID: 7275880242170135628}
-  - component: {fileID: 7275880242170135631}
   - component: {fileID: 541598284552217849}
-  - component: {fileID: 6241766992834355521}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -165,25 +163,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6174524, y: 1.255172}
   m_EdgeRadius: 0
---- !u!114 &7275880242170135631
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7275880242170135624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8a84de8a767c104981512fe7b5881be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  feetPos: {fileID: 7275880242312044456}
-  radius: 0.3
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 768
-  ForceJump: 20
 --- !u!70 &541598284552217849
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -200,24 +179,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0.024348974, y: -0.045181453}
   m_Size: {x: 0.85022306, y: 0.8502232}
   m_Direction: 0
---- !u!114 &6241766992834355521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7275880242170135624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba6b9ecac71f66a44a18fa267cc3bb70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AttackPos: {fileID: 7520161776058505642}
-  Enemies:
-    serializedVersion: 2
-    m_Bits: 0
-  RangeAttack: 1
-  damage: 1
 --- !u!1 &7275880242312044457
 GameObject:
   m_ObjectHideFlags: 0
