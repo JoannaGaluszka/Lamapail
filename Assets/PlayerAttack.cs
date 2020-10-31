@@ -23,7 +23,7 @@ public class PlayerAttack : MonoBehaviour
                 Collider2D[] DealingDamage = Physics2D.OverlapCircleAll(AttackPos.position, RangeAttack, Enemies);
                 for (int i = 0; i < DealingDamage.Length; i++)
                 {
-                    Debug.Log ("Attack");
+                    Debug.Log("Attack");
                 }
             }
 
@@ -36,5 +36,11 @@ public class PlayerAttack : MonoBehaviour
 
 
         }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireSphere(AttackPos.position, RangeAttack);
     }
 }
