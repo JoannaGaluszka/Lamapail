@@ -7,7 +7,7 @@ public class PlayerAttack : MonoBehaviour
 {
     private float Cooldown;
     public float startCooldown;
-    public Transform attackPos;
+    public Transform AttackPos;
     public LayerMask whoisenemy;
     public float attackRange;
     public int DMG;
@@ -18,10 +18,10 @@ public class PlayerAttack : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.F))
             {
-                Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whoisenemy);
+                Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(AttackPos.position, attackRange, whoisenemy);
                 for (int i = 0; i < enemiesToDamage.Length; i++)
                 {
-                    enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(DMG);
+                    enemiesToDamage[i].GetComponent<EnemyController>().DamageTaken(DMG);
                 }
                 Cooldown = startCooldown;
             }
@@ -36,7 +36,7 @@ public class PlayerAttack : MonoBehaviour
         void OnDrawGizmosSelected()
         {
             Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(attackPos, attackRange);
+            Gizmos.DrawWireSphere(AttackPos, attackRange);
         }
     }
 }

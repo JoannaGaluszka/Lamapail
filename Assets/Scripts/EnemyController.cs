@@ -10,6 +10,7 @@ public class EnemyController : MonoBehaviour
     public float distance;
     private bool movingLeft = true;
     public Transform detection;
+    public GameObject BoinkEffect;
 
     // private Animator Cycle       <-------------Przy gotowych spritach bedziemy kombinowac // dodać start przy animatorze
     public GameObject Particle;
@@ -39,7 +40,7 @@ public class EnemyController : MonoBehaviour
             Destroy(gameObject);
         }
 
-        Transform.Translate(Vector2.left * speed * Time.deltaTime);
+        transform.Translate(Vector2.left * speed * Time.deltaTime);
 
         
     }
