@@ -1,19 +1,25 @@
 fileFormatVersion: 2
-guid: 274da637d0787fb45a1ce30888d6b01e
+guid: 5feff20653098d544ad286ee8d1417f6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8020792422996973119
-    second: tileset-sliced_0
+      213: -7341407202210888751
+    second: door_0
   - first:
-      213: 7622575126782243504
-    second: tileset-sliced_1
+      213: 6623719234781301212
+    second: door_1
   - first:
-      213: -5056025633293989528
-    second: tileset-sliced_2
+      213: 4744073622485524861
+    second: door_2
   - first:
-      213: 5333720824279054982
-    second: tileset-sliced_3
+      213: -8810169383252994586
+    second: door_3
+  - first:
+      213: -4935834299494285922
+    second: door_4
+  - first:
+      213: -8064736477851923831
+    second: door_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -99,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tileset-sliced_0
+      name: door_0
       rect:
         serializedVersion: 2
-        x: 48
-        y: 336
+        x: 0
+        y: 0
         width: 16
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -113,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3611e576349f4f60800000000000000
-      internalID: 8020792422996973119
+      spriteID: 1d3c9b8cb051e1a90800000000000000
+      internalID: -7341407202210888751
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset-sliced_1
+      name: door_1
       rect:
         serializedVersion: 2
-        x: 16
-        y: 336
+        x: 17
+        y: 0
         width: 16
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b2759111b3d8c960800000000000000
-      internalID: 7622575126782243504
+      spriteID: cd9cf01dc8d2ceb50800000000000000
+      internalID: 6623719234781301212
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset-sliced_2
+      name: door_2
       rect:
         serializedVersion: 2
-        x: 16
-        y: 304
+        x: 34
+        y: 0
         width: 16
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,19 +161,61 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8690e38797365d9b0800000000000000
-      internalID: -5056025633293989528
+      spriteID: d71ec8013d556d140800000000000000
+      internalID: 4744073622485524861
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset-sliced_3
+      name: door_3
       rect:
         serializedVersion: 2
-        x: 48
-        y: 16
-        width: 32
+        x: 51
+        y: 0
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e5de2ccf9dfbb580800000000000000
+      internalID: -8810169383252994586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_4
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 0
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9d34741bd4608bb0800000000000000
+      internalID: -4935834299494285922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_5
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 0
+        width: 15
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -176,8 +224,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68ab14694de250a40800000000000000
-      internalID: 5333720824279054982
+      spriteID: 98a4086f6ec441090800000000000000
+      internalID: -8064736477851923831
       vertices: []
       indices: 
       edges: []

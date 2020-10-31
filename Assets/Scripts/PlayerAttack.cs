@@ -18,12 +18,12 @@ public class PlayerAttack : MonoBehaviour
         //mozna atakowac
         {
 
-            if (Input.GetKey(KeyCode.F))
+            if (Input.GetKeyDown(KeyCode.F))
             {
                 Collider2D[] DealingDamage = Physics2D.OverlapCircleAll(AttackPos.position, RangeAttack, Enemies);
                 for (int i = 0; i < DealingDamage.Length; i++)
                 {
-                    
+                    Debug.Log("Attack");
                 }
             }
 
@@ -36,5 +36,11 @@ public class PlayerAttack : MonoBehaviour
 
 
         }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireSphere(AttackPos.position, RangeAttack);
     }
 }
