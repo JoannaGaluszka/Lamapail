@@ -20,14 +20,6 @@ public class LeverScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F))
         anim.SetBool("LeverFlip", true);
     }
-    void OnTriggerExit2D()
-    {
-        if (Input.GetKeyDown(KeyCode.F))
 
-            if (Zmiana)
 
-            return;
-
-        anim.SetBool("LeverFlip", false);
-    }
 }
