@@ -6,8 +6,6 @@ public class Enemy_Walk : MonoBehaviour
 {
     public float speed;
     public float distance;
-
-
     private bool movingLeft = true;
     public Transform detection;
 
