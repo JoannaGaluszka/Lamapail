@@ -1,46 +1,52 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    private float CzasMiedzyAtakiem;
-    private float StartTime;
 
+    private bool Beng = false;
+
+    private float attackTimer = 0;
+    private float attackCd = .35f;
+    public Collider2D attackTrigger;
     public Transform AttackPos;
-    public LayerMask Enemies;
-    public float RangeAttack;
-    public int damage;
+    private Animator anim;
 
-    private void Update()
+    void Awake()
     {
-        if (CzasMiedzyAtakiem <= 0)
-        //mozna atakowac
-        {
 
-            if (Input.GetKeyDown(KeyCode.F))
+        anim = gameObject.GetComponent<Animator>();
+        attackTrigger.enabled = false;
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F) && !Beng)
+        {
+            Debug.Log("BOINK");
+            Beng = true;
+            attackTimer = attackCd;
+
+            attackTrigger.enabled = true;
+           
+        }
+
+        if (Beng)
+        {
+            if (attackTimer > 0)
             {
-                Collider2D[] DealingDamage = Physics2D.OverlapCircleAll(AttackPos.position, RangeAttack, Enemies);
-                for (int i = 0; i < DealingDamage.Length; i++)
-                {
-                    Debug.Log("Attack");
-                }
+                attackTimer -= Time.deltaTime;
             }
-
-
-            CzasMiedzyAtakiem = StartTime;
+            else
+            {
+                Beng = false;
+                attackTrigger.enabled = false;
+            }
         }
-        else
-        {
-            CzasMiedzyAtakiem -= Time.deltaTime;
+        anim.SetBool("Czy atakuje", Beng);
 
-
-        }
     }
+  
 
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.cyan;
-        Gizmos.DrawWireSphere(AttackPos.position, RangeAttack);
-    }
 }
+
