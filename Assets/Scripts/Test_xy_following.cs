@@ -7,7 +7,8 @@ public class Test_xy_following : MonoBehaviour
     public Transform player;
     public float range;
     public float moveSpeed;
-    
+    public float distance;
+    private bool movingLeft = true;
     public Transform detection;
     
 
@@ -50,6 +51,22 @@ public class Test_xy_following : MonoBehaviour
         void StopFollowing()
         {
             rb.velocity = new Vector2(0, 0);
+        }
+
+        RaycastHit2D ground = Physics2D.Raycast(detection.position, Vector2.down, distance);
+        if (ground.collider == false)
+        {
+            if (movingLeft == true)
+            {
+                transform.eulerAngles = new Vector3(0, -180, 0);
+                movingLeft = false;
+            }
+            else
+            {
+                transform.eulerAngles = new Vector3(0, 0, 0);
+                movingLeft = true;
+
+            }
         }
 
     }
