@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rb;
-        public float speed;
+    public float speed;
     private float moveInput;
     private bool ground;
     public Transform feetPos;
@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
         if(moveInput > 0)
         {
             transform.eulerAngles = new Vector2(0, 0);
-        } else if(moveInput <= 0)
+        } else if(moveInput < 0)
         {
 
             transform.eulerAngles = new Vector2(0, 180);
