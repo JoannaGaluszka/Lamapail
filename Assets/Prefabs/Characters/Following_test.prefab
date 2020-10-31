@@ -1,5 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< Updated upstream
 --- !u!1 &1084114897002758819
 GameObject:
   m_ObjectHideFlags: 0
@@ -10,7 +11,7 @@ GameObject:
   m_Component:
   - component: {fileID: 349234404029411845}
   m_Layer: 0
-  m_Name: Detection
+  m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -30,6 +31,8 @@ Transform:
   m_Father: {fileID: 6871112596128507266}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &8437294133332303215
 GameObject:
   m_ObjectHideFlags: 0
@@ -42,7 +45,6 @@ GameObject:
   - component: {fileID: 1223247375347275604}
   - component: {fileID: 5158953414256048648}
   - component: {fileID: 6587317545682209830}
-  - component: {fileID: 4487956767305685050}
   m_Layer: 0
   m_Name: Following_test
   m_TagString: Untagged
@@ -60,8 +62,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.16, y: -3.29, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 349234404029411845}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -102,7 +103,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1869369427
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: baa0c643131554ff99574059ec7da1cc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -127,15 +128,15 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 100
+  m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 3
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 0
 --- !u!61 &6587317545682209830
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -149,7 +150,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.25061023, y: -0.21010017}
+  m_Offset: {x: -0.25061023, y: -0.25060987}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -160,8 +161,10 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5308578, y: 1.1677608}
+  m_Size: {x: 1.5308578, y: 1.2487803}
   m_EdgeRadius: 0
+<<<<<<< Updated upstream
+=======
 --- !u!114 &4487956767305685050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,8 +177,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70f511de440c77548ae8901813233b6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  range: 5
-  moveSpeed: 2
-  distance: 2
-  detection: {fileID: 349234404029411845}
+  speed: 10
+  target: {fileID: 0}
+  PatrolL: {fileID: 0}
+  PatrolR: {fileID: 0}
+>>>>>>> Stashed changes
