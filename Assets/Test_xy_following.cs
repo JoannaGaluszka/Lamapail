@@ -5,9 +5,11 @@ using UnityEngine;
 public class Test_xy_following : MonoBehaviour
 {
     public Transform player;
-
-   public float range;
+    public float range;
     public float moveSpeed;
+    
+    public Transform detection;
+    
 
     Rigidbody2D rb;
 
@@ -16,42 +18,41 @@ public class Test_xy_following : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
     }
-    private void Update()
+   
+    void Update()
     {
-        //dystans
         float distance = Vector2.Distance(transform.position, player.position);
-
+        
         if (distance < range)
         {
-            //following
             Following();
         }
         else
         {
-            //stop
             StopFollowing();
         }
-    }
 
-         void Following()
+
+        void Following()
         {
-            if(transform.position.x < player.position.x)
+            if (transform.position.x < player.position.x)
             {
                 rb.velocity = new Vector2(moveSpeed, 0);
-            transform.localScale = new Vector2(-1, 1);
-        }
-            else 
+                transform.localScale = new Vector2(-1, 1);
+            }
+            else
             {
                 rb.velocity = new Vector2(-moveSpeed, 0);
-            transform.localScale = new Vector2(1, 1);
+                transform.localScale = new Vector2(1, 1);
             }
         }
 
         void StopFollowing()
         {
-        rb.velocity = new Vector2(0, 0); 
+            rb.velocity = new Vector2(0, 0);
         }
 
+    }
     
 }
 
