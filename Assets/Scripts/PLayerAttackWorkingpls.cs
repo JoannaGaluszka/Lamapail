@@ -1,9 +1,8 @@
-﻿
-using System.Collections;
-using System.Threading;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAttack : MonoBehaviour
+public class PLayerAttackWorkingpls : MonoBehaviour
 {
     private float Cooldown;
     public float startCooldown;
