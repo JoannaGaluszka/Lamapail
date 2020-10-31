@@ -2,12 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_Walk : MonoBehaviour
+public class EnemyWalk : MonoBehaviour
 {
     public float speed;
     public float distance;
-
-
     private bool movingLeft = true;
     public Transform detection;
 
