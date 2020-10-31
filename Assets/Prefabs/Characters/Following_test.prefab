@@ -1,5 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< Updated upstream
 --- !u!1 &1084114897002758819
 GameObject:
   m_ObjectHideFlags: 0
@@ -30,6 +31,8 @@ Transform:
   m_Father: {fileID: 6871112596128507266}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &8437294133332303215
 GameObject:
   m_ObjectHideFlags: 0
@@ -59,8 +62,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.16, y: -3.29, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 349234404029411845}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -161,3 +163,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5308578, y: 1.2487803}
   m_EdgeRadius: 0
+<<<<<<< Updated upstream
+=======
+--- !u!114 &4487956767305685050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8437294133332303215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70f511de440c77548ae8901813233b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  target: {fileID: 0}
+  PatrolL: {fileID: 0}
+  PatrolR: {fileID: 0}
+>>>>>>> Stashed changes
