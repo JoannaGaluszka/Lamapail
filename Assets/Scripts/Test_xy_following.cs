@@ -5,16 +5,20 @@ using UnityEngine;
 public class Test_xy_following : MonoBehaviour
 {
     public Transform player;
-    
     public float range;
     public float moveSpeed;
+<<<<<<< HEAD
 
     
 
     public float distancee;
 
+=======
+    public float distance;
+    private bool movingLeft = true;
+>>>>>>> master
     public Transform detection;
-
+    
 
     Rigidbody2D rb;
 
@@ -23,12 +27,11 @@ public class Test_xy_following : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
     }
-
+   
     void Update()
     {
-
         float distance = Vector2.Distance(transform.position, player.position);
-
+        
         if (distance < range)
         {
             Following();
@@ -58,13 +61,30 @@ public class Test_xy_following : MonoBehaviour
             rb.velocity = new Vector2(0, 0);
         }
 
+<<<<<<< HEAD
+=======
+        RaycastHit2D ground = Physics2D.Raycast(detection.position, Vector2.down, distance);
+        if (ground.collider == false)
+        {
+            if (movingLeft == true)
+            {
+                transform.eulerAngles = new Vector3(0, -180, 0);
+                movingLeft = false;
+            }
+            else
+            {
+                transform.eulerAngles = new Vector3(0, 0, 0);
+                movingLeft = true;
+>>>>>>> master
+
+
+<<<<<<< HEAD
 
 
 
-
-
+=======
+>>>>>>> master
     }
-
-
+    
 }
 
