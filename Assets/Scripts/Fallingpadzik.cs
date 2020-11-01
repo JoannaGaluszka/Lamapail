@@ -6,12 +6,15 @@ public class Fallingpadzik : MonoBehaviour
 {
     public Rigidbody2D rb;
     Vector2 startPos;
+    public SpriteRenderer Spr;
+    private BoxCollider2D coll;
 
-    public bool respawn = true;
     // Start is called before the first frame update
     void Start()
     {
+        coll = GetComponent<BoxCollider2D>();
         rb = GetComponent<Rigidbody2D>();
+        Spr = GetComponent<SpriteRenderer>();
         startPos = transform.position;
     }
 
@@ -19,24 +22,29 @@ public class Fallingpadzik : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player") 
         {
-            Invoke("FallingPadzik", 0.2f);
+            Invoke("FallingPadzik", 0.4f);
         }
     }
     void FallingPadzik()
     {
         rb.isKinematic = false;
-        Destroy(gameObject, 3f);
-        rb.velocity = new Vector3(0, 0, 0);
-        transform.position = startPos;
+        Spr.sortingLayerName = "Mid";
+        Invoke("ColliderOFF", 0.15f);
+        Invoke("Respawn", 3.75f);
+        
+        
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    void ColliderOFF()
     {
-        if (collision.tag == "DeathZone" && respawn)
-        {
-            rb.isKinematic = true;
-            rb.velocity = new Vector3(0, 0, 0);
-            transform.position = startPos;
-        }
+        coll.enabled = false;
+    }
+    void Respawn()
+    {
+        transform.position = startPos;
+        Spr.sortingLayerName = "Platforms";
+        rb.isKinematic = true;
+        rb.velocity = new Vector2(0, 0);
+        coll.enabled = true;
     }
 
 }
