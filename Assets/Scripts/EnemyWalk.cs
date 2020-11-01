@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class EnemyWalk : MonoBehaviour
@@ -14,19 +15,24 @@ public class EnemyWalk : MonoBehaviour
         transform.Translate(Vector2.left * speed * Time.deltaTime);
 
         RaycastHit2D ground = Physics2D.Raycast(detection.position, Vector2.down, distance);
-        if (ground.collider == false)
-        {
-            if (movingLeft == true)
-            {
-                transform.eulerAngles = new Vector3(0, -180, 0);
-                movingLeft = false;
-            }
-            else
-            {
-                transform.eulerAngles = new Vector3(0, 0, 0);
-                movingLeft = true;
+        //RaycastHit2D tree1 = Physics2D.Raycast(detection.position, Vector2.left, distance);
+        //RaycastHit2D tree2 = Physics2D.Raycast(detection.position, Vector2.right, distance);
 
-            }
+        if (ground.collider == false || transform.position.x < -31 || transform.position.x > 130)
+        {
+                if (movingLeft == true)
+                {
+                    transform.eulerAngles = new Vector3(0, -180, 0);
+                    movingLeft = false;
+                }
+                else
+                {
+                    transform.eulerAngles = new Vector3(0, 0, 0);
+                    movingLeft = true;
+
+                }
         }
+
+
     }
 }
