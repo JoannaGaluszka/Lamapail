@@ -15,23 +15,22 @@ public class LeverScript : MonoBehaviour
 
     void Update()
     {
+        if (is_flipped == false) anim.SetBool("LeverFlip", true);
+        else anim.SetBool("LeverFlip", false);
+    }
+    void OnTriggerEnter()
+    {
         if (Input.GetKeyDown(KeyCode.F))
         {
             if (is_flipped == false)
             {
-                anim.SetBool("LeverFlip", true);
                 is_flipped = true;
             }
             else
             {
-                anim.SetBool("LeverFlip", false);
                 is_flipped = false;
             }
         }
-    }
-    void OnTriggerStay2D()
-    {
-        
         
     }
 
