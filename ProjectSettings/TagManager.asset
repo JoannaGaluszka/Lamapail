@@ -6,6 +6,7 @@ TagManager:
   tags:
   - FeetPos
   - Platforms
+  - Frog
   layers:
   - Default
   - TransparentFX

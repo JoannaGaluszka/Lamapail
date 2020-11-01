@@ -22,6 +22,7 @@ public class PlayerAttack : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.F))
             {
                 Attack();
+                Debug.Log("Attack");
             }
 
 

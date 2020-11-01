@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2009683128472685487}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: distance
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -43,9 +43,10 @@ GameObject:
   - component: {fileID: 6707087008075079046}
   - component: {fileID: 3641406431788756306}
   - component: {fileID: 1404584904062713309}
-  m_Layer: 0
+  - component: {fileID: 3727409562362621266}
+  m_Layer: 11
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Frog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -142,7 +143,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -177,3 +178,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.331114, y: 1.0515299}
   m_EdgeRadius: 0
+--- !u!114 &3727409562362621266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9100155905305841805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c03bddd04f3269646b505767a972a5dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 150
