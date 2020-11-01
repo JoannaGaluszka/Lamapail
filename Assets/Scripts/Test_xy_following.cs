@@ -8,11 +8,11 @@ public class Test_xy_following : MonoBehaviour
     
     public float range;
     public float moveSpeed;
-<<<<<<< Updated upstream:Assets/Test_xy_following.cs
+
     
-=======
+
     public float distancee;
->>>>>>> Stashed changes:Assets/Scripts/Test_xy_following.cs
+
     public Transform detection;
 
 
@@ -58,11 +58,11 @@ public class Test_xy_following : MonoBehaviour
             rb.velocity = new Vector2(0, 0);
         }
 
-<<<<<<< Updated upstream:Assets/Test_xy_following.cs
-=======
 
 
->>>>>>> Stashed changes:Assets/Scripts/Test_xy_following.cs
+
+
+
     }
 
 
