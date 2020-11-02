@@ -1,17 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Security.Cryptography;
 using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    private float CzasMiedzyAtakiem = 2f;
+    private float CzasMiedzyAtakiem;
     private float StartTime;
 
     public Transform AttackPos;
     public LayerMask Enemies;
     public float RangeAttack;
-    public int damage = 40;
+    public int damage;
 
     private void Update()
     {
@@ -21,8 +20,11 @@ public class PlayerAttack : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.F))
             {
-                Attack();
-                Debug.Log("Attack");
+                Collider2D[] DealingDamage = Physics2D.OverlapCircleAll(AttackPos.position, RangeAttack, Enemies);
+                for (int i = 0; i < DealingDamage.Length; i++)
+                {
+                    Debug.Log("Attack");
+                }
             }
 
 
@@ -40,18 +42,5 @@ public class PlayerAttack : MonoBehaviour
     {
         Gizmos.color = Color.cyan;
         Gizmos.DrawWireSphere(AttackPos.position, RangeAttack);
-    }
-
-    private void Attack()
-    {
-        //Check for enemies in AttackPos object
-        Collider2D[] DealingDamage = Physics2D.OverlapCircleAll(AttackPos.position, RangeAttack, Enemies);
-
-        //Loop through enemies if any and deal damage to them
-        foreach (Collider2D enemy in DealingDamage)
-        {
-            enemy.GetComponent<EnemyDamage>().TakeDamage(damage);
-        }
-
     }
 }
