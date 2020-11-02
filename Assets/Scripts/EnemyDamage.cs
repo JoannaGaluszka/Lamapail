@@ -4,11 +4,19 @@ using UnityEngine;
 
 public class EnemyDamage : MonoBehaviour
 {
+<<<<<<< HEAD
+=======
+    
+>>>>>>> master
     public int maxHealth = 300;
     int currentHealth;
     private Rigidbody2D rb;
     SpriteRenderer sprite;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
     void Start()
     {
         currentHealth = maxHealth;
@@ -42,4 +50,8 @@ public class EnemyDamage : MonoBehaviour
         sprite.color = new Color(255, 255, 255, 255);
     }
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> master

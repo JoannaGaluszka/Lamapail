@@ -43,7 +43,8 @@ GameObject:
   - component: {fileID: 6707087008075079046}
   - component: {fileID: 3641406431788756306}
   - component: {fileID: 1404584904062713309}
-  - component: {fileID: 3727409562362621266}
+  - component: {fileID: 654180133912047446}
+  - component: {fileID: 6784050338602439668}
   m_Layer: 11
   m_Name: Enemy
   m_TagString: Frog
@@ -128,9 +129,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c49b187aefe6efb40a387d6889583d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  distance: 2
-  detection: {fileID: 2009683128472685487}
 --- !u!50 &3641406431788756306
 Rigidbody2D:
   serializedVersion: 4
@@ -178,7 +176,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.331114, y: 1.0515299}
   m_EdgeRadius: 0
---- !u!114 &3727409562362621266
+--- !u!114 &654180133912047446
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -187,7 +185,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 9100155905305841805}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c03bddd04f3269646b505767a972a5dd, type: 3}
+  m_Script: {fileID: 11500000, guid: 21d00b716d16ea34cbcde4da3e02c764, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 150
+  HP: 30
+  speed: 1
+  distance: 1
+  detection: {fileID: 2009683128472685487}
+  BoinkEffect: {fileID: 0}
+  Particle: {fileID: 0}
+--- !u!114 &6784050338602439668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9100155905305841805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dcaf74f1bdd07e4eacdb97e39dbbcaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 300
