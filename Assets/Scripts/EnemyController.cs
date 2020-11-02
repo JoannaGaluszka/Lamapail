@@ -41,13 +41,5 @@ public class EnemyController : MonoBehaviour
         }
 
         transform.Translate(Vector2.left * speed * Time.deltaTime);
-
-        
-    }
-    public void DamageTaken(int DMG)
-    {
-        Instantiate(BoinkEffect, transform.position, Quaternion.identity);
-        HP -= DMG;
-        Debug.Log("zabolało");
     }
 }
