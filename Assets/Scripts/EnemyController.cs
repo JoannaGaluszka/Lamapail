@@ -10,21 +10,22 @@ public class EnemyController : MonoBehaviour
 	public float speed;
 	public bool MoveRight;
 	public float distance;
-	public Transform detection;
-	public GameObject BoinkEffect;
-
+	private Transform target;
+	
+	
 	
 	void Update()
+		
 	{
 		
 		if (MoveRight)
 		{
-			transform.Translate(2 * Time.deltaTime * speed, 0, 0);
+			transform.Translate(Time.deltaTime * speed, 0, 0);
 			transform.localScale = new Vector2(-1, 1);
 		}
 		else
 		{
-			transform.Translate(-2 * Time.deltaTime * speed, 0, 0);
+			transform.Translate(-Time.deltaTime * speed, 0, 0);
 			transform.localScale = new Vector2(1, 1);
 		}
 	}
@@ -43,4 +44,5 @@ public class EnemyController : MonoBehaviour
 			}
 		}
 	}
+	
 }
