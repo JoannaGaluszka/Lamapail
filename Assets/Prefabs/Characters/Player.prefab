@@ -42,10 +42,10 @@ GameObject:
   - component: {fileID: 7275880242170135627}
   - component: {fileID: 7275880242170135629}
   - component: {fileID: 541598284552217849}
-  - component: {fileID: 7275880242170135631}
-  - component: {fileID: 6241766992834355521}
   - component: {fileID: 4908994313717077439}
   - component: {fileID: 9150755073105663354}
+  - component: {fileID: 2022181126490492465}
+  - component: {fileID: 69327278354841162}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -157,43 +157,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0.046200395, y: 0.51429844}
   m_Size: {x: 0.89885545, y: 0.9888246}
   m_Direction: 0
---- !u!114 &7275880242170135631
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7275880242170135624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8a84de8a767c104981512fe7b5881be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  feetPos: {fileID: 7275880242312044456}
-  radius: 0.3
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 4864
-  ForceJump: 20
---- !u!114 &6241766992834355521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7275880242170135624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba6b9ecac71f66a44a18fa267cc3bb70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AttackPos: {fileID: 7520161776058505642}
-  Enemies:
-    serializedVersion: 2
-    m_Bits: 2048
-  RangeAttack: 1.08
-  damage: 35
 --- !u!70 &4908994313717077439
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -229,6 +192,43 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2022181126490492465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7275880242170135624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba6b9ecac71f66a44a18fa267cc3bb70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AttackPos: {fileID: 7520161776058505642}
+  Enemies:
+    serializedVersion: 2
+    m_Bits: 2048
+  RangeAttack: 3
+  damage: 40
+--- !u!114 &69327278354841162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7275880242170135624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8a84de8a767c104981512fe7b5881be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  feetPos: {fileID: 7275880242312044456}
+  radius: 4
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 6912
+  ForceJump: 30
 --- !u!1 &7275880242312044457
 GameObject:
   m_ObjectHideFlags: 0
