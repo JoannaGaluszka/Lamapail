@@ -2,11 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-<<<<<<< HEAD
-public class Fallingplatform : MonoBehaviour
-=======
 public class FallingPlatform : MonoBehaviour
->>>>>>> AMI
 {
     public Rigidbody2D rb;
     Vector2 startPos;
