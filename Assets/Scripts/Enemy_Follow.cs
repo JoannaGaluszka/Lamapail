@@ -5,15 +5,24 @@ using UnityEngine;
 public class Enemy_Follow : MonoBehaviour
 {
     public float speed;
+    public float HP;
     //szybkosc poruszana sie enemy
     public float stop;
     public float backdistance;
+    public float DetectionRadius;
+    public Transform AttackDistance;
 
     private float czaMiedzStrz;
     public float czaRozpoczStrz;
 
     public GameObject projectile;
     private Transform target;
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(AttackDistance.position, DetectionRadius);
+    }
 
     void Start()
     {
