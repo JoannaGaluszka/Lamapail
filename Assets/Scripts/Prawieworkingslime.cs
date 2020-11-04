@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Prawieworkingslime : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Prawieworkingslime : MonoBehaviour
     public Transform AttackDistance;
     public LayerMask StartAttack;
 
+    
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
@@ -20,6 +22,7 @@ public class Prawieworkingslime : MonoBehaviour
     void Update()
 
     {
+        
         
 
         if (MoveRight)

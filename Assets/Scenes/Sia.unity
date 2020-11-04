@@ -13287,6 +13287,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4135515356995502698, guid: c06f24d59c8a50041bf55fa2ec19d4d9,
+        type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4135515356995502710, guid: c06f24d59c8a50041bf55fa2ec19d4d9,
         type: 3}
       propertyPath: m_RootOrder
@@ -21052,35 +21057,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a22c30eca8be7594783bb70d7f9e3486, type: 3}
---- !u!1 &1722706322 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7275880242170135624, guid: 1e740386d44f48a43a748c5344c28c20,
-    type: 3}
-  m_PrefabInstance: {fileID: 2057376696}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1722706330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1722706322}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2c2b5f8051bb6843afdcea79dab6522, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  zycie: 4
-  iloscSerc: 4
-  heart:
-  - {fileID: 1407288762}
-  - {fileID: 1735281999}
-  - {fileID: 1281270546}
-  - {fileID: 2145135014}
-  - {fileID: 1101866941}
-  - {fileID: 483730531}
-  full: {fileID: -205270267638800340, guid: 5ed9f40d65d74df43a0218ce1408647e, type: 3}
-  empty: {fileID: 6960772035834626590, guid: 5ed9f40d65d74df43a0218ce1408647e, type: 3}
 --- !u!1001 &1724729508
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24510,6 +24486,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 69327278354841162, guid: 1e740386d44f48a43a748c5344c28c20,
         type: 3}
+      propertyPath: heart.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 69327278354841162, guid: 1e740386d44f48a43a748c5344c28c20,
+        type: 3}
       propertyPath: ForceJump
       value: 15
       objectReference: {fileID: 0}
@@ -24552,6 +24533,68 @@ PrefabInstance:
         type: 3}
       propertyPath: wallJumping
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 69327278354841162, guid: 1e740386d44f48a43a748c5344c28c20,
+        type: 3}
+      propertyPath: maxHealth
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 69327278354841162, guid: 1e740386d44f48a43a748c5344c28c20,
+        type: 3}
+      propertyPath: full
+      value: 
+      objectReference: {fileID: -205270267638800340, guid: 5ed9f40d65d74df43a0218ce1408647e,
+        type: 3}
+    - target: {fileID: 69327278354841162, guid: 1e740386d44f48a43a748c5344c28c20,
+        type: 3}
+      propertyPath: empty
+      value: 
+      objectReference: {fileID: 6960772035834626590, guid: 5ed9f40d65d74df43a0218ce1408647e,
+        type: 3}
+    - target: {fileID: 69327278354841162, guid: 1e740386d44f48a43a748c5344c28c20,
+        type: 3}
+      propertyPath: heart.Array.data[0]
+      value: 
+      objectReference: {fileID: 1407288762}
+    - target: {fileID: 69327278354841162, guid: 1e740386d44f48a43a748c5344c28c20,
+        type: 3}
+      propertyPath: heart.Array.data[1]
+      value: 
+      objectReference: {fileID: 1735281999}
+    - target: {fileID: 69327278354841162, guid: 1e740386d44f48a43a748c5344c28c20,
+        type: 3}
+      propertyPath: heart.Array.data[2]
+      value: 
+      objectReference: {fileID: 1281270546}
+    - target: {fileID: 69327278354841162, guid: 1e740386d44f48a43a748c5344c28c20,
+        type: 3}
+      propertyPath: heart.Array.data[3]
+      value: 
+      objectReference: {fileID: 2145135014}
+    - target: {fileID: 69327278354841162, guid: 1e740386d44f48a43a748c5344c28c20,
+        type: 3}
+      propertyPath: heart.Array.data[4]
+      value: 
+      objectReference: {fileID: 1101866941}
+    - target: {fileID: 69327278354841162, guid: 1e740386d44f48a43a748c5344c28c20,
+        type: 3}
+      propertyPath: heart.Array.data[5]
+      value: 
+      objectReference: {fileID: 483730531}
+    - target: {fileID: 69327278354841162, guid: 1e740386d44f48a43a748c5344c28c20,
+        type: 3}
+      propertyPath: iloscSerc
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 69327278354841162, guid: 1e740386d44f48a43a748c5344c28c20,
+        type: 3}
+      propertyPath: zycie
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022181126490492465, guid: 1e740386d44f48a43a748c5344c28c20,
+        type: 3}
+      propertyPath: RangeAttack
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2819404977989241529, guid: 1e740386d44f48a43a748c5344c28c20,
         type: 3}
@@ -25839,6 +25882,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4135515356995502697, guid: c06f24d59c8a50041bf55fa2ec19d4d9,
+        type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4135515356995502697, guid: c06f24d59c8a50041bf55fa2ec19d4d9,
+        type: 3}
+      propertyPath: HP
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 4135515356995502697, guid: c06f24d59c8a50041bf55fa2ec19d4d9,
+        type: 3}
+      propertyPath: StartAttack.m_Bits
+      value: 8192
+      objectReference: {fileID: 0}
+    - target: {fileID: 4135515356995502698, guid: c06f24d59c8a50041bf55fa2ec19d4d9,
+        type: 3}
+      propertyPath: HealthBar
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4135515356995502698, guid: c06f24d59c8a50041bf55fa2ec19d4d9,
+        type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4135515356995502698, guid: c06f24d59c8a50041bf55fa2ec19d4d9,
+        type: 3}
+      propertyPath: maxHealth
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 4135515356995502710, guid: c06f24d59c8a50041bf55fa2ec19d4d9,
         type: 3}
