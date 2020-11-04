@@ -14,6 +14,9 @@ public class PlayerController : MonoBehaviour
     public float ForceJump;
     Animator HeroAnimCont;
 
+    
+    
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -24,17 +27,21 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         moveInput = Input.GetAxis("Horizontal");
-        rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+    
+            rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+        
+       
+        
     }
 
     private void Update()
     {
         ground = Physics2D.OverlapCircle(feetPos.position, radius, whatIsGround);
         //chodzonko
-        if(moveInput > 0)
+        if (moveInput > 0)
         {
             transform.eulerAngles = new Vector2(0, 0);
-        } else if(moveInput < 0)
+        } else if (moveInput < 0)
         {
 
             transform.eulerAngles = new Vector2(0, 180);
@@ -49,11 +56,18 @@ public class PlayerController : MonoBehaviour
 
 
 
+        
         if (ground == true && Input.GetKeyDown(KeyCode.Space))
         {
-            rb.velocity = Vector2.up * ForceJump;
+            rb.velocity = new Vector2(rb.velocity.x, ForceJump);
         }
+       
+
+
     }
+
+
+
 }
 
 

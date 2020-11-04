@@ -8,6 +8,12 @@ TextureImporter:
   - first:
       213: 7904136456745960365
     second: heart_1
+  - first:
+      213: 6960772035834626590
+    second: heart_2
+  - first:
+      213: -7403393265459281337
+    second: heart_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -37,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -51,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 500
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -96,10 +102,10 @@ TextureImporter:
       name: heart_0
       rect:
         serializedVersion: 2
-        x: 45
-        y: 65
-        width: 884
-        height: 1015
+        x: 149
+        y: 233
+        width: 741
+        height: 679
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -117,10 +123,10 @@ TextureImporter:
       name: heart_1
       rect:
         serializedVersion: 2
-        x: 979
-        y: 73
-        width: 892
-        height: 1007
+        x: 472
+        y: 228
+        width: 12
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,6 +136,48 @@ TextureImporter:
       bones: []
       spriteID: da3ce80ca3221bd60800000000000000
       internalID: 7904136456745960365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heart_2
+      rect:
+        serializedVersion: 2
+        x: 1018
+        y: 233
+        width: 740
+        height: 679
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e12456e6941a99060800000000000000
+      internalID: 6960772035834626590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heart_3
+      rect:
+        serializedVersion: 2
+        x: 1340
+        y: 228
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 742c7c7cc0dd14990800000000000000
+      internalID: -7403393265459281337
       vertices: []
       indices: 
       edges: []
