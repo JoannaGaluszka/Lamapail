@@ -7,12 +7,14 @@ public class Projectile : MonoBehaviour
 {
     public float speed;
 
+    private PlayerController Player;
     private Transform player;
+
     private Vector2 target;
 
     private void Start()
     {
-
+        Player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         target = new Vector2(player.position.x, player.position.y);
     }
@@ -27,13 +29,16 @@ public class Projectile : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        if (other.CompareTag("Player"))
+        if (col.CompareTag("Player"))
         {
-            DestroyProjectile();
+            Player.Damage(1);
         }
+        
     }
+
 
     void DestroyProjectile()
     {

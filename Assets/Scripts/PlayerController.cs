@@ -6,14 +6,17 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rb;
+    public Transform feetPos;
+    public LayerMask whatIsGround;
+    Animator HeroAnimCont;
+
     public float speed;
     private float moveInput;
-    private bool ground;
-    public Transform feetPos;
     public float radius;
-    public LayerMask whatIsGround;
     public float ForceJump;
-    Animator HeroAnimCont;
+
+    private bool ground;
+
 
     public int zycie;
     public int iloscSerc =6;
@@ -21,9 +24,7 @@ public class PlayerController : MonoBehaviour
     public Image[] heart;
     public Sprite full;
     public Sprite empty;
-    private PlayerController player;
-
-
+    private PlayerController Player;
 
 
     private void Start()
@@ -47,6 +48,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+
         //hp gracza, zmiana sprite
         if (zycie > iloscSerc)
         {
@@ -80,7 +82,8 @@ public class PlayerController : MonoBehaviour
         if (moveInput > 0)
         {
             transform.eulerAngles = new Vector2(0, 0);
-        } else if (moveInput < 0)
+        }
+        else if (moveInput < 0)
         {
 
             transform.eulerAngles = new Vector2(0, 180);
@@ -95,13 +98,14 @@ public class PlayerController : MonoBehaviour
 
 
 
-        
+
         if (ground == true && Input.GetKeyDown(KeyCode.Space))
         {
             rb.velocity = new Vector2(rb.velocity.x, ForceJump);
         }
 
-        if(zycie > iloscSerc)
+
+        if (zycie > iloscSerc)
         {
             zycie = iloscSerc;
         }
@@ -109,15 +113,20 @@ public class PlayerController : MonoBehaviour
         {
             Die();
         }
-       
-
 
     }
+
 
     void Die()
     {
         //reset poziomu
         Application.LoadLevel(Application.loadedLevel);
+    }
+
+
+    public void Damage(int obrazenia)
+    {
+        zycie -= obrazenia;
     }
 
 

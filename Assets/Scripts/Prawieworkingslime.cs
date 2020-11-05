@@ -7,19 +7,24 @@ public class Prawieworkingslime : MonoBehaviour
 {
     public float HP;
     public float speed;
-    public bool MoveRight;
     public float DetectionRadius;
+
+    public bool MoveRight;
+    
     public Transform AttackDistance;
     public LayerMask StartAttack;
-
     
+
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(AttackDistance.position, DetectionRadius);
     }
 
-    void Update()
+   
+
+        void Update()
 
     {
         
@@ -60,10 +65,13 @@ public class Prawieworkingslime : MonoBehaviour
                 MoveRight = true;
             }
         }
+        
     }
+
     void Attack()
     {
         Debug.Log("Detekcja");
+
     }
     
 }
