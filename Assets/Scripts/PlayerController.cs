@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     public float ForceJump;
 
     private bool ground;
+    private bool doubleJump;
 
 
     public int zycie;
@@ -24,7 +25,7 @@ public class PlayerController : MonoBehaviour
     public Image[] heart;
     public Sprite full;
     public Sprite empty;
-    private PlayerController Player;
+    
 
 
     private void Start()
@@ -99,9 +100,23 @@ public class PlayerController : MonoBehaviour
 
 
 
-        if (ground == true && Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            rb.velocity = new Vector2(rb.velocity.x, ForceJump);
+            if (ground)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, ForceJump);
+                doubleJump = true;
+            }
+            else
+            {
+                if (doubleJump)
+                {
+                    doubleJump = false;
+                    rb.velocity = new Vector2(rb.velocity.x, 0);
+                    rb.velocity = new Vector2(rb.velocity.x, ForceJump);
+                }
+            }
+            
         }
 
 
