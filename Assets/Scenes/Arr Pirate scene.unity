@@ -1499,7 +1499,7 @@ PrefabInstance:
     - target: {fileID: 1228502142221747135, guid: e318d6cf7a69c404f8c8e43cd3bd0f7d,
         type: 3}
       propertyPath: m_Offset.x
-      value: -0.5577563
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1228502142221747135, guid: e318d6cf7a69c404f8c8e43cd3bd0f7d,
         type: 3}
@@ -1509,7 +1509,7 @@ PrefabInstance:
     - target: {fileID: 1228502142221747135, guid: e318d6cf7a69c404f8c8e43cd3bd0f7d,
         type: 3}
       propertyPath: m_Offset.y
-      value: 0.2226457
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1228502142221747135, guid: e318d6cf7a69c404f8c8e43cd3bd0f7d,
         type: 3}
@@ -1524,6 +1524,16 @@ PrefabInstance:
     - target: {fileID: 1228502142221747135, guid: e318d6cf7a69c404f8c8e43cd3bd0f7d,
         type: 3}
       propertyPath: m_UsedByComposite
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1228502142221747135, guid: e318d6cf7a69c404f8c8e43cd3bd0f7d,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1228502142221747135, guid: e318d6cf7a69c404f8c8e43cd3bd0f7d,
+        type: 3}
+      propertyPath: m_EdgeRadius
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2119,6 +2129,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -4672163745296329812, guid: a774776507b787d4baba15c093303c3c,
         type: 3}
+    - target: {fileID: 7275880242170135627, guid: 1e740386d44f48a43a748c5344c28c20,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 414160607
+      objectReference: {fileID: 0}
+    - target: {fileID: 7275880242170135627, guid: 1e740386d44f48a43a748c5344c28c20,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7275880242170135629, guid: 1e740386d44f48a43a748c5344c28c20,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 74ae763e7eff0024ba6d7f7fac5ef61a, type: 2}
     - target: {fileID: 7520161776058505642, guid: 1e740386d44f48a43a748c5344c28c20,
         type: 3}
       propertyPath: m_LocalPosition.x
