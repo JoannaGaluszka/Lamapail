@@ -7,6 +7,8 @@ TagManager:
   - FeetPos
   - Platforms
   - Frog
+  - turn
+  - AttackDistance
   layers:
   - Default
   - TransparentFX
@@ -22,7 +24,7 @@ TagManager:
   - Enemy
   - Platforms
   - Player
-  - 
+  - Turn
   - 
   - 
   - 
