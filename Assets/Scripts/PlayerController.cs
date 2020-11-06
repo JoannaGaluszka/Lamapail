@@ -143,9 +143,6 @@ public class PlayerController : MonoBehaviour
     {
         zycie -= obrazenia;
     }
-
-
-
 }
 
 

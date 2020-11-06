@@ -40,13 +40,13 @@ GameObject:
   m_Component:
   - component: {fileID: 7275880242170135626}
   - component: {fileID: 7275880242170135627}
+  - component: {fileID: 6935457374910692917}
   - component: {fileID: 7275880242170135629}
   - component: {fileID: 541598284552217849}
   - component: {fileID: 4908994313717077439}
   - component: {fileID: 9150755073105663354}
   - component: {fileID: 2022181126490492465}
   - component: {fileID: 69327278354841162}
-  - component: {fileID: 1146523326555620872}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -121,6 +121,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &6935457374910692917
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7275880242170135624}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.8813186, y: 2.5996094}
+    newSize: {x: 2.0625, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.8813186, y: 2.5996094}
+  m_EdgeRadius: 0
 --- !u!50 &7275880242170135629
 Rigidbody2D:
   serializedVersion: 4
@@ -235,32 +261,6 @@ MonoBehaviour:
   heart: []
   full: {fileID: 0}
   empty: {fileID: 0}
---- !u!61 &1146523326555620872
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7275880242170135624}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.8813186, y: 2.5996094}
-    newSize: {x: 2.0625, y: 2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.34, y: 2.5996094}
-  m_EdgeRadius: 0
 --- !u!1 &7275880242312044457
 GameObject:
   m_ObjectHideFlags: 0
