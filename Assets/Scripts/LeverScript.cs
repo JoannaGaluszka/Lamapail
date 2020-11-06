@@ -6,6 +6,7 @@ public class LeverScript : MonoBehaviour
 {
     public bool Zmiana;
     public bool is_flipped;
+    private bool triggerEntered = false;
     Animator anim;
     void Start()
     {
@@ -15,12 +16,7 @@ public class LeverScript : MonoBehaviour
 
     void Update()
     {
-        if (is_flipped == false) anim.SetBool("LeverFlip", true);
-        else anim.SetBool("LeverFlip", false);
-    }
-    void OnTriggerEnter()
-    {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.E) && triggerEntered == true)
         {
             if (is_flipped == false)
             {
@@ -30,6 +26,7 @@ public class LeverScript : MonoBehaviour
             {
                 is_flipped = false;
             }
+            Debug.Log("Ciach");
         }
         
     }
