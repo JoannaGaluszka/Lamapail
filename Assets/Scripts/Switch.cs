@@ -4,22 +4,20 @@ using UnityEngine;
 
 public class Switch : MonoBehaviour
 {
-    public GameObject On;
-    public GameObject Off;
-
+    public Sprite on, off;
     public bool isOn = false;
-
+    public DoorController doors;
     private void Start()
     {
-        gameObject.GetComponent<SpriteRenderer>().sprite = Off.GetComponent<SpriteRenderer>().sprite;
+        gameObject.GetComponent<SpriteRenderer>().sprite = on;
 
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        gameObject.GetComponent<SpriteRenderer>().sprite = On.GetComponent<SpriteRenderer>().sprite;
+        //if (Input.GetKeyDown(KeyCode.E)) nie ogarniam bomby czemu to nie działa 
+        gameObject.GetComponent<SpriteRenderer>().sprite = off;
 
         isOn = true;
-
+        doors.Open();
     }
 }

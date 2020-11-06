@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1275332900}
   - component: {fileID: 1275332899}
   - component: {fileID: 1275332898}
-  - component: {fileID: 1275332901}
   - component: {fileID: 1275332902}
   - component: {fileID: 1275332904}
   - component: {fileID: 1275332903}
@@ -106,20 +105,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1275332901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1275332897}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edc3fb93e5b2f0a409ba6fc656bb78cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Zmiana: 0
-  is_flipped: 0
 --- !u!61 &1275332902
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -184,9 +169,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4c723c66e5f9fe4682c86c3aa6cd49b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  On: {fileID: 4809362195108387435, guid: 47cd17743e857bb42be11fbfa07ae6c7, type: 3}
-  Off: {fileID: 697495610368161471, guid: 854198060742dc848b1177745578e34f, type: 3}
+  on: {fileID: -8501006745491687560, guid: c27abd0d443878f4792ade80233d34f3, type: 3}
+  off: {fileID: -3281244560843872036, guid: c27abd0d443878f4792ade80233d34f3, type: 3}
   isOn: 0
+  doors: {fileID: 0}
 --- !u!1001 &7425469567385941892
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -252,7 +238,7 @@ PrefabInstance:
     - target: {fileID: 4965111334618997826, guid: a22c30eca8be7594783bb70d7f9e3486,
         type: 3}
       propertyPath: m_Name
-      value: plat22
+      value: plat22 Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a22c30eca8be7594783bb70d7f9e3486, type: 3}
