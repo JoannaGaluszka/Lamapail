@@ -17,7 +17,17 @@ public class PlayerController : MonoBehaviour
 
     private bool ground;
     private bool doubleJump;
-
+    //walljump 7.11 aj
+    public float WallCheckRadius;
+    private bool TouchingWall;
+    public Transform WallCheck;
+    private bool WallSlide;
+    public float WallSlideSpeed;
+    //++++
+    private bool WallJump;
+    public float WallForceHorizontal;
+    public float WallForceVertical;
+    public float WallJumpTime;
 
     public int zycie;
     public int iloscSerc =6;
@@ -39,12 +49,8 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        moveInput = Input.GetAxis("Horizontal");
-    
-            rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
-        
-       
-        
+        moveInput = Input.GetAxis("Horizontal");   
+        rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);           
     }
 
     private void Update()
@@ -99,24 +105,51 @@ public class PlayerController : MonoBehaviour
 
 
 
-
+        //skaczanko
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (ground)
             {
-                rb.velocity = new Vector2(rb.velocity.x, ForceJump);
-                doubleJump = true;
+                rb.velocity = Vector2.up * ForceJump;
+                //doubleJump = true;
             }
-            else
-            {
-                if (doubleJump)
-                {
-                    doubleJump = false;
-                    rb.velocity = new Vector2(rb.velocity.x, 0);
-                    rb.velocity = new Vector2(rb.velocity.x, ForceJump);
-                }
-            }
+            //else
+            //{
+            //    if (doubleJump)
+            //    {
+            //        doubleJump = false;
+            //        rb.velocity = new Vector2(rb.velocity.x, 0);
+            //        rb.velocity = new Vector2(rb.velocity.x, ForceJump);
+            //    }
+            //}
             
+        }
+        //Double Jump Conditions uwu
+        TouchingWall = Physics2D.OverlapCircle(WallCheck.position, WallCheckRadius, whatIsGround);
+
+        if(TouchingWall == true && ground == false && moveInput != 0)
+        {
+            WallSlide = true;
+        } else
+        {
+            WallSlide = false;
+        }
+        //zmiana charakterystyki rb przy slajdzie
+        if (WallSlide)
+        {                                                                    
+            rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -WallSlideSpeed, float.MaxValue));
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) && WallSlide == true)
+        {
+            WallJump = true;
+            Invoke("WallJumpBlock", WallJumpTime);
+        }
+        //fizyka odbicia i think
+        if (WallJump == true)
+        {                                                    //tu z jakiegoś powodu przy odbiciu nie nadaje -moveinput, nie odbija i nie odwraca postaci/
+            rb.velocity = new Vector2(WallForceHorizontal * -moveInput, WallForceVertical);
+            Debug.Log("odbicie");
         }
 
 
@@ -130,18 +163,21 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-
-
     void Die()
     {
         //reset poziomu
         Application.LoadLevel(Application.loadedLevel);
     }
 
-
     public void Damage(int obrazenia)
     {
         zycie -= obrazenia;
+    }
+
+    private void WallJumpBlock()
+    {
+        WallJump = false;
+        Debug.Log("WallJumpBlock");
     }
 }
 
