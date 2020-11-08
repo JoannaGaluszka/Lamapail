@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,11 +10,12 @@ public class PlayerController : MonoBehaviour
     public Transform feetPos;
     public LayerMask whatIsGround;
     Animator HeroAnimCont;
-
+    
     public float speed;
     private float moveInput;
     public float radius;
     public float ForceJump;
+    
 
     private bool ground;
     private bool doubleJump;
@@ -57,22 +59,22 @@ public class PlayerController : MonoBehaviour
         }
         for (int i = 0; i < heart.Length; i++)
         {
-            //jesli i jest mniejsze od ilosci zycia, pojawia sie full sprite 
+            // mniejsze od ILOSCI ZYCIA, pojawia sie full sprite 
             if (i < zycie)
             {
                 heart[i].sprite = full;
             }
-            else //jelsi i jest wieszke od ilosci zycia, zmienia sie na empty sprite
+            else //wieszke od ilosci zycia, zmienia sie na empty sprite
             {
                 heart[i].sprite = empty;
 
-                //jesli i jest mniejsze od ilosci serc, to chcemy aby serca byly widoczne 
+                //mniejsze od ILOSCI SERC, to serca beda widoczne 
                 if (i < iloscSerc)
                 {
                     heart[i].enabled = true;
 
                 }
-                else //jesli i jest wieksze od ilosci serc, to chcemy aby serca byly ukryte 
+                else //wieksze od ilosci serc, to serca beda ukryte 
                 {
                     heart[i].enabled = false;
                 }
@@ -137,11 +139,12 @@ public class PlayerController : MonoBehaviour
         //reset poziomu
         Application.LoadLevel(Application.loadedLevel);
     }
+    
 
 
-    public void Damage(int obrazenia)
+    public void Damage(int iloscSerc)
     {
-        zycie -= obrazenia;
+        zycie -= iloscSerc;
     }
 
 

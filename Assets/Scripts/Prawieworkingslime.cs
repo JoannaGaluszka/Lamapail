@@ -13,10 +13,14 @@ public class Prawieworkingslime : MonoBehaviour
     
     public Transform AttackDistance;
     public LayerMask StartAttack;
-    
+    private PlayerController Player;
 
+    private void Start()
+    {
+        Player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+    }
 
-    private void OnDrawGizmosSelected()
+        private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(AttackDistance.position, DetectionRadius);
@@ -51,6 +55,8 @@ public class Prawieworkingslime : MonoBehaviour
             speed = 2;
         }
     }
+
+    
     void OnTriggerEnter2D(Collider2D trig)
     {
         if (trig.gameObject.CompareTag("turn"))
@@ -73,5 +79,12 @@ public class Prawieworkingslime : MonoBehaviour
         Debug.Log("Detekcja");
 
     }
-    
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            Player.Damage(1);
+        }
+    }
+
 }

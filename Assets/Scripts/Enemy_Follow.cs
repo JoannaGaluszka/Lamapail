@@ -31,6 +31,7 @@ public class Enemy_Follow : MonoBehaviour
         czaMiedzStrz = czaRozpoczStrz;
     }
 
+
     void Update()
     {
         if (Vector2.Distance(transform.position, target.position) > stop)
@@ -49,7 +50,7 @@ public class Enemy_Follow : MonoBehaviour
         if(czaMiedzStrz <= 0)
         {
             Instantiate(projectile, transform.position, Quaternion.identity);
-            //quaternion.identity nie ma rotacji
+            //quaternion.identity, brak obrotu
             czaMiedzStrz = czaRozpoczStrz;
         }
         else

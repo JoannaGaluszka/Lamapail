@@ -30,9 +30,9 @@ public class Projectile : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter2D(Collider2D col)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (col.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
             Player.Damage(1);
         }
