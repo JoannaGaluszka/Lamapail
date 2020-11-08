@@ -1,25 +1,37 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Prawieworkingslime : MonoBehaviour
 {
     public float HP;
     public float speed;
-    public bool MoveRight;
     public float DetectionRadius;
+
+    public bool MoveRight;
+    
     public Transform AttackDistance;
     public LayerMask StartAttack;
+    private PlayerController Player;
 
-    private void OnDrawGizmosSelected()
+    private void Start()
+    {
+        Player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+    }
+
+        private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(AttackDistance.position, DetectionRadius);
     }
 
-    void Update()
+   
+
+        void Update()
 
     {
+        
         
 
         if (MoveRight)
@@ -43,6 +55,8 @@ public class Prawieworkingslime : MonoBehaviour
             speed = 2;
         }
     }
+
+    
     void OnTriggerEnter2D(Collider2D trig)
     {
         if (trig.gameObject.CompareTag("turn"))
@@ -57,10 +71,20 @@ public class Prawieworkingslime : MonoBehaviour
                 MoveRight = true;
             }
         }
+        
     }
+
     void Attack()
     {
         Debug.Log("Detekcja");
+
     }
-    
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            Player.Damage(1);
+        }
+    }
+
 }

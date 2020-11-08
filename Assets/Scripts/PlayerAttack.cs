@@ -42,6 +42,8 @@ public class PlayerAttack : MonoBehaviour
         Gizmos.DrawWireSphere(AttackPos.position, RangeAttack);
     }
 
+    
+
     private void Attack()
     {
         //Check for enemies in AttackPos object
