@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rb;
+    private SpriteRenderer spriteRenderer;
     public Transform feetPos;
     public LayerMask whatIsGround;
     Animator HeroAnimCont;
@@ -30,29 +31,23 @@ public class PlayerController : MonoBehaviour
     public float WallJumpTime;
 
     public int zycie;
-    public int iloscSerc =6;
+    public int iloscSerc = 6;
 
     public Image[] heart;
     public Sprite full;
     public Sprite empty;
-    
 
+    private bool didWallJump = false;
 
-    private void Start()
+    private void Start()    
     {
         rb = GetComponent<Rigidbody2D>();
         HeroAnimCont = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
 
         zycie = iloscSerc;
 
     }
-
-    private void FixedUpdate()
-    {
-        moveInput = Input.GetAxis("Horizontal");   
-        rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);           
-    }
-
     private void Update()
     {
 
@@ -85,14 +80,31 @@ public class PlayerController : MonoBehaviour
             }
         }
         ground = Physics2D.OverlapCircle(feetPos.position, radius, whatIsGround);
+
+        /////////////////////////////
+        if (ground)
+        {
+            didWallJump = false;
+        }
+
         //chodzonko
+        moveInput = Input.GetAxis("Horizontal");
+
+
+        if (didWallJump)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y);
+        } else
+        {
+            rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+        }
+
         if (moveInput > 0)
         {
             transform.eulerAngles = new Vector2(0, 0);
         }
         else if (moveInput < 0)
         {
-
             transform.eulerAngles = new Vector2(0, 180);
         }
         //animatonko
@@ -103,7 +115,7 @@ public class PlayerController : MonoBehaviour
             HeroAnimCont.SetBool("Idzie", false);
         }
 
-
+        /////////////////////////////////
 
         //skaczanko
         if (Input.GetKeyDown(KeyCode.Space))
@@ -124,7 +136,7 @@ public class PlayerController : MonoBehaviour
             //}
             
         }
-        //Double Jump Conditions uwu
+        //wall Jump warunki
         TouchingWall = Physics2D.OverlapCircle(WallCheck.position, WallCheckRadius, whatIsGround);
 
         if(TouchingWall == true && ground == false && moveInput != 0)
@@ -138,6 +150,11 @@ public class PlayerController : MonoBehaviour
         if (WallSlide)
         {                                                                    
             rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -WallSlideSpeed, float.MaxValue));
+           // Mathf.Clamp
+           // rb.velocity.y -= WallSlideSpeed;
+           // if (rb.velocity.y > float.MaxValue) {
+           //     rb.velocity.y = float.MaxValue;
+           // }
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && WallSlide == true)
@@ -148,8 +165,13 @@ public class PlayerController : MonoBehaviour
         //fizyka odbicia i think
         if (WallJump == true)
         {                                                    //tu z jakiegoś powodu przy odbiciu nie nadaje -moveinput, nie odbija i nie odwraca postaci/
+            didWallJump = true;
             rb.velocity = new Vector2(WallForceHorizontal * -moveInput, WallForceVertical);
+            //rb.velocity = new Vector2(rb.velocity.x, WallForceVertical);
+            //rb.AddForce(new Vector2(WallForceHorizontal * -moveInput, 0), ForceMode2D.Impulse);
             Debug.Log("odbicie");
+            //Debug.Log(-moveInput);
+           // Debug.Log(rb.velocity);
         }
 
 

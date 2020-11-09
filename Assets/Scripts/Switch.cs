@@ -18,7 +18,7 @@ public class Switch : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         TriggerEntered = true;
-        Debug.Log("kolizja dzwignia !!!");    
+        //Debug.Log("kolizja dzwignia !!!");    
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -31,7 +31,7 @@ public class Switch : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log("Dzwigna exit");
+       // Debug.Log("Dzwigna exit");
         TriggerEntered = false;
     }
     private void Use()
@@ -40,6 +40,6 @@ public class Switch : MonoBehaviour
         gameObject.GetComponent<SpriteRenderer>().sprite = on;
         isOn = true;
         doors.Open();
-        Debug.Log("FLIP !!!");
+        //Debug.Log("FLIP !!!");
     }
 }
