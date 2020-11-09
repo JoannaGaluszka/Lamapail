@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD:Assets/Scripts/Passing.cs.meta
 guid: 3fef2dbf2a517384abd7a9969faaa948
+=======
+guid: 3e03cca385252594886ada0726af60ae
+>>>>>>> origin/Antua:Assets/Scripts/DoorController.cs.meta
+=======
+guid: 3fef2dbf2a517384abd7a9969faaa948
+>>>>>>> origin/Antua
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

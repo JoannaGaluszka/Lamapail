@@ -67,3 +67,6 @@ TagManager:
   - name: Platforms
     uniqueID: 1795437859
     locked: 0
+  - name: Slime
+    uniqueID: 3124679409
+    locked: 0
