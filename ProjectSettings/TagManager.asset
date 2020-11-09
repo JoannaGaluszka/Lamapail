@@ -71,3 +71,6 @@ TagManager:
   - name: BouncingSlime
     uniqueID: 3124679409
     locked: 0
+  - name: UI
+    uniqueID: 2290359697
+    locked: 0
