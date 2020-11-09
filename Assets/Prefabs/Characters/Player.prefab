@@ -216,8 +216,8 @@ MonoBehaviour:
   WallCheckRadius: 0.2
   WallCheck: {fileID: 2383003140057731639}
   WallSlideSpeed: 0.5
-  WallForceHorizontal: 30
-  WallForceVertical: 10
+  WallForceHorizontal: 1
+  WallForceVertical: 3
   WallJumpTime: 0.5
   zycie: 0
   iloscSerc: 6
