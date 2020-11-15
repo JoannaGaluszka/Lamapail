@@ -21,7 +21,7 @@ public class BouncingSlime : MonoBehaviour
         {
             animatorek.SetTrigger("ActivateBounce");
             collision.gameObject.GetComponent<Rigidbody2D>
-                ().AddForce(new Vector2(0f,MocWyrzutu), ForceMode2D.Impulse);
+                ().AddForce(Vector2.up * MocWyrzutu, ForceMode2D.Impulse);
 
             Debug.Log("kolizja");
         }
