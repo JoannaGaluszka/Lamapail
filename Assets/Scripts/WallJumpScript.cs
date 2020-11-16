@@ -6,8 +6,12 @@ public class WallJumpScript : MonoBehaviour
 {
     private Rigidbody2D rb;
     public LayerMask whatIsGround;
+    private bool ground;
+    private float moveInput;
+    public float speed;
 
-    public float WallCheckRadius;
+
+    public float WallCheckDistance;
     private bool TouchingWall;
     public Transform WallCheck;
     private bool WallSlide;
@@ -18,6 +22,7 @@ public class WallJumpScript : MonoBehaviour
     public float WallForceVertical;
     public float WallJumpTime;
     private bool didWallJump = false;
+
 
     void Update()
     {
@@ -35,7 +40,7 @@ public class WallJumpScript : MonoBehaviour
             rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
         }
 
-        TouchingWall = Physics2D.OverlapCircle(WallCheck.position, WallCheckRadius, whatIsGround);
+        TouchingWall = Physics2D.Raycast(WallCheck.position, transform.right, WallCheckDistance, whatIsGround);
 
         if (TouchingWall == true && ground == false && moveInput != 0)
         {

@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public Transform feetPos;
     public LayerMask whatIsGround;
     Animator HeroAnimCont;
+    private bool IsFacingRight = true;
 
     public float speed;
     private float moveInput;
@@ -70,14 +71,25 @@ public class PlayerController : MonoBehaviour
 
         //chodzonko
         moveInput = Input.GetAxis("Horizontal");
-   
+
+        if (didWallJump)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y);
+        }
+        else
+        {
+            rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+        }
+
         if (moveInput > 0)
         {
             transform.eulerAngles = new Vector2(0, 0);
+            IsFacingRight = true;
         }
         else if (moveInput < 0)
         {
             transform.eulerAngles = new Vector2(0, 180);
+            IsFacingRight = false;
         }
         //animatonko
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
@@ -109,7 +121,7 @@ public class PlayerController : MonoBehaviour
     void Die()
     {
         //reset poziomu
-        Application.LoadLevel(Application.loadedLevel);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
     }
 
     public void Damage(int obrazenia)
