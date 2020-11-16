@@ -10,14 +10,14 @@ public class PlayerController : MonoBehaviour
     public Transform feetPos;
     public LayerMask whatIsGround;
     Animator HeroAnimCont;
-    private bool IsFacingRight = true;
+    public bool IsFacingRight;
 
     public float speed;
-    private float moveInput;
+    public float moveInput;
     public float radius;
     public float ForceJump;
 
-    private bool ground;
+    public bool ground;
     private bool doubleJump;
     
     public int zycie;
@@ -32,12 +32,16 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         HeroAnimCont = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-
+        IsFacingRight = true;
         zycie = iloscSerc;
 
     }
     private void Update()
     {
+        if(ground && Input.GetKeyDown(KeyCode.Space))
+        {
+            Jump();
+        }
 
         //hp gracza, zmiana sprite
         if (zycie > iloscSerc)
@@ -67,29 +71,28 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
-        ground = Physics2D.OverlapCircle(feetPos.position, radius, whatIsGround);
+        bool grounded = Physics2D.OverlapCircle(feetPos.position, radius, whatIsGround);
+
+        if (grounded)
+        {
+            ground = true;
+        } else {
+            ground = false;
+        }
 
         //chodzonko
         moveInput = Input.GetAxis("Horizontal");
-
-        if (didWallJump)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y);
-        }
-        else
-        {
-            rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
-        }
+        rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
 
         if (moveInput > 0)
         {
-            transform.eulerAngles = new Vector2(0, 0);
             IsFacingRight = true;
+            transform.eulerAngles = new Vector2(0, 0);           
         }
         else if (moveInput < 0)
         {
-            transform.eulerAngles = new Vector2(0, 180);
             IsFacingRight = false;
+            transform.eulerAngles = new Vector2(0, 180);        
         }
         //animatonko
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
@@ -99,15 +102,7 @@ public class PlayerController : MonoBehaviour
             HeroAnimCont.SetBool("Idzie", false);
         }
 
-        //skaczanko
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (ground)
-            {
-                rb.velocity = Vector2.up * ForceJump;            
-            }          
-        }
-
+   
         if (zycie > iloscSerc)
         {
             zycie = iloscSerc;
@@ -118,6 +113,13 @@ public class PlayerController : MonoBehaviour
         }
 
     }
+
+    //skaczanko
+    public void Jump()
+    {
+        rb.velocity = new Vector2(rb.velocity.x, ForceJump);
+    }
+
     void Die()
     {
         //reset poziomu

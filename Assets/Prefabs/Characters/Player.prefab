@@ -1,35 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1705902810998941151
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4048974468544071115}
-  m_Layer: 0
-  m_Name: WallCheck
-  m_TagString: Untagged
-  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4048974468544071115
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1705902810998941151}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.01, z: -3.4038968}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7275880242170135626}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2819404977989241529
 GameObject:
   m_ObjectHideFlags: 0
@@ -75,7 +45,7 @@ GameObject:
   - component: {fileID: 9150755073105663354}
   - component: {fileID: 2022181126490492465}
   - component: {fileID: 69327278354841162}
-  - component: {fileID: 490215282779046911}
+  - component: {fileID: 1781305976714843382}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -96,7 +66,6 @@ Transform:
   m_Children:
   - {fileID: 7275880242312044456}
   - {fileID: 7520161776058505642}
-  - {fileID: 4048974468544071115}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -249,7 +218,7 @@ MonoBehaviour:
   heart: []
   full: {fileID: 0}
   empty: {fileID: 0}
---- !u!114 &490215282779046911
+--- !u!114 &1781305976714843382
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -261,16 +230,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13b252c0163f4cf4c8e6829e515f21f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  whatIsGround:
+  WallCheckDistance: 2
+  WallSlideSpeed: 1
+  WallJumpTime: 0.5
+  GroundLayer:
     serializedVersion: 2
-    m_Bits: 0
-  speed: 0
-  WallCheckRadius: 0
-  WallCheck: {fileID: 0}
-  WallSlideSpeed: 0
-  WallForceHorizontal: 0
-  WallForceVertical: 0
-  WallJumpTime: 0
+    m_Bits: 512
 --- !u!1 &7275880242312044457
 GameObject:
   m_ObjectHideFlags: 0
