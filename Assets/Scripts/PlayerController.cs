@@ -188,7 +188,7 @@ public class PlayerController : MonoBehaviour
     void Die()
     {
         //reset poziomu
-        Application.LoadLevel(Application.loadedLevel);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
     }
 
     public void Damage(int obrazenia)
