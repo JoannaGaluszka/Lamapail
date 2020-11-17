@@ -210,9 +210,12 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 6912
+  IsFacingRight: 0
   speed: 10
+  moveInput: 0
   radius: 0.2
   ForceJump: 30
+  ground: 0
   zycie: 0
   iloscSerc: 6
   heart: []
@@ -230,12 +233,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13b252c0163f4cf4c8e6829e515f21f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WallCheckDistance: 2
-  WallSlideSpeed: 1
+  WallCheckDistance: 3
+  WallSlideSpeed: -1
   WallJumpTime: 0.5
+  WallForceX: 15
+  WallForceY: 15
   GroundLayer:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 768
+  pc: {fileID: 0}
 --- !u!1 &7275880242312044457
 GameObject:
   m_ObjectHideFlags: 0
