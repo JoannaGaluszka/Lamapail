@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 4908994313717077439}
   - component: {fileID: 9150755073105663354}
   - component: {fileID: 2022181126490492465}
+  - component: {fileID: 1050213048167558532}
   - component: {fileID: 69327278354841162}
   m_Layer: 0
   m_Name: Player
@@ -195,6 +196,26 @@ MonoBehaviour:
     m_Bits: 2048
   RangeAttack: 3
   damage: 40
+--- !u!114 &1050213048167558532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7275880242170135624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85f2e269ea8029d4ea478bcc7124a2a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sab: {fileID: 0}
+  AttackPos: {fileID: 6015088092201274488}
+  Enemies:
+    serializedVersion: 2
+    m_Bits: 2048
+  RangeAttack: 6
+  damage: 80
+  hit: 0
 --- !u!114 &69327278354841162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,7 +231,7 @@ MonoBehaviour:
   feetPos: {fileID: 7275880242312044456}
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 6912
+    m_Bits: 4864
   speed: 10
   radius: 0.2
   ForceJump: 30
@@ -220,11 +241,11 @@ MonoBehaviour:
   WallForceHorizontal: 1
   WallForceVertical: 3
   WallJumpTime: 0.5
-  zycie: 0
+  zycie: 6
   iloscSerc: 6
   heart: []
-  full: {fileID: 0}
-  empty: {fileID: 0}
+  full: {fileID: -205270267638800340, guid: 5ed9f40d65d74df43a0218ce1408647e, type: 3}
+  empty: {fileID: 6960772035834626590, guid: 5ed9f40d65d74df43a0218ce1408647e, type: 3}
 --- !u!1 &7275880242312044457
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,7 +330,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8587660568173040156}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.026, y: -0.178, z: 0}
+  m_LocalPosition: {x: 6.13, y: 1.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7275880242170135626}

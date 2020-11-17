@@ -1723,6 +1723,11 @@ PrefabInstance:
       propertyPath: StartDashTime
       value: 0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 1050213048167558532, guid: 1e740386d44f48a43a748c5344c28c20,
+        type: 3}
+      propertyPath: sab
+      value: 
+      objectReference: {fileID: 288331287}
     - target: {fileID: 2022181126490492465, guid: 1e740386d44f48a43a748c5344c28c20,
         type: 3}
       propertyPath: RangeAttack
@@ -4089,7 +4094,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed6dfc0f55c230d4b86b76bbe83599fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 122477297}
 --- !u!1001 &294041120
 PrefabInstance:
   m_ObjectHideFlags: 0
