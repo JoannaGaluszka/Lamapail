@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
 
     private bool ground;
     private bool doubleJump;
-    //walljump 
+    //walljump 7.11 aj
     public float WallCheckRadius;
     private bool TouchingWall;
     public Transform WallCheck;
@@ -81,6 +81,7 @@ public class PlayerController : MonoBehaviour
         }
         ground = Physics2D.OverlapCircle(feetPos.position, radius, whatIsGround);
 
+        /////////////////////////////
         if (ground)
         {
             didWallJump = false;
@@ -114,6 +115,7 @@ public class PlayerController : MonoBehaviour
             HeroAnimCont.SetBool("Idzie", false);
         }
 
+        /////////////////////////////////
 
         //skaczanko
         if (Input.GetKeyDown(KeyCode.Space))
@@ -121,12 +123,20 @@ public class PlayerController : MonoBehaviour
             if (ground)
             {
                 rb.velocity = Vector2.up * ForceJump;
-                
+                //doubleJump = true;
             }
-           
+            //else
+            //{
+            //    if (doubleJump)
+            //    {
+            //        doubleJump = false;
+            //        rb.velocity = new Vector2(rb.velocity.x, 0);
+            //        rb.velocity = new Vector2(rb.velocity.x, ForceJump);
+            //    }
+            //}
             
         }
-        //wall Jump 
+        //wall Jump warunki
         TouchingWall = Physics2D.OverlapCircle(WallCheck.position, WallCheckRadius, whatIsGround);
 
         if(TouchingWall == true && ground == false && moveInput != 0)
@@ -140,7 +150,11 @@ public class PlayerController : MonoBehaviour
         if (WallSlide)
         {                                                                    
             rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -WallSlideSpeed, float.MaxValue));
-         
+           // Mathf.Clamp
+           // rb.velocity.y -= WallSlideSpeed;
+           // if (rb.velocity.y > float.MaxValue) {
+           //     rb.velocity.y = float.MaxValue;
+           // }
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && WallSlide == true)
@@ -148,14 +162,16 @@ public class PlayerController : MonoBehaviour
             WallJump = true;
             Invoke("WallJumpBlock", WallJumpTime);
         }
-        
+        //fizyka odbicia i think
         if (WallJump == true)
-        {                                                    
+        {                                                    //tu z jakiegoś powodu przy odbiciu nie nadaje -moveinput, nie odbija i nie odwraca postaci/
             didWallJump = true;
             rb.velocity = new Vector2(WallForceHorizontal * -moveInput, WallForceVertical);
- 
+            //rb.velocity = new Vector2(rb.velocity.x, WallForceVertical);
+            //rb.AddForce(new Vector2(WallForceHorizontal * -moveInput, 0), ForceMode2D.Impulse);
             Debug.Log("odbicie");
-            
+            //Debug.Log(-moveInput);
+           // Debug.Log(rb.velocity);
         }
 
 
@@ -173,14 +189,6 @@ public class PlayerController : MonoBehaviour
     {
         //reset poziomu
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Point"))
-        {
-            Destroy(other.gameObject);
-        }
     }
 
     public void Damage(int obrazenia)

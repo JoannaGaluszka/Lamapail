@@ -10,7 +10,6 @@ TagManager:
   - turn
   - AttackDistance
   - BouncingSlime
-  - Point
   layers:
   - Default
   - TransparentFX
@@ -30,7 +29,7 @@ TagManager:
   - BouncingSlime
   - VFX
   - OneWayPlatfrom
-  - Point
+  - 
   - 
   - 
   - 
@@ -68,9 +67,6 @@ TagManager:
     locked: 0
   - name: Platforms
     uniqueID: 1795437859
-    locked: 0
-  - name: Point
-    uniqueID: 2083592151
     locked: 0
   - name: BouncingSlime
     uniqueID: 3124679409
