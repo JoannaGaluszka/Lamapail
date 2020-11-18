@@ -16,9 +16,9 @@ public class PointMng : MonoBehaviour
         }
     }
 
-    public void ZmienWynik(int CherryValue)
+    public void ZmienWynik(int coinValue)
     {
-        punkt += CherryValue;
+        punkt += coinValue;
         text.text = "X" + punkt.ToString();
 
     }

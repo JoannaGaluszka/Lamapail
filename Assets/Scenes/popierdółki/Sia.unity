@@ -352,7 +352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1821675736fd210498699cad5659a423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CherryValue: 1
+  coinValue: 1
 --- !u!58 &19118843
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -406,7 +406,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2083592151
-  m_SortingLayer: 8
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 056b6a3f6e14d4af2a7d641c4dd44e79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3025,7 +3025,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1821675736fd210498699cad5659a423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CherryValue: 1
+  coinValue: 1
 --- !u!58 &168495708
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3079,7 +3079,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2083592151
-  m_SortingLayer: 8
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 056b6a3f6e14d4af2a7d641c4dd44e79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4746,7 +4746,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1821675736fd210498699cad5659a423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CherryValue: 1
+  coinValue: 1
 --- !u!58 &285158352
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4800,7 +4800,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2083592151
-  m_SortingLayer: 8
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 056b6a3f6e14d4af2a7d641c4dd44e79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5305,7 +5305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1821675736fd210498699cad5659a423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CherryValue: 1
+  coinValue: 1
 --- !u!58 &314306218
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5359,7 +5359,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2083592151
-  m_SortingLayer: 8
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 056b6a3f6e14d4af2a7d641c4dd44e79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -8089,7 +8089,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1821675736fd210498699cad5659a423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CherryValue: 1
+  coinValue: 1
 --- !u!58 &480199601
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -8143,7 +8143,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2083592151
-  m_SortingLayer: 8
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 056b6a3f6e14d4af2a7d641c4dd44e79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -12318,7 +12318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1821675736fd210498699cad5659a423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CherryValue: 1
+  coinValue: 1
 --- !u!58 &704366378
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -12372,7 +12372,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2083592151
-  m_SortingLayer: 8
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 056b6a3f6e14d4af2a7d641c4dd44e79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -13840,7 +13840,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1821675736fd210498699cad5659a423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CherryValue: 1
+  coinValue: 1
 --- !u!58 &790634653
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -13894,7 +13894,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2083592151
-  m_SortingLayer: 8
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 056b6a3f6e14d4af2a7d641c4dd44e79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -14669,7 +14669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1821675736fd210498699cad5659a423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CherryValue: 1
+  coinValue: 1
 --- !u!58 &825714461
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -14723,7 +14723,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2083592151
-  m_SortingLayer: 8
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 056b6a3f6e14d4af2a7d641c4dd44e79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -15826,7 +15826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1821675736fd210498699cad5659a423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CherryValue: 1
+  coinValue: 1
 --- !u!58 &918161444
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -15899,7 +15899,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2083592151
-  m_SortingLayer: 8
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 056b6a3f6e14d4af2a7d641c4dd44e79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -17342,7 +17342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1821675736fd210498699cad5659a423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CherryValue: 1
+  coinValue: 1
 --- !u!58 &1006400647
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -17396,7 +17396,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2083592151
-  m_SortingLayer: 8
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 056b6a3f6e14d4af2a7d641c4dd44e79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -19838,7 +19838,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1821675736fd210498699cad5659a423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CherryValue: 1
+  coinValue: 1
 --- !u!58 &1233299419
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -19892,7 +19892,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2083592151
-  m_SortingLayer: 8
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 056b6a3f6e14d4af2a7d641c4dd44e79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -23341,7 +23341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1821675736fd210498699cad5659a423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CherryValue: 1
+  coinValue: 1
 --- !u!58 &1487217166
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -23395,7 +23395,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2083592151
-  m_SortingLayer: 8
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 056b6a3f6e14d4af2a7d641c4dd44e79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -24631,7 +24631,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1821675736fd210498699cad5659a423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CherryValue: 1
+  coinValue: 1
 --- !u!58 &1541732482
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -24685,7 +24685,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2083592151
-  m_SortingLayer: 8
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 056b6a3f6e14d4af2a7d641c4dd44e79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -26287,7 +26287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1821675736fd210498699cad5659a423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CherryValue: 1
+  coinValue: 1
 --- !u!58 &1637570910
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -26341,7 +26341,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2083592151
-  m_SortingLayer: 8
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 056b6a3f6e14d4af2a7d641c4dd44e79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -30692,7 +30692,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1821675736fd210498699cad5659a423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CherryValue: 1
+  coinValue: 1
 --- !u!58 &1871649383
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -30746,7 +30746,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2083592151
-  m_SortingLayer: 8
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 056b6a3f6e14d4af2a7d641c4dd44e79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -31357,7 +31357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1821675736fd210498699cad5659a423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CherryValue: 1
+  coinValue: 1
 --- !u!58 &1914552715
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -31411,7 +31411,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2083592151
-  m_SortingLayer: 8
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 056b6a3f6e14d4af2a7d641c4dd44e79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -34399,7 +34399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1821675736fd210498699cad5659a423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CherryValue: 1
+  coinValue: 1
 --- !u!58 &2102154578
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -34453,7 +34453,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2083592151
-  m_SortingLayer: 8
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 056b6a3f6e14d4af2a7d641c4dd44e79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -34606,7 +34606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1821675736fd210498699cad5659a423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CherryValue: 1
+  coinValue: 1
 --- !u!58 &2114815317
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -34660,7 +34660,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2083592151
-  m_SortingLayer: 8
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 056b6a3f6e14d4af2a7d641c4dd44e79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
