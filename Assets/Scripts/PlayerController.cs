@@ -6,106 +6,90 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rb;
-    private SpriteRenderer spriteRenderer;
     public Transform feetPos;
     public LayerMask whatIsGround;
     Animator HeroAnimCont;
+    public Transform PunktZaczepienia;
 
     public float speed;
-    private float moveInput;
-    public float radius;
     public float ForceJump;
+    private float Grawitacja;
+    public float wallJump = 0.2f;
+    private float WallJumpReverse;
 
     private bool ground;
-    private bool doubleJump;
-    //walljump 
-    public float WallCheckRadius;
-    private bool TouchingWall;
-    public Transform WallCheck;
-    private bool WallSlide;
-    public float WallSlideSpeed;
-    //++++
-    private bool WallJump;
-    public float WallForceHorizontal;
-    public float WallForceVertical;
-    public float WallJumpTime;
+    private bool Grab, Grabbing;
 
-    public int zycie;
-    public int iloscSerc = 6;
 
-    public Image[] heart;
-    public Sprite full;
-    public Sprite empty;
-
-    private bool didWallJump = false;
-
-    private void Start()    
+    private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         HeroAnimCont = GetComponent<Animator>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        Grawitacja = rb.gravityScale;
 
-        zycie = iloscSerc;
+
 
     }
     private void Update()
     {
+        if (WallJumpReverse <= 0)
+        {
+            //CHODZENIE I SKAKANIE
+            rb.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * speed, rb.velocity.y);
 
-        //hp gracza, zmiana sprite
-        if (zycie > iloscSerc)
-        {
-            zycie = iloscSerc;
-        }
-        for (int i = 0; i < heart.Length; i++)
-        {
-            //jesli i jest mniejsze od ilosci zycia, pojawia sie full sprite 
-            if (i < zycie)
+            ground = Physics2D.OverlapCircle(feetPos.position, 0.2f, whatIsGround);
+
+            if (Input.GetButtonDown("Jump") && ground)
             {
-                heart[i].sprite = full;
+                rb.velocity = new Vector2(rb.velocity.x, ForceJump);
             }
-            else //jelsi i jest wieszke od ilosci zycia, zmienia sie na empty sprite
+            // FLIP
+            if (rb.velocity.x > 0)
             {
-                heart[i].sprite = empty;
+                transform.localScale = Vector3.one;
+            }
+            else if (rb.velocity.x < 0)
+            {
+                transform.localScale = new Vector3(-1f, 1, 1f);
+            }
 
-                //jesli i jest mniejsze od ilosci serc, to chcemy aby serca byly widoczne 
-                if (i < iloscSerc)
-                {
-                    heart[i].enabled = true;
+            // GRABBING I WALLJUMPING
+            Grab = Physics2D.OverlapCircle(PunktZaczepienia.position, .2f, whatIsGround);
 
-                }
-                else //jesli i jest wieksze od ilosci serc, to chcemy aby serca byly ukryte 
+            Grabbing = false;
+            if (Grab && !ground)
+            {
+                if ((transform.localScale.x == 1f && Input.GetAxisRaw("Horizontal") > 0) || (transform.localScale.x == -1f && Input.GetAxisRaw("Horizontal") < 0))
                 {
-                    heart[i].enabled = false;
+                    Grabbing = true;
                 }
             }
-        }
-        ground = Physics2D.OverlapCircle(feetPos.position, radius, whatIsGround);
 
-        if (ground)
+            if (Grabbing)
+            {
+                rb.gravityScale = 0f;
+                rb.velocity = Vector2.zero;
+
+                if (Input.GetButtonDown("Jump"))
+                {
+                    WallJumpReverse = wallJump;
+
+                    rb.velocity = new Vector2(-Input.GetAxisRaw("Horizontal") * speed, ForceJump);
+                    rb.gravityScale = Grawitacja;
+                    Grabbing = false;
+                }
+            }
+            else
+            {
+                rb.gravityScale = Grawitacja;
+            }
+        }
+        else
         {
-            didWallJump = false;
+            WallJumpReverse -= Time.deltaTime;
         }
 
-        //chodzonko
-        moveInput = Input.GetAxis("Horizontal");
 
-
-        if (didWallJump)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y);
-        } else
-        {
-            rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
-        }
-
-        if (moveInput > 0)
-        {
-            transform.eulerAngles = new Vector2(0, 0);
-        }
-        else if (moveInput < 0)
-        {
-            transform.eulerAngles = new Vector2(0, 180);
-        }
         //animatonko
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
             HeroAnimCont.SetBool("Idzie", true);
@@ -114,85 +98,22 @@ public class PlayerController : MonoBehaviour
             HeroAnimCont.SetBool("Idzie", false);
         }
 
-
-        //skaczanko
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (ground)
-            {
-                rb.velocity = Vector2.up * ForceJump;
-                
-            }
-           
-            
-        }
-        //wall Jump 
-        TouchingWall = Physics2D.OverlapCircle(WallCheck.position, WallCheckRadius, whatIsGround);
-
-        if(TouchingWall == true && ground == false && moveInput != 0)
-        {
-            WallSlide = true;
-        } else
-        {
-            WallSlide = false;
-        }
-        //zmiana charakterystyki rb przy slajdzie
-        if (WallSlide)
-        {                                                                    
-            rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -WallSlideSpeed, float.MaxValue));
-         
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space) && WallSlide == true)
-        {
-            WallJump = true;
-            Invoke("WallJumpBlock", WallJumpTime);
-        }
-        
-        if (WallJump == true)
-        {                                                    
-            didWallJump = true;
-            rb.velocity = new Vector2(WallForceHorizontal * -moveInput, WallForceVertical);
- 
-            Debug.Log("odbicie");
-            
-        }
-
-
-        if (zycie > iloscSerc)
-        {
-            zycie = iloscSerc;
-        }
-        if (zycie <= 0)
-        {
-            Die();
-        }
-
-    }
-    void Die()
-    {
-        //reset poziomu
-        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Point"))
-        {
-            Destroy(other.gameObject);
-        }
-    }
-
-    public void Damage(int obrazenia)
-    {
-        zycie -= obrazenia;
-    }
-
-    private void WallJumpBlock()
-    {
-        WallJump = false;
-        Debug.Log("WallJumpBlock");
-    }
 }
+
+       
+
+    
+
+   
+
+    
+
+
+    
+    
+
+   
 
 

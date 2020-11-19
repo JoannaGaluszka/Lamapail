@@ -10,7 +10,7 @@ public class Projectile : MonoBehaviour
 
     public bool playerInRange;
 
-    private PlayerController Player;
+    private HP Player;
     private Transform player;
     public LayerMask PlayerLayer;
     private Vector2 target;
@@ -18,7 +18,7 @@ public class Projectile : MonoBehaviour
 
     private void Start()
     {
-        Player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        Player = GameObject.FindGameObjectWithTag("Player").GetComponent<HP>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         target = new Vector2(player.position.x, player.position.y);
     }
