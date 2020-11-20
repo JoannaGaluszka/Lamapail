@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour
                 Dash = true;
                 ActualDash = StartDash;
                 rb.velocity = Vector2.zero;
-                DirectionDash = (int)moveInput;
+                DirectionDash = moveInput;
             }
 
             if (Dash)
