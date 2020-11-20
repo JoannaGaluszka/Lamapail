@@ -13,6 +13,7 @@ TagManager:
   - Point
   - CheckPoint
   - MovingPlatform
+  - Ground
   layers:
   - Default
   - TransparentFX
