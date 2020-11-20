@@ -16,9 +16,15 @@ public class PlayerController : MonoBehaviour
     private float Grawitacja;
     public float wallJump = 0.2f;
     private float WallJumpReverse;
+    private float DirectionDash;
+    private float ActualDash;
+    public float DashForce;
+    public float StartDash;
+    private float moveInput;
 
     private bool ground;
     private bool Grab, Grabbing;
+    public bool Dash;
 
 
     private void Start()
@@ -35,6 +41,7 @@ public class PlayerController : MonoBehaviour
         if (WallJumpReverse <= 0)
         {
             //CHODZENIE I SKAKANIE
+            moveInput = Input.GetAxis("Horizontal");
             rb.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * speed, rb.velocity.y);
 
             ground = Physics2D.OverlapCircle(feetPos.position, 0.2f, whatIsGround);
@@ -51,6 +58,24 @@ public class PlayerController : MonoBehaviour
             else if (rb.velocity.x < 0)
             {
                 transform.localScale = new Vector3(-1f, 1, 1f);
+            }
+            //DASH
+            if(Input.GetKeyDown(KeyCode.LeftShift) && !ground && moveInput != 0)
+            {
+                Dash = true;
+                ActualDash = StartDash;
+                rb.velocity = Vector2.zero;
+                DirectionDash = (int)moveInput;
+            }
+
+            if (Dash)
+            {
+                rb.velocity = transform.right * DirectionDash * ForceJump;
+                ActualDash -= Time.deltaTime;
+                if(ActualDash <= 0)
+                {
+                    Dash = false;
+                }
             }
 
             // GRABBING I WALLJUMPING
