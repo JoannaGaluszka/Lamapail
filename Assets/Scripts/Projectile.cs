@@ -6,26 +6,36 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     public float speed;
+    public float DetectionRadius;
 
-    private PlayerController Player;
+    public bool playerInRange;
+
+    private HP Player;
     private Transform player;
-
+    public LayerMask PlayerLayer;
     private Vector2 target;
+
 
     private void Start()
     {
-        Player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        Player = GameObject.FindGameObjectWithTag("Player").GetComponent<HP>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         target = new Vector2(player.position.x, player.position.y);
     }
     private void Update()
     {
-        //zamiast target, mozna zastosowac player.position, projectile bedzie followowac 
-        transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
+        playerInRange = Physics2D.OverlapCircle(transform.position, DetectionRadius, PlayerLayer);
 
-        if(transform.position.x == target.x && transform.position.y == target.y)
+        if (playerInRange)
         {
-            DestroyProjectile();
+
+            //zamiast target, mozna zastosowac player.position, projectile bedzie followowac 
+            transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
+
+            if (transform.position.x == target.x && transform.position.y == target.y)
+            {
+                DestroyProjectile();
+            }
         }
     }
 

@@ -10,6 +10,10 @@ TagManager:
   - turn
   - AttackDistance
   - BouncingSlime
+  - Point
+  - CheckPoint
+  - MovingPlatform
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -27,11 +31,11 @@ TagManager:
   - Player
   - Turn
   - BouncingSlime
-  - 
-  - 
-  - 
-  - 
-  - 
+  - VFX
+  - OneWayPlatfrom
+  - Point
+  - CheckPoint
+  - MovingPlatform
   - 
   - 
   - 
@@ -65,9 +69,18 @@ TagManager:
   - name: Enemy
     uniqueID: 2425597869
     locked: 0
+  - name: MovingPlatform
+    uniqueID: 3310884793
+    locked: 0
   - name: Platforms
     uniqueID: 1795437859
     locked: 0
+  - name: Point
+    uniqueID: 2083592151
+    locked: 0
   - name: BouncingSlime
     uniqueID: 3124679409
+    locked: 0
+  - name: UI
+    uniqueID: 2290359697
     locked: 0
