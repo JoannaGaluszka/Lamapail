@@ -5539,12 +5539,12 @@ PrefabInstance:
     - target: {fileID: 4686369158890043542, guid: 1e740386d44f48a43a748c5344c28c20,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.85
+      value: 0.62
       objectReference: {fileID: 0}
     - target: {fileID: 4686369159949863312, guid: 1e740386d44f48a43a748c5344c28c20,
         type: 3}
       propertyPath: DashForce
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4686369159949863312, guid: 1e740386d44f48a43a748c5344c28c20,
         type: 3}
@@ -54764,7 +54764,7 @@ PrefabInstance:
     - target: {fileID: 143704431548664552, guid: 31254530074f5624e96afc30f144464b,
         type: 3}
       propertyPath: m_Text
-      value: 'SPACE & L.CTRL
+      value: 'L.CTRL = DASH
 
 '
       objectReference: {fileID: 0}
