@@ -8,11 +8,15 @@ public class StickToPlatform : MonoBehaviour
     {
         if (col.gameObject.name.Equals("MovingPlatform"))
             this.transform.parent = col.transform;
+        if (col.gameObject.name.Equals("MovingPlatformY"))
+            this.transform.parent = col.transform;
     }
 
     void OnCollisionExit2D(Collision2D col)
     {
         if (col.gameObject.name.Equals("MovingPlatform"))
+            this.transform.parent = null;
+        if (col.gameObject.name.Equals("MovingPlatformY"))
             this.transform.parent = null;
     }
 }
