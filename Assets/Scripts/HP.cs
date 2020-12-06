@@ -11,7 +11,8 @@ public class HP : MonoBehaviour
     public Image[] heart;
     public Sprite full;
     public Sprite empty;
-    
+    public GameObject effect;
+
     void Start()
     {
         zycie = iloscSerc;
@@ -54,7 +55,9 @@ public class HP : MonoBehaviour
         }
         if (zycie <= 0)
         {
+            Instantiate(effect, transform.position, Quaternion.identity);
             Die();
+            
         }
 
     }

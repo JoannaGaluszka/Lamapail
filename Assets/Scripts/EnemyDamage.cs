@@ -9,8 +9,10 @@ public class EnemyDamage : MonoBehaviour
     int currentHealth;
     private Rigidbody2D rb;
     SpriteRenderer sprite;
+    public GameObject effect;
 
-    
+
+
 
 
     void Start()
@@ -32,6 +34,7 @@ public class EnemyDamage : MonoBehaviour
 
             if (currentHealth <= 0)
             {
+                
                 Die();
             }
 
@@ -40,7 +43,9 @@ public class EnemyDamage : MonoBehaviour
 
         void Die()
         {
+            
             Destroy(gameObject);
+            Instantiate(effect, transform.position, Quaternion.identity);
             Debug.Log("Enemy died!");
         }
 

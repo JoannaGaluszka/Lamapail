@@ -5,7 +5,8 @@ using UnityEngine;
 public class FallingObjects : MonoBehaviour
 {
     Rigidbody2D rb;
-   
+    public GameObject effect;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -25,6 +26,7 @@ public class FallingObjects : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            Instantiate(effect, transform.position, Quaternion.identity);
             Destroy(other.gameObject);
            
             DestroyFallingObject();
