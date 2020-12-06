@@ -1215,6 +1215,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7840574440050728188, guid: a5799cf428d5c1e4bbc65b69e042b81e,
         type: 3}
+    - target: {fileID: 1882039099065248009, guid: 3badf78cf08cbf04db8fb1a29a3d3c73,
+        type: 3}
+      propertyPath: blood
+      value: 
+      objectReference: {fileID: 2864548170618101817, guid: fece93512f624c84bb7d1684f5c17f32,
+        type: 3}
     - target: {fileID: 1882039099065248010, guid: 3badf78cf08cbf04db8fb1a29a3d3c73,
         type: 3}
       propertyPath: m_IsTrigger
@@ -5692,10 +5698,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7840574440050728188, guid: a5799cf428d5c1e4bbc65b69e042b81e,
         type: 3}
+    - target: {fileID: 4686369159949863321, guid: 1e740386d44f48a43a748c5344c28c20,
+        type: 3}
+      propertyPath: blood
+      value: 
+      objectReference: {fileID: 2864548170618101817, guid: fece93512f624c84bb7d1684f5c17f32,
+        type: 3}
     - target: {fileID: 4686369159990827517, guid: 1e740386d44f48a43a748c5344c28c20,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 62.3
+      value: 37.34
       objectReference: {fileID: 0}
     - target: {fileID: 4686369159990827517, guid: 1e740386d44f48a43a748c5344c28c20,
         type: 3}
@@ -39992,7 +40004,7 @@ PrefabInstance:
         type: 3}
       propertyPath: blood
       value: 
-      objectReference: {fileID: 8310322806410678794, guid: df69b1b69fabedc4d895f309aede5020,
+      objectReference: {fileID: 2864548170618101817, guid: fece93512f624c84bb7d1684f5c17f32,
         type: 3}
     - target: {fileID: 3998238883027278999, guid: c06f24d59c8a50041bf55fa2ec19d4d9,
         type: 3}

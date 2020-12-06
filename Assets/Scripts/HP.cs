@@ -12,6 +12,7 @@ public class HP : MonoBehaviour
     public Sprite full;
     public Sprite empty;
     public GameObject effect;
+    public GameObject blood;
 
     void Start()
     {
@@ -75,6 +76,7 @@ public class HP : MonoBehaviour
     }
     public void Damage(int obrazenia)
     {
+        Instantiate(blood, transform.position, Quaternion.identity);
         zycie -= obrazenia;
     }
 

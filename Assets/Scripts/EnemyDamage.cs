@@ -10,6 +10,7 @@ public class EnemyDamage : MonoBehaviour
     private Rigidbody2D rb;
     SpriteRenderer sprite;
     public GameObject effect;
+    public GameObject blood;
 
 
 
@@ -28,6 +29,7 @@ public class EnemyDamage : MonoBehaviour
         public void TakeDamage(int damage)
         {
             currentHealth -= damage;
+            Instantiate(blood, transform.position, Quaternion.identity);
             Debug.Log("Take " + damage + " damage");
             StartCoroutine(HitColor());
             rb.AddForce(transform.up * 60, ForceMode2D.Impulse);
