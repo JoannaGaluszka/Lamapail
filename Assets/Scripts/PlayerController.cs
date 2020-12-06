@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
     public float nextCooldownTime = 0;
 
     public GameObject dashEffect;
+    
 
 
     private void Start()
@@ -81,14 +82,18 @@ public class PlayerController : MonoBehaviour
 
                 if (Dash)
                 {
-                    
-                    rb.velocity = transform.right * DirectionDash * ForceJump;
-                    ActualDash -= Time.deltaTime;
-                    if (ActualDash <= 0)
-                    {
                     Instantiate(dashEffect, transform.position, Quaternion.identity);
+                    rb.velocity = transform.right * DirectionDash * ForceJump;
+                    
+                    ActualDash -= Time.deltaTime;
+                    
+
+                if (ActualDash <= 0)
+                    {
+                    
                     Dash = false;
-                        
+                    
+
                 }
                 }
             
