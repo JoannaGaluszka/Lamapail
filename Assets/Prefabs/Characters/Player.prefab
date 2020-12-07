@@ -106,7 +106,6 @@ GameObject:
   - component: {fileID: 4686369159949863326}
   - component: {fileID: 4686369159949863327}
   - component: {fileID: 4686369159949863312}
-  - component: {fileID: 4686369159949863313}
   - component: {fileID: 4686369159949863321}
   m_Layer: 13
   m_Name: Player
@@ -271,6 +270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sab: {fileID: 0}
+  slider: {fileID: 0}
   AttackPos: {fileID: 4686369159956632878}
   Enemies:
     serializedVersion: 2
@@ -295,25 +295,16 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 135936
   PunktZaczepienia: {fileID: 4686369158890043542}
+  PSA: {fileID: 4686369159949863327}
   speed: 12
   ForceJump: 20
   wallJump: 0.1
---- !u!114 &4686369159949863313
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4686369159949863314}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de7e0f2ae575eae4d89452fba1c3a908, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dashSpeed: 50
-  speed: 12
-  startDashTime: 0.1
-  startResetDash: 0.5
+  DashForce: 0
+  StartDash: 0
+  Dash: 0
+  cooldownTime: 1.25
+  nextCooldownTime: 0
+  dashEffect: {fileID: 0}
 --- !u!114 &4686369159949863321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -337,6 +328,8 @@ MonoBehaviour:
   - {fileID: 0}
   full: {fileID: -205270267638800340, guid: 5ed9f40d65d74df43a0218ce1408647e, type: 3}
   empty: {fileID: 6960772035834626590, guid: 5ed9f40d65d74df43a0218ce1408647e, type: 3}
+  effect: {fileID: 0}
+  blood: {fileID: 0}
 --- !u!1 &4686369159956632879
 GameObject:
   m_ObjectHideFlags: 0

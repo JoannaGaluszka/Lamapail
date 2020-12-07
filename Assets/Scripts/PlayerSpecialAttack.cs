@@ -8,18 +8,20 @@ using UnityEngine.UI;
 public class PlayerSpecialAttack : MonoBehaviour
 {
     public GameObject sab;
-    private Slider slider;
+    public Slider slider;
 
     public Transform AttackPos;
     public LayerMask Enemies;
     public float RangeAttack;
     public int damage = 80;
     public bool hit = false;
+    Animator HeroAnimCont;
 
 
     void Start()
     {
         slider = sab.GetComponent<Slider>();
+        HeroAnimCont = GetComponent<Animator>();
     }
 
     IEnumerator Cosbdzieje()
@@ -36,8 +38,13 @@ public class PlayerSpecialAttack : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.R))
             {
                 Attack();
-                StartCoroutine (Cosbdzieje());
-            }
+                StartCoroutine(Cosbdzieje());
+                HeroAnimCont.SetBool("SA", true);
+            }            
+        }
+        else
+        {
+            HeroAnimCont.SetBool("SA", false);
         }
     }
 

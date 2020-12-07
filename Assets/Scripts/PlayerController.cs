@@ -38,9 +38,6 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         HeroAnimCont = GetComponent<Animator>();
         Grawitacja = rb.gravityScale;
-
-
-
     }
     private void Update()
     {
@@ -142,7 +139,7 @@ public class PlayerController : MonoBehaviour
         {
             HeroAnimCont.SetBool("Idzie", false);
         }
-
+        
     }
 
 }
