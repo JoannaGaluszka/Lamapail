@@ -11,7 +11,9 @@ public class HP : MonoBehaviour
     public Image[] heart;
     public Sprite full;
     public Sprite empty;
-    
+    public GameObject effect;
+    public GameObject blood;
+
     void Start()
     {
         zycie = iloscSerc;
@@ -54,7 +56,9 @@ public class HP : MonoBehaviour
         }
         if (zycie <= 0)
         {
+            Instantiate(effect, transform.position, Quaternion.identity);
             Die();
+            
         }
 
     }
@@ -72,6 +76,7 @@ public class HP : MonoBehaviour
     }
     public void Damage(int obrazenia)
     {
+        Instantiate(blood, transform.position, Quaternion.identity);
         zycie -= obrazenia;
     }
 
