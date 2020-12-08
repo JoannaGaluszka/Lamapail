@@ -146,6 +146,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 300
+  effect: {fileID: 7840574440050728188, guid: a5799cf428d5c1e4bbc65b69e042b81e, type: 3}
+  blood: {fileID: 2864548170618101817, guid: fece93512f624c84bb7d1684f5c17f32, type: 3}
 --- !u!114 &3998238883027278996
 MonoBehaviour:
   m_ObjectHideFlags: 0
