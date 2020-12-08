@@ -9,13 +9,14 @@ public class PlayerSpecialAttack : MonoBehaviour
 {
     public GameObject sab;
     public Slider slider;
-
+    public GameObject GO;
     public Transform AttackPos;
     public LayerMask Enemies;
     public float RangeAttack;
     public int damage = 80;
     public bool hit = false;
     Animator HeroAnimCont;
+    public GameObject effect;
 
 
     void Start()
@@ -40,6 +41,7 @@ public class PlayerSpecialAttack : MonoBehaviour
                 Attack();
                 StartCoroutine(Cosbdzieje());
                 HeroAnimCont.SetBool("SA", true);
+                Instantiate(effect, GO.transform.position, Quaternion.identity);
             }            
         }
         else

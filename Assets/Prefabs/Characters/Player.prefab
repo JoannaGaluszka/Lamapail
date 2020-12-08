@@ -129,6 +129,7 @@ Transform:
   - {fileID: 4686369158729063013}
   - {fileID: 4686369158890043542}
   - {fileID: 4686369159956632878}
+  - {fileID: 2575170966270995450}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -271,6 +272,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sab: {fileID: 0}
   slider: {fileID: 0}
+  GO: {fileID: 0}
   AttackPos: {fileID: 4686369159956632878}
   Enemies:
     serializedVersion: 2
@@ -278,6 +280,7 @@ MonoBehaviour:
   RangeAttack: 6
   damage: 80
   hit: 0
+  effect: {fileID: 0}
 --- !u!114 &4686369159949863312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -295,7 +298,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 135936
   PunktZaczepienia: {fileID: 4686369158890043542}
-  PSA: {fileID: 4686369159949863327}
   speed: 12
   ForceJump: 20
   wallJump: 0.1
@@ -359,4 +361,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4686369159990827517}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6920770468087818272
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2575170966270995450}
+  m_Layer: 0
+  m_Name: Rogi
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2575170966270995450
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6920770468087818272}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.695, y: 0.73, z: -1.781286}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4686369159990827517}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
