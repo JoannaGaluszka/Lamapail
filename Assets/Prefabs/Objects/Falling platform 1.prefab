@@ -201,8 +201,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbda4e0734c5b7149bfb484da890e699, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "CzasWywo\u0142ania": 1
-  RespawnTime: 3
+  rb: {fileID: 2385949961011304197}
+  Spr: {fileID: 2385949961011304196}
+  coll: {fileID: 0}
+  respawn: 1
 --- !u!61 &2385949961011304198
 BoxCollider2D:
   m_ObjectHideFlags: 0

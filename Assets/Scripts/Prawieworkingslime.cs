@@ -13,11 +13,11 @@ public class Prawieworkingslime : MonoBehaviour
     
     public Transform AttackDistance;
     public LayerMask StartAttack;
-    private HP Player;
+    private PlayerController Player;
 
     private void Start()
     {
-        Player = GameObject.FindGameObjectWithTag("Player").GetComponent<HP>();
+        Player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
 
         private void OnDrawGizmosSelected()

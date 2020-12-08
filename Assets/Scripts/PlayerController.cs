@@ -6,132 +6,94 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rb;
+    private SpriteRenderer spriteRenderer;
     public Transform feetPos;
     public LayerMask whatIsGround;
     Animator HeroAnimCont;
-    public Transform PunktZaczepienia;
+    public bool IsFacingRight;
 
     public float speed;
+    public float moveInput;
+    public float radius;
     public float ForceJump;
-    private float Grawitacja;
-    public float wallJump = 0.2f;
-    private float WallJumpReverse;
-    private float DirectionDash;
-    private float ActualDash;
-    public float DashForce;
-    public float StartDash;
-    private float moveInput;
 
-    private bool ground;
-    private bool Grab, Grabbing;
-    public bool Dash;
-
-    public float cooldownTime = 1.25f;
-    public float nextCooldownTime = 0;
-
-    public GameObject dashEffect;
+    public bool ground;
+    private bool doubleJump;
     
+    public int zycie;
+    public int iloscSerc = 6;
 
+    public Image[] heart;
+    public Sprite full;
+    public Sprite empty;
 
-    private void Start()
+    private void Start()    
     {
         rb = GetComponent<Rigidbody2D>();
         HeroAnimCont = GetComponent<Animator>();
-        Grawitacja = rb.gravityScale;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        IsFacingRight = true;
+        zycie = iloscSerc;
+
     }
     private void Update()
     {
-        if (WallJumpReverse <= 0)
+        if(ground && Input.GetKeyDown(KeyCode.Space))
         {
-            //CHODZENIE I SKAKANIE
-            moveInput = Input.GetAxis("Horizontal");
-            rb.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * speed, rb.velocity.y);
-
-            ground = Physics2D.OverlapCircle(feetPos.position, 0.2f, whatIsGround);
-
-            if (Input.GetButtonDown("Jump") && ground)
-            {
-                rb.velocity = new Vector2(rb.velocity.x, ForceJump);
-            }
-            // FLIP
-            if (rb.velocity.x > 0)
-            {
-                transform.localScale = Vector3.one;
-            }
-            else if (rb.velocity.x < 0)
-            {
-                transform.localScale = new Vector3(-1f, 1, 1f);
-            }
-            //DASH
-            if (Time.time > nextCooldownTime)
-            {
-                if (Input.GetKeyDown(KeyCode.LeftControl) && moveInput != 0)
-                {
-
-                    Dash = true;
-                    ActualDash = StartDash;
-                    rb.velocity = Vector2.zero;
-                    DirectionDash = moveInput;
-                    nextCooldownTime = Time.time + cooldownTime;
-                    
-                }
-            }
-
-                if (Dash)
-                {
-                    Instantiate(dashEffect, transform.position, Quaternion.identity);
-                    rb.velocity = transform.right * DirectionDash * ForceJump;
-                    
-                    ActualDash -= Time.deltaTime;
-                    
-
-                if (ActualDash <= 0)
-                    {
-                    
-                    Dash = false;
-                    
-
-                }
-                }
-            
-
-            // GRABBING I WALLJUMPING
-            Grab = Physics2D.OverlapCircle(PunktZaczepienia.position, .2f, whatIsGround);
-
-            Grabbing = false;
-            if (Grab)
-            {
-                if ((transform.localScale.x == 1f && Input.GetAxisRaw("Horizontal") > 0) || (transform.localScale.x == -1f && Input.GetAxisRaw("Horizontal") < 0))
-                {
-                    Grabbing = true;
-                }
-            }
-
-            if (Grabbing)
-            {
-                rb.gravityScale = 0f;
-                rb.velocity = Vector2.zero;
-
-                if (Input.GetButtonDown("Jump"))
-                {
-                    WallJumpReverse = wallJump;
-
-                    rb.velocity = new Vector2(-Input.GetAxisRaw("Horizontal") * speed, ForceJump);
-                    rb.gravityScale = Grawitacja;
-                    Grabbing = false;
-                }
-            }
-            else
-            {
-                rb.gravityScale = Grawitacja;
-            }
-        }
-        else
-        {
-            WallJumpReverse -= Time.deltaTime;
+            Jump();
         }
 
+        //hp gracza, zmiana sprite
+        if (zycie > iloscSerc)
+        {
+            zycie = iloscSerc;
+        }
+        for (int i = 0; i < heart.Length; i++)
+        {
+            //jesli i jest mniejsze od ilosci zycia, pojawia sie full sprite 
+            if (i < zycie)
+            {
+                heart[i].sprite = full;
+            }
+            else //jelsi i jest wieszke od ilosci zycia, zmienia sie na empty sprite
+            {
+                heart[i].sprite = empty;
 
+                //jesli i jest mniejsze od ilosci serc, to chcemy aby serca byly widoczne 
+                if (i < iloscSerc)
+                {
+                    heart[i].enabled = true;
+
+                }
+                else //jesli i jest wieksze od ilosci serc, to chcemy aby serca byly ukryte 
+                {
+                    heart[i].enabled = false;
+                }
+            }
+        }
+        bool grounded = Physics2D.OverlapCircle(feetPos.position, radius, whatIsGround);
+
+        if (grounded)
+        {
+            ground = true;
+        } else {
+            ground = false;
+        }
+
+        //chodzonko
+        moveInput = Input.GetAxis("Horizontal");
+        rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+
+        if (moveInput > 0)
+        {
+            IsFacingRight = true;
+            transform.eulerAngles = new Vector2(0, 0);           
+        }
+        else if (moveInput < 0)
+        {
+            IsFacingRight = false;
+            transform.eulerAngles = new Vector2(0, 180);        
+        }
         //animatonko
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
             HeroAnimCont.SetBool("Idzie", true);
@@ -139,23 +101,35 @@ public class PlayerController : MonoBehaviour
         {
             HeroAnimCont.SetBool("Idzie", false);
         }
-        
+
+   
+        if (zycie > iloscSerc)
+        {
+            zycie = iloscSerc;
+        }
+        if (zycie <= 0)
+        {
+            Die();
+        }
+
     }
 
+    //skaczanko
+    public void Jump()
+    {
+        rb.velocity = new Vector2(rb.velocity.x, ForceJump);
+    }
+
+    void Die()
+    {
+        //reset poziomu
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void Damage(int obrazenia)
+    {
+        zycie -= obrazenia;
+    }
 }
-
-       
-
-    
-
-   
-
-    
-
-
-    
-    
-
-   
 
 

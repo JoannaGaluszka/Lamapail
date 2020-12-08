@@ -104,11 +104,6 @@ MonoBehaviour:
   backdistance: 4
   DetectionRadius: 1.6
   AttackDistance: {fileID: 1882039099503627861}
-  PlayerLayer:
-    serializedVersion: 2
-    m_Bits: 0
-  playerInRange: 0
-  facingRight: 0
   czaRozpoczStrz: 3
   projectile: {fileID: 4080945446917120123, guid: 0622ce300cff79f4ea7e93179f91bd7d,
     type: 3}
@@ -162,8 +157,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 300
-  effect: {fileID: 7840574440050728188, guid: a5799cf428d5c1e4bbc65b69e042b81e, type: 3}
-  blood: {fileID: 2864548170618101817, guid: fece93512f624c84bb7d1684f5c17f32, type: 3}
 --- !u!1 &1882039099503627860
 GameObject:
   m_ObjectHideFlags: 0

@@ -112,10 +112,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f5f0f650223cc64885c2fe8a1012ad9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
-  DetectionRadius: 13
+  speed: 5
+  DetectionRadius: 16
   playerInRange: 0
   PlayerLayer:
     serializedVersion: 2
     m_Bits: 8192
-  liveTime: 2
