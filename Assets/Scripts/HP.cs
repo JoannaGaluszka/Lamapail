@@ -19,7 +19,7 @@ public class HP : MonoBehaviour
         zycie = iloscSerc;
     }
 
-    
+
     void Update()
     {
         //hp gracza, zmiana sprite
@@ -58,7 +58,7 @@ public class HP : MonoBehaviour
         {
             Instantiate(effect, transform.position, Quaternion.identity);
             Die();
-            
+
         }
 
     }
