@@ -295,7 +295,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 135936
   PunktZaczepienia: {fileID: 4686369158890043542}
-  PSA: {fileID: 4686369159949863327}
   speed: 12
   ForceJump: 20
   wallJump: 0.1
@@ -304,7 +303,8 @@ MonoBehaviour:
   Dash: 0
   cooldownTime: 1.25
   nextCooldownTime: 0
-  dashEffect: {fileID: 0}
+  dashEffect: {fileID: 7488327433671025659, guid: 87eaffffce592fc458114a69d815e303,
+    type: 3}
 --- !u!114 &4686369159949863321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -328,8 +328,8 @@ MonoBehaviour:
   - {fileID: 0}
   full: {fileID: -205270267638800340, guid: 5ed9f40d65d74df43a0218ce1408647e, type: 3}
   empty: {fileID: 6960772035834626590, guid: 5ed9f40d65d74df43a0218ce1408647e, type: 3}
-  effect: {fileID: 0}
-  blood: {fileID: 0}
+  effect: {fileID: 7840574440050728188, guid: a5799cf428d5c1e4bbc65b69e042b81e, type: 3}
+  blood: {fileID: 2864548170618101817, guid: fece93512f624c84bb7d1684f5c17f32, type: 3}
 --- !u!1 &4686369159956632879
 GameObject:
   m_ObjectHideFlags: 0
