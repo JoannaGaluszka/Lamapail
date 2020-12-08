@@ -26,15 +26,18 @@ public class PlayerController : MonoBehaviour
     private bool Grab, Grabbing;
     public bool Dash;
 
+    public float cooldownTime = 1.25f;
+    public float nextCooldownTime = 0;
+
+    public GameObject dashEffect;
+    
+
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         HeroAnimCont = GetComponent<Animator>();
         Grawitacja = rb.gravityScale;
-
-
-
     }
     private void Update()
     {
@@ -60,29 +63,43 @@ public class PlayerController : MonoBehaviour
                 transform.localScale = new Vector3(-1f, 1, 1f);
             }
             //DASH
-            if(Input.GetKeyDown(KeyCode.LeftShift) && !ground && moveInput != 0)
+            if (Time.time > nextCooldownTime)
             {
-                Dash = true;
-                ActualDash = StartDash;
-                rb.velocity = Vector2.zero;
-                DirectionDash = moveInput;
-            }
-
-            if (Dash)
-            {
-                rb.velocity = transform.right * DirectionDash * ForceJump;
-                ActualDash -= Time.deltaTime;
-                if(ActualDash <= 0)
+                if (Input.GetKeyDown(KeyCode.LeftControl) && moveInput != 0)
                 {
-                    Dash = false;
+
+                    Dash = true;
+                    ActualDash = StartDash;
+                    rb.velocity = Vector2.zero;
+                    DirectionDash = moveInput;
+                    nextCooldownTime = Time.time + cooldownTime;
+                    
                 }
             }
+
+                if (Dash)
+                {
+                    Instantiate(dashEffect, transform.position, Quaternion.identity);
+                    rb.velocity = transform.right * DirectionDash * ForceJump;
+                    
+                    ActualDash -= Time.deltaTime;
+                    
+
+                if (ActualDash <= 0)
+                    {
+                    
+                    Dash = false;
+                    
+
+                }
+                }
+            
 
             // GRABBING I WALLJUMPING
             Grab = Physics2D.OverlapCircle(PunktZaczepienia.position, .2f, whatIsGround);
 
             Grabbing = false;
-            if (Grab && !ground)
+            if (Grab)
             {
                 if ((transform.localScale.x == 1f && Input.GetAxisRaw("Horizontal") > 0) || (transform.localScale.x == -1f && Input.GetAxisRaw("Horizontal") < 0))
                 {
@@ -122,7 +139,7 @@ public class PlayerController : MonoBehaviour
         {
             HeroAnimCont.SetBool("Idzie", false);
         }
-
+        
     }
 
 }
