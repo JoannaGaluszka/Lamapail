@@ -6,7 +6,7 @@ public class PlayerFollow : MonoBehaviour
 {
     public Transform Player;
     [Range(0, 1)]
-    public float k;
+    public float k = 1;
 
     void Update()
     {
