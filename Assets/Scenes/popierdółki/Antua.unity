@@ -52138,7 +52138,7 @@ PrefabInstance:
     - target: {fileID: 4686369159949863327, guid: 1e740386d44f48a43a748c5344c28c20,
         type: 3}
       propertyPath: StunTime
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4686369159990827517, guid: 1e740386d44f48a43a748c5344c28c20,
         type: 3}
