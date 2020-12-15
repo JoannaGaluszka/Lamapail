@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 1
-  nextLevel: AMI
+  nextLevel: Arr Pirate
 --- !u!50 &4575101262674773544
 Rigidbody2D:
   serializedVersion: 4

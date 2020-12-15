@@ -3963,6 +3963,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: FallingSpikes
       objectReference: {fileID: 0}
+    - target: {fileID: 950191316694628599, guid: bf829bf58e3071a479a97bb80c7b14a8,
+        type: 3}
+      propertyPath: effect
+      value: 
+      objectReference: {fileID: 7840574440050728188, guid: a5799cf428d5c1e4bbc65b69e042b81e,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf829bf58e3071a479a97bb80c7b14a8, type: 3}
 --- !u!4 &132089292 stripped
@@ -30957,6 +30963,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4392370447760190284, guid: f9119cdb1eda8c74d81cf7934d87209f,
+        type: 3}
+      propertyPath: m_Mass
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 4392370447760190286, guid: f9119cdb1eda8c74d81cf7934d87209f,
         type: 3}
       propertyPath: m_RootOrder
@@ -49296,7 +49307,7 @@ PrefabInstance:
         type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 6840809796989710495, guid: 0f0b1a573e033ed4ab344451ed24f0da,
+      objectReference: {fileID: 4575101262674773547, guid: 0f0b1a573e033ed4ab344451ed24f0da,
         type: 3}
     - target: {fileID: 1882039099065248010, guid: 3badf78cf08cbf04db8fb1a29a3d3c73,
         type: 3}
@@ -52149,12 +52160,12 @@ PrefabInstance:
     - target: {fileID: 4686369159990827517, guid: 1e740386d44f48a43a748c5344c28c20,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 72.59
+      value: 32.68
       objectReference: {fileID: 0}
     - target: {fileID: 4686369159990827517, guid: 1e740386d44f48a43a748c5344c28c20,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.27
+      value: 0.13
       objectReference: {fileID: 0}
     - target: {fileID: 4686369159990827517, guid: 1e740386d44f48a43a748c5344c28c20,
         type: 3}
