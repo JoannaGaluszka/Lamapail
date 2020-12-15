@@ -11,6 +11,7 @@ public class EnemyDamage : MonoBehaviour
     SpriteRenderer sprite;
     public GameObject effect;
     public GameObject blood;
+    public GameObject item;
 
 
 
@@ -49,6 +50,7 @@ public class EnemyDamage : MonoBehaviour
             Destroy(gameObject);
             Instantiate(effect, transform.position, Quaternion.identity);
             Debug.Log("Enemy died!");
+            Instantiate(item, transform.position, Quaternion.identity);
         }
 
         IEnumerator HitColor()
