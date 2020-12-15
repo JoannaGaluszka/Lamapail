@@ -9,14 +9,16 @@ public class PlayerSpecialAttack : MonoBehaviour
 {
     public GameObject sab;
     public Slider slider;
-    public GameObject GO;
+    public GameObject Rogi;
     public Transform AttackPos;
     public LayerMask Enemies;
     public float RangeAttack;
     public int damage = 80;
     public bool hit = false;
     Animator HeroAnimCont;
-    public GameObject effect;
+    public GameObject EfektPlayer;
+    public GameObject EfektEnemy;
+    public float StunTime;
 
 
     void Start()
@@ -32,6 +34,18 @@ public class PlayerSpecialAttack : MonoBehaviour
         hit = false;
     }
 
+    //IEnumerator Stunned()
+    //{
+      //  Collider2D[] EnemyCheck = Physics2D.OverlapCircleAll(AttackPos.position, RangeAttack, Enemies);
+      //  foreach (Collider2D enemy in EnemyCheck)
+      //  {
+      //     float speedo = enemy.GetComponent<Prawieworkingslime>().speed;
+      //      speedo = 0;
+      //      yield return new WaitForSeconds(StunTime);
+      //      speedo = 2;
+      //  }
+   // }
+
     public void Update()
     {
         if (slider.value == 10f)
@@ -41,7 +55,7 @@ public class PlayerSpecialAttack : MonoBehaviour
                 Attack();
                 StartCoroutine(Cosbdzieje());
                 HeroAnimCont.SetBool("SA", true);
-                Instantiate(effect, GO.transform.position, Quaternion.identity);
+                Instantiate(EfektPlayer, Rogi.transform.position, Quaternion.identity);
             }            
         }
         else
@@ -57,17 +71,18 @@ public class PlayerSpecialAttack : MonoBehaviour
     }
 
 
-
     private void Attack()
     {
         
         Collider2D[] DealingDamage = Physics2D.OverlapCircleAll(AttackPos.position, RangeAttack, Enemies);
         foreach (Collider2D enemy in DealingDamage)
         {
+            enemy.GetComponent<Transform>();
             enemy.GetComponent<EnemyDamage>().TakeDamage(damage);
+           // StartCoroutine(Stunned());
+            GameObject efekcik = Instantiate(EfektEnemy, enemy.transform.position, Quaternion.identity);
+            efekcik.transform.SetParent(enemy.transform);
         }
 
     }
-
-    
 }

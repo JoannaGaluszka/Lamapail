@@ -12081,7 +12081,7 @@ PrefabInstance:
     - target: {fileID: 3998238883027278999, guid: c06f24d59c8a50041bf55fa2ec19d4d9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 59.540005
+      value: 58.02
       objectReference: {fileID: 0}
     - target: {fileID: 4135515356995502696, guid: c06f24d59c8a50041bf55fa2ec19d4d9,
         type: 3}
@@ -20355,6 +20355,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a22c30eca8be7594783bb70d7f9e3486, type: 3}
+--- !u!1 &802576731 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6920770468087818272, guid: 1e740386d44f48a43a748c5344c28c20,
+    type: 3}
+  m_PrefabInstance: {fileID: 2032191306}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &803642823 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1689137769525867595, guid: a22c30eca8be7594783bb70d7f9e3486,
@@ -52112,15 +52118,37 @@ PrefabInstance:
       propertyPath: sab
       value: 
       objectReference: {fileID: 1683888973}
+    - target: {fileID: 4686369159949863327, guid: 1e740386d44f48a43a748c5344c28c20,
+        type: 3}
+      propertyPath: EfektPlayer
+      value: 
+      objectReference: {fileID: 4062887801315973991, guid: 1369d5c70bb7e0849849ba333e3d62ce,
+        type: 3}
+    - target: {fileID: 4686369159949863327, guid: 1e740386d44f48a43a748c5344c28c20,
+        type: 3}
+      propertyPath: EfektEnemy
+      value: 
+      objectReference: {fileID: 7729046139948923819, guid: 60f6c748182b60749a5734a4a3d6214a,
+        type: 3}
+    - target: {fileID: 4686369159949863327, guid: 1e740386d44f48a43a748c5344c28c20,
+        type: 3}
+      propertyPath: Rogi
+      value: 
+      objectReference: {fileID: 802576731}
+    - target: {fileID: 4686369159949863327, guid: 1e740386d44f48a43a748c5344c28c20,
+        type: 3}
+      propertyPath: StunTime
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4686369159990827517, guid: 1e740386d44f48a43a748c5344c28c20,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 88.93
+      value: 72.59
       objectReference: {fileID: 0}
     - target: {fileID: 4686369159990827517, guid: 1e740386d44f48a43a748c5344c28c20,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.4
+      value: -3.27
       objectReference: {fileID: 0}
     - target: {fileID: 4686369159990827517, guid: 1e740386d44f48a43a748c5344c28c20,
         type: 3}
