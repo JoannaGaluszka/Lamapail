@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: "Assets/Scenes/popierd\xF3\u0142ki/Sia.unity"
+    guid: 251b05708fce87e4588614c694154736
+  - enabled: 1
+    path: "Assets/Scenes/popierd\xF3\u0142ki/lvl2.unity"
+    guid: a041c0425ca584248b8f9f9cddc284b3
   m_configObjects: {}

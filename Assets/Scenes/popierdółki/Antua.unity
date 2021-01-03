@@ -3963,6 +3963,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: FallingSpikes
       objectReference: {fileID: 0}
+    - target: {fileID: 950191316694628599, guid: bf829bf58e3071a479a97bb80c7b14a8,
+        type: 3}
+      propertyPath: effect
+      value: 
+      objectReference: {fileID: 7840574440050728188, guid: a5799cf428d5c1e4bbc65b69e042b81e,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf829bf58e3071a479a97bb80c7b14a8, type: 3}
 --- !u!4 &132089292 stripped
@@ -12081,7 +12087,7 @@ PrefabInstance:
     - target: {fileID: 3998238883027278999, guid: c06f24d59c8a50041bf55fa2ec19d4d9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 59.540005
+      value: 58.02
       objectReference: {fileID: 0}
     - target: {fileID: 4135515356995502696, guid: c06f24d59c8a50041bf55fa2ec19d4d9,
         type: 3}
@@ -20355,6 +20361,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a22c30eca8be7594783bb70d7f9e3486, type: 3}
+--- !u!1 &802576731 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6920770468087818272, guid: 1e740386d44f48a43a748c5344c28c20,
+    type: 3}
+  m_PrefabInstance: {fileID: 2032191306}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &803642823 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1689137769525867595, guid: a22c30eca8be7594783bb70d7f9e3486,
@@ -30951,6 +30963,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4392370447760190284, guid: f9119cdb1eda8c74d81cf7934d87209f,
+        type: 3}
+      propertyPath: m_Mass
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 4392370447760190286, guid: f9119cdb1eda8c74d81cf7934d87209f,
         type: 3}
       propertyPath: m_RootOrder
@@ -49286,6 +49303,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1882039099065248009, guid: 3badf78cf08cbf04db8fb1a29a3d3c73,
+        type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 4575101262674773547, guid: 0f0b1a573e033ed4ab344451ed24f0da,
+        type: 3}
     - target: {fileID: 1882039099065248010, guid: 3badf78cf08cbf04db8fb1a29a3d3c73,
         type: 3}
       propertyPath: m_IsTrigger
@@ -52112,15 +52135,37 @@ PrefabInstance:
       propertyPath: sab
       value: 
       objectReference: {fileID: 1683888973}
+    - target: {fileID: 4686369159949863327, guid: 1e740386d44f48a43a748c5344c28c20,
+        type: 3}
+      propertyPath: EfektPlayer
+      value: 
+      objectReference: {fileID: 4062887801315973991, guid: 1369d5c70bb7e0849849ba333e3d62ce,
+        type: 3}
+    - target: {fileID: 4686369159949863327, guid: 1e740386d44f48a43a748c5344c28c20,
+        type: 3}
+      propertyPath: EfektEnemy
+      value: 
+      objectReference: {fileID: 7729046139948923819, guid: 60f6c748182b60749a5734a4a3d6214a,
+        type: 3}
+    - target: {fileID: 4686369159949863327, guid: 1e740386d44f48a43a748c5344c28c20,
+        type: 3}
+      propertyPath: Rogi
+      value: 
+      objectReference: {fileID: 802576731}
+    - target: {fileID: 4686369159949863327, guid: 1e740386d44f48a43a748c5344c28c20,
+        type: 3}
+      propertyPath: StunTime
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4686369159990827517, guid: 1e740386d44f48a43a748c5344c28c20,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 88.93
+      value: 32.68
       objectReference: {fileID: 0}
     - target: {fileID: 4686369159990827517, guid: 1e740386d44f48a43a748c5344c28c20,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.4
+      value: 0.13
       objectReference: {fileID: 0}
     - target: {fileID: 4686369159990827517, guid: 1e740386d44f48a43a748c5344c28c20,
         type: 3}
