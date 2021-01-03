@@ -152,7 +152,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 369ba3788032e864e96797a28c9a1691, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -273,7 +273,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sab: {fileID: 0}
   slider: {fileID: 0}
-  GO: {fileID: 6920770468087818272}
+  Rogi: {fileID: 0}
   AttackPos: {fileID: 4686369159956632878}
   Enemies:
     serializedVersion: 2
@@ -281,7 +281,9 @@ MonoBehaviour:
   RangeAttack: 6
   damage: 80
   hit: 0
-  effect: {fileID: 4062887801315973991, guid: 1369d5c70bb7e0849849ba333e3d62ce, type: 3}
+  EfektPlayer: {fileID: 0}
+  EfektEnemy: {fileID: 0}
+  StunTime: 0
 --- !u!114 &4686369159949863312
 MonoBehaviour:
   m_ObjectHideFlags: 0
