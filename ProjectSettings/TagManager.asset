@@ -10,6 +10,8 @@ TagManager:
   - turn
   - AttackDistance
   - BouncingSlime
+  - Ground
+  - Point
   layers:
   - Default
   - TransparentFX
@@ -73,4 +75,7 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 2290359697
+    locked: 0
+  - name: Player Coverup
+    uniqueID: 2162259275
     locked: 0

@@ -12,14 +12,10 @@ public class PSA : MonoBehaviour
     public GameObject player;
     bool atak;
 
-    public Image srBar, srPin;
-
     void Start()
     {
         slider = GetComponent<Slider>();
         SetMax(10);
-        srBar = this.transform.Find("bartile_0").GetComponent<Image>();
-        srPin = this.transform.Find("nextbartile_0").GetComponent<Image>();
     }
 
     public void SetMax(int valuee)
