@@ -14,7 +14,7 @@ public class switchLevel : MonoBehaviour
             SceneManager.LoadScene(index);
         }
 
-        SceneManager.LoadScene(nextLevel);
+        
     }
 
 }
