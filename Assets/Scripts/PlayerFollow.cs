@@ -11,7 +11,7 @@ public class PlayerFollow : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector3 desiredPos = new Vector3(Player.position.x, 2, transform.position.z);
+        Vector3 desiredPos = new Vector3(Player.position.x+3, 2, transform.position.z);
         Vector3 smoothPos = Vector3.SmoothDamp(transform.position, desiredPos, ref velocity, k);
         transform.position = smoothPos;
         //transform.position = Vector3.Lerp(transform.position, new Vector3(Player.position.x, 2, transform.position.z), k);

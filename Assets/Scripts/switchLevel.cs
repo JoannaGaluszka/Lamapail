@@ -5,13 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class switchLevel : MonoBehaviour
 {
-    public int index;
-    public string nextLevel;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene(index);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
         
