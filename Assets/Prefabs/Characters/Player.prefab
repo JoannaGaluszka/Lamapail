@@ -304,8 +304,8 @@ MonoBehaviour:
   speed: 12
   ForceJump: 20
   wallJump: 0.1
-  DashForce: 0
-  StartDash: 0
+  DashForce: 15
+  StartDash: 0.3
   Dash: 0
   cooldownTime: 1.25
   nextCooldownTime: 0

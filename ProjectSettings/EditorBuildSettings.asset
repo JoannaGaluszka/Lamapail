@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: "Assets/Scenes/popierd\xF3\u0142ki/Sia.unity"
     guid: 251b05708fce87e4588614c694154736
   - enabled: 1
-    path: "Assets/Scenes/popierd\xF3\u0142ki/lvl2.unity"
-    guid: a041c0425ca584248b8f9f9cddc284b3
+    path: "Assets/Scenes/popierd\xF3\u0142ki/Antua.unity"
+    guid: 3bff7b48e89c12441b6f1fae298d6260
+  - enabled: 1
+    path: "Assets/Scenes/popierd\xF3\u0142ki/lvl 3 dark.unity"
+    guid: 16352293301d9dd43a4bfa8336f068af
   m_configObjects: {}
