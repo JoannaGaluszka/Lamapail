@@ -281,8 +281,10 @@ MonoBehaviour:
   RangeAttack: 6
   damage: 80
   hit: 0
-  EfektPlayer: {fileID: 0}
-  EfektEnemy: {fileID: 0}
+  EfektPlayer: {fileID: 4062887801315973991, guid: 1369d5c70bb7e0849849ba333e3d62ce,
+    type: 3}
+  EfektEnemy: {fileID: 7729046139948923819, guid: 60f6c748182b60749a5734a4a3d6214a,
+    type: 3}
   StunTime: 0
 --- !u!114 &4686369159949863312
 MonoBehaviour:
@@ -330,6 +332,7 @@ MonoBehaviour:
   empty: {fileID: 6960772035834626590, guid: 5ed9f40d65d74df43a0218ce1408647e, type: 3}
   effect: {fileID: 7840574440050728188, guid: a5799cf428d5c1e4bbc65b69e042b81e, type: 3}
   blood: {fileID: 2864548170618101817, guid: fece93512f624c84bb7d1684f5c17f32, type: 3}
+  DeadMenu: {fileID: 0}
 --- !u!1 &4686369159956632879
 GameObject:
   m_ObjectHideFlags: 0
