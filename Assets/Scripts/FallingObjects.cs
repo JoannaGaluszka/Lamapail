@@ -6,6 +6,7 @@ public class FallingObjects : MonoBehaviour
 {
     Rigidbody2D rb;
     public GameObject effect;
+    public GameObject DeadMenu;
 
     void Start()
     {
@@ -31,7 +32,7 @@ public class FallingObjects : MonoBehaviour
            
             DestroyFallingObject();
 
-            UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+            DeadMenu.SetActive(true);
 
         }
         else

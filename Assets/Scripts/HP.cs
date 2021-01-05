@@ -13,6 +13,7 @@ public class HP : MonoBehaviour
     public Sprite empty;
     public GameObject effect;
     public GameObject blood;
+    public GameObject DeadMenu;
 
     void Start()
     {
@@ -64,8 +65,7 @@ public class HP : MonoBehaviour
     }
     void Die()
     {
-        //reset poziomu
-        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+        DeadMenu.SetActive(true);
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
