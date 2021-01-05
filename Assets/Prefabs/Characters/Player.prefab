@@ -285,7 +285,7 @@ MonoBehaviour:
     type: 3}
   EfektEnemy: {fileID: 7729046139948923819, guid: 60f6c748182b60749a5734a4a3d6214a,
     type: 3}
-  StunTime: 0
+  StunTime: 2
 --- !u!114 &4686369159949863312
 MonoBehaviour:
   m_ObjectHideFlags: 0
