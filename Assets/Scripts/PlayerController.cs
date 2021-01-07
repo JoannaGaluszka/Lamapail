@@ -133,7 +133,7 @@ public class PlayerController : MonoBehaviour
 
 
         //animatonko
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+        if ((transform.localScale.x == 1f && Input.GetAxisRaw("Horizontal") > 0) || (transform.localScale.x == -1f && Input.GetAxisRaw("Horizontal") < 0))
             HeroAnimCont.SetBool("Idzie", true);
         else
         {

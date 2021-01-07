@@ -5340,6 +5340,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1564721794}
     m_Modifications:
+    - target: {fileID: 1299299274318967000, guid: c7cd865abfbc0704f8f2c7a6d3fd0ab9,
+        type: 3}
+      propertyPath: Speed
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1384030808833335729, guid: c7cd865abfbc0704f8f2c7a6d3fd0ab9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7468,8 +7473,8 @@ Transform:
   m_Children:
   - {fileID: 1759282028}
   - {fileID: 1034953515}
-  - {fileID: 65961336}
   - {fileID: 352624598}
+  - {fileID: 65961336}
   m_Father: {fileID: 1564721794}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13358,12 +13363,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &487707432 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8142805460251716248, guid: f9119cdb1eda8c74d81cf7934d87209f,
-    type: 3}
-  m_PrefabInstance: {fileID: 1549324421}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &489583612
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24952,6 +24951,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 946dc731dcd6cf849bf2875b2db930c1, type: 3}
+--- !u!4 &958470370 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4069334048666134186, guid: f9119cdb1eda8c74d81cf7934d87209f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1549324421}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &964222299 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3413287783061729187, guid: 946dc731dcd6cf849bf2875b2db930c1,
@@ -33475,6 +33480,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1564721794}
     m_Modifications:
+    - target: {fileID: 1299299274318967000, guid: c7cd865abfbc0704f8f2c7a6d3fd0ab9,
+        type: 3}
+      propertyPath: Speed
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1384030808833335729, guid: c7cd865abfbc0704f8f2c7a6d3fd0ab9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -37661,7 +37671,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.062332153, y: 0.15280914}
+  m_Offset: {x: 0.005241394, y: 0.091732025}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -37672,7 +37682,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.7091217, y: 1.6943817}
+  m_Size: {x: 1.7351227, y: 1.816536}
   m_EdgeRadius: 0
 --- !u!212 &1422047494
 SpriteRenderer:
@@ -39574,6 +39584,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1564721794}
     m_Modifications:
+    - target: {fileID: 1299299274318967000, guid: c7cd865abfbc0704f8f2c7a6d3fd0ab9,
+        type: 3}
+      propertyPath: Speed
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1384030808833335729, guid: c7cd865abfbc0704f8f2c7a6d3fd0ab9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -41685,7 +41700,17 @@ PrefabInstance:
     - target: {fileID: 4069334048666134186, guid: f9119cdb1eda8c74d81cf7934d87209f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 24
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069334048666134186, guid: f9119cdb1eda8c74d81cf7934d87209f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 198.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069334048666134186, guid: f9119cdb1eda8c74d81cf7934d87209f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.82
       objectReference: {fileID: 0}
     - target: {fileID: 4392370447760190274, guid: f9119cdb1eda8c74d81cf7934d87209f,
         type: 3}
@@ -41961,7 +41986,7 @@ Transform:
   - {fileID: 566315409}
   - {fileID: 1383509716}
   - {fileID: 1129220386}
-  - {fileID: 487707432}
+  - {fileID: 958470370}
   - {fileID: 373873737}
   - {fileID: 1947458763}
   - {fileID: 542618222}
