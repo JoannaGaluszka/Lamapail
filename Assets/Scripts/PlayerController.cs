@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour
 
             ground = Physics2D.OverlapCircle(feetPos.position, 0.2f, whatIsGround);
 
-            if (Input.GetButtonDown("Jump")&& ground) 
+            if (Input.GetButtonDown("Jump") && ground)
             {
                 rb.velocity = new Vector2(rb.velocity.x, ForceJump);
             }
