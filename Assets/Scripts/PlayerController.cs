@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask whatIsGround;
     Animator HeroAnimCont;
     public Transform PunktZaczepienia;
+    private AudioSource jump;
 
     public float speed;
     public float ForceJump;
@@ -38,6 +39,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         HeroAnimCont = GetComponent<Animator>();
         Grawitacja = rb.gravityScale;
+        jump = GetComponent<AudioSource>();
     }
     private void Update()
     {
@@ -52,6 +54,7 @@ public class PlayerController : MonoBehaviour
             if (Input.GetButtonDown("Jump") && ground)
             {
                 rb.velocity = new Vector2(rb.velocity.x, ForceJump);
+                jump.Play();
             }
             // FLIP
             if (rb.velocity.x > 0)
