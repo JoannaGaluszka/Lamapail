@@ -20,18 +20,18 @@ public class SoundMng : MonoBehaviour
    
 
 
-    private static bool audioMngExists;
-    void Start()
-    {
-        if (!audioMngExists)
-        {
-            audioMngExists = true;
-            DontDestroyOnLoad(transform.gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
+    //private static bool audioMngExists;
+    //void Start()
+   // {
+        //if (!audioMngExists)
+      //  {
+         //   audioMngExists = true;
+           // DontDestroyOnLoad(transform.gameObject);
+      //  }
+       // else
+      //  {
+           // Destroy(gameObject);
+       // }
+   // }
 
 }
