@@ -17,6 +17,7 @@ public class SoundMng : MonoBehaviour
     public AudioSource Win;
     public AudioSource Projectile;
     public AudioSource BreakProjectile;
+   
 
 
     private static bool audioMngExists;
