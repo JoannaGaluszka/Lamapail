@@ -74,7 +74,7 @@ public class HP : MonoBehaviour
     }
     void Die()
     {
-        soundMng.playerDead.Play();
+        
         DeadMenu.SetActive(true);
         
     }
