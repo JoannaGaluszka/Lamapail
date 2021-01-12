@@ -28,7 +28,7 @@ public class PlayerAttack : MonoBehaviour
             {
                 Attack();
                 Debug.Log("Attack");
-                soundMng.playerAttack.Play();
+                
             }
 
 
@@ -59,6 +59,7 @@ public class PlayerAttack : MonoBehaviour
         foreach (Collider2D enemy in DealingDamage)
         {
             enemy.GetComponent<EnemyDamage>().TakeDamage(damage);
+            soundMng.playerAttack.Play();
         }
 
     }

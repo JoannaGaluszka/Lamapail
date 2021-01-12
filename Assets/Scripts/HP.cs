@@ -61,10 +61,13 @@ public class HP : MonoBehaviour
         }
         if (zycie <= 0)
         {
+            
             Instantiate(effect, transform.position, Quaternion.identity);
             
+
             Die();
             
+
 
         }
 

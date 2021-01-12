@@ -38,7 +38,7 @@ public class EnemyDamage : MonoBehaviour
             Debug.Log("Take " + damage + " damage");
             StartCoroutine(HitColor());
             rb.AddForce(transform.up * 60, ForceMode2D.Impulse);
-            soundMng.playerHurt.Play();
+            
 
 
         if (currentHealth <= 0)
@@ -52,13 +52,14 @@ public class EnemyDamage : MonoBehaviour
 
         void Die()
         {
-            
+            soundMng.enemyDead.Play();
             Destroy(gameObject);
             Instantiate(effect, transform.position, Quaternion.identity);
             Debug.Log("Enemy died!");
             Instantiate(item, transform.position, Quaternion.identity);
             
-        }
+
+    }
 
         IEnumerator HitColor()
         {

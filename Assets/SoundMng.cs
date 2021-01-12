@@ -11,6 +11,12 @@ public class SoundMng : MonoBehaviour
     public AudioSource PickUp;
     public AudioSource open;
     public AudioSource dash;
+    public AudioSource enemyDead;
+    public AudioSource PressPad;
+    public AudioSource SuperAttack;
+    public AudioSource Win;
+    public AudioSource Projectile;
+    public AudioSource BreakProjectile;
 
 
     private static bool audioMngExists;
