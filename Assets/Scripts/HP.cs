@@ -14,10 +14,14 @@ public class HP : MonoBehaviour
     public GameObject effect;
     public GameObject blood;
     public GameObject DeadMenu;
+    public AudioSource GameOverSound;
+    public AudioSource pickupSound;
 
     void Start()
     {
         zycie = iloscSerc;
+        GameOverSound = GetComponent<AudioSource>();
+        pickupSound = GetComponent<AudioSource>();
     }
 
 
@@ -58,19 +62,24 @@ public class HP : MonoBehaviour
         if (zycie <= 0)
         {
             Instantiate(effect, transform.position, Quaternion.identity);
+            
             Die();
+            
 
         }
 
     }
     void Die()
     {
+        GameOverSound.Play();
         DeadMenu.SetActive(true);
+        
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Point"))
         {
+            pickupSound.Play();
             Destroy(other.gameObject);
         }
     }
