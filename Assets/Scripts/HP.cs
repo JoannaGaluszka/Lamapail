@@ -14,14 +14,14 @@ public class HP : MonoBehaviour
     public GameObject effect;
     public GameObject blood;
     public GameObject DeadMenu;
-    public AudioSource GameOverSound;
+    private SoundMng soundMng;
     public AudioSource pickupSound;
 
     void Start()
     {
         zycie = iloscSerc;
-        GameOverSound = GetComponent<AudioSource>();
-        pickupSound = GetComponent<AudioSource>();
+        soundMng = FindObjectOfType<SoundMng>();
+        
     }
 
 
@@ -61,17 +61,20 @@ public class HP : MonoBehaviour
         }
         if (zycie <= 0)
         {
+            
             Instantiate(effect, transform.position, Quaternion.identity);
             
+
             Die();
             
+
 
         }
 
     }
     void Die()
     {
-        GameOverSound.Play();
+        soundMng.playerDead.Play();
         DeadMenu.SetActive(true);
         
     }
@@ -79,7 +82,7 @@ public class HP : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Point"))
         {
-            pickupSound.Play();
+            soundMng.PickUp.Play();
             Destroy(other.gameObject);
         }
     }

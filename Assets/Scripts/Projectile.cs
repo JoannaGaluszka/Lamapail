@@ -15,6 +15,7 @@ public class Projectile : MonoBehaviour
     public LayerMask PlayerLayer;
     private Vector2 target;
     public float liveTime = 1.5f;
+    private SoundMng soundMng;
 
 
     private void Start()
@@ -22,6 +23,7 @@ public class Projectile : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player").GetComponent<HP>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         target = new Vector2(player.position.x, player.position.y);
+        soundMng = FindObjectOfType<SoundMng>();
     }
     private void Update()
     {
@@ -57,6 +59,8 @@ public class Projectile : MonoBehaviour
 
         if (other.CompareTag("Player"))
         {
+            
+            soundMng.Projectile.Play();
             Player.Damage(1);
         }
 
@@ -67,6 +71,7 @@ public class Projectile : MonoBehaviour
     void DestroyProjectile()
     {
         {
+            soundMng.BreakProjectile.Play();
             Destroy(gameObject);
         }
     }

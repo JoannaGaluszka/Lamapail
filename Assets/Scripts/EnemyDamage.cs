@@ -12,7 +12,7 @@ public class EnemyDamage : MonoBehaviour
     public GameObject effect;
     public GameObject blood;
     public GameObject item;
-    private AudioSource hit;
+    private SoundMng soundMng;
 
 
 
@@ -23,8 +23,8 @@ public class EnemyDamage : MonoBehaviour
         currentHealth = maxHealth;
         rb = transform.GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
-        hit = GetComponent<AudioSource>();
-        
+        soundMng = FindObjectOfType<SoundMng>();
+
 
     }
 
@@ -33,12 +33,13 @@ public class EnemyDamage : MonoBehaviour
         {
             
             currentHealth -= damage;
-            hit.Play();
+            
             Instantiate(blood, transform.position, Quaternion.identity);
             Debug.Log("Take " + damage + " damage");
             StartCoroutine(HitColor());
             rb.AddForce(transform.up * 60, ForceMode2D.Impulse);
-        
+            
+
 
         if (currentHealth <= 0)
             {
@@ -51,13 +52,14 @@ public class EnemyDamage : MonoBehaviour
 
         void Die()
         {
-            
+            soundMng.enemyDead.Play();
             Destroy(gameObject);
             Instantiate(effect, transform.position, Quaternion.identity);
             Debug.Log("Enemy died!");
             Instantiate(item, transform.position, Quaternion.identity);
             
-        }
+
+    }
 
         IEnumerator HitColor()
         {
