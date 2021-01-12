@@ -897,7 +897,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 350, y: 70}
+  m_AnchoredPosition: {x: 350, y: 162}
   m_SizeDelta: {x: 243.39526, y: 53.724487}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &143704431548664553
@@ -1131,8 +1131,6 @@ MonoBehaviour:
     type: 3}
   glowPin: {fileID: 5463174806482870277, guid: 24ff58e7ef568764b8678a17b8da90d5, type: 3}
   player: {fileID: 0}
-  srBar: {fileID: 0}
-  srPin: {fileID: 0}
 --- !u!1 &143704432132193869
 GameObject:
   m_ObjectHideFlags: 0
@@ -1277,8 +1275,8 @@ RectTransform:
   m_Father: {fileID: 143704431469999428}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -350, y: -206}
   m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 1, y: 1}
