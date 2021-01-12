@@ -14,10 +14,13 @@ public class Prawieworkingslime : MonoBehaviour
     public Transform AttackDistance;
     public LayerMask StartAttack;
     private HP Player;
+    private SoundMng soundMng;
+
 
     private void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player").GetComponent<HP>();
+        soundMng = FindObjectOfType<SoundMng>();
     }
 
         private void OnDrawGizmosSelected()
@@ -83,6 +86,7 @@ public class Prawieworkingslime : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            soundMng.playerHurt.Play();
             Player.Damage(1);
         }
     }

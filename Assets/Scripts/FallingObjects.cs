@@ -7,11 +7,13 @@ public class FallingObjects : MonoBehaviour
     Rigidbody2D rb;
     public GameObject effect;
     public GameObject DeadMenu;
+    private SoundMng soundMng;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        
+        soundMng = FindObjectOfType<SoundMng>();
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -27,10 +29,11 @@ public class FallingObjects : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            soundMng.playerDead.Play();
             Instantiate(effect, transform.position, Quaternion.identity);
             Destroy(other.gameObject);
+       
            
-            DestroyFallingObject();
 
             DeadMenu.SetActive(true);
 
@@ -44,10 +47,6 @@ public class FallingObjects : MonoBehaviour
         
        
     }
-    
-    void DestroyFallingObject()
-    {
-            Destroy(gameObject);
-    }
+   
 
 }

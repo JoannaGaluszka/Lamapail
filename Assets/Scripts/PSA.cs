@@ -11,11 +11,13 @@ public class PSA : MonoBehaviour
     public Sprite normalBar, glowBar, normalPin, glowPin;
     public GameObject player;
     bool atak;
+    private SoundMng soundMng;
 
     void Start()
     {
         slider = GetComponent<Slider>();
         SetMax(10);
+        soundMng = FindObjectOfType<SoundMng>();
     }
 
     public void SetMax(int valuee)
@@ -28,6 +30,7 @@ public class PSA : MonoBehaviour
         atak = player.GetComponent<PlayerSpecialAttack>().hit;
         startingTime += Time.deltaTime;
         slider.value = startingTime;
+        
 
         if (startingTime >= slider.maxValue)
         {
@@ -36,14 +39,16 @@ public class PSA : MonoBehaviour
             bar[0].sprite = glowBar;
             bar[1].sprite = glowPin;
             
+
         }
         if (atak)
         {
-
+            soundMng.SuperAttack.Play();
             startingTime = 0f;
             slider.value = 0f;
             bar[0].sprite = normalBar;
             bar[1].sprite = normalPin;
+            
 
         }
     }
