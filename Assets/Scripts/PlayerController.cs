@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask whatIsGround;
     Animator HeroAnimCont;
     public Transform PunktZaczepienia;
-    private AudioSource jump;
+    
 
     public float speed;
     public float ForceJump;
@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
     public float nextCooldownTime = 0;
 
     public GameObject dashEffect;
+    private SoundMng soundMng;
     
 
 
@@ -39,7 +40,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         HeroAnimCont = GetComponent<Animator>();
         Grawitacja = rb.gravityScale;
-        jump = GetComponent<AudioSource>();
+        soundMng = FindObjectOfType<SoundMng>();
     }
     private void Update()
     {
@@ -54,7 +55,8 @@ public class PlayerController : MonoBehaviour
             if (Input.GetButtonDown("Jump") && ground)
             {
                 rb.velocity = new Vector2(rb.velocity.x, ForceJump);
-                jump.Play();
+                soundMng.jump.Play();
+
             }
             // FLIP
             if (rb.velocity.x > 0)
@@ -76,13 +78,15 @@ public class PlayerController : MonoBehaviour
                     rb.velocity = Vector2.zero;
                     DirectionDash = moveInput;
                     nextCooldownTime = Time.time + cooldownTime;
-                    
+                    soundMng.dash.Play();
+
                 }
             }
 
                 if (Dash)
                 {
                     Instantiate(dashEffect, transform.position, Quaternion.identity);
+                    
                     rb.velocity = transform.right * DirectionDash * ForceJump;
                     
                     ActualDash -= Time.deltaTime;
