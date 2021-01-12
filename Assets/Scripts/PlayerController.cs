@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask whatIsGround;
     Animator HeroAnimCont;
     public Transform PunktZaczepienia;
-    private AudioSource jump;
+    public AudioSource jump;
 
     public float speed;
     public float ForceJump;
