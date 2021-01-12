@@ -7,9 +7,11 @@ public class InstaKill : MonoBehaviour
     public PlayerController player;
     public GameObject effect;
     public GameObject DeadMenu;
+    public AudioSource GameOverSound;
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
+        GameOverSound = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -21,6 +23,7 @@ public class InstaKill : MonoBehaviour
         if(other.name == "Player")
         {
             Instantiate(effect, transform.position, Quaternion.identity);
+            GameOverSound.Play();
             DeadMenu.SetActive(true);
         }
     }

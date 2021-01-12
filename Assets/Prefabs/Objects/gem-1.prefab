@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: -3602084374132792269}
   m_Layer: 0
   m_Name: gem-1
-  m_TagString: Untagged
+  m_TagString: Point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -181,8 +181,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49bd8f67dfa454f4dbebd4a9b27a47f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 1
-  nextLevel: lvl2
 --- !u!50 &4575101262674773544
 Rigidbody2D:
   serializedVersion: 4
