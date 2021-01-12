@@ -8,11 +8,13 @@ public class Switch : MonoBehaviour
     public bool isOn;
     public DoorController doors;
     public bool TriggerEntered;
+    private AudioSource open;
     private void Start()
     {
         gameObject.GetComponent<SpriteRenderer>().sprite = off;
         TriggerEntered = false;
         isOn = false;
+        open = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -37,6 +39,7 @@ public class Switch : MonoBehaviour
     private void Use()
     {
         gameObject.GetComponent<SpriteRenderer>().sprite = on;
+        open.Play();
         isOn = true;
         doors.Open();
     }

@@ -14,6 +14,7 @@ public class Prawieworkingslime : MonoBehaviour
     public Transform AttackDistance;
     public LayerMask StartAttack;
     private HP Player;
+    
 
     private void Start()
     {
