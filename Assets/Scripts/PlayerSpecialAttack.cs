@@ -35,17 +35,17 @@ public class PlayerSpecialAttack : MonoBehaviour
         hit = false;
     }
 
-    IEnumerator Stunned()
-    {
-        Collider2D[] EnemyCheck = Physics2D.OverlapCircleAll(AttackPos.position, RangeAttack, Enemies);
-        foreach (Collider2D enemy in EnemyCheck)
-        {
+    //IEnumerator Stunned()
+    //{
+       // Collider2D[] EnemyCheck = Physics2D.OverlapCircleAll(AttackPos.position, RangeAttack, Enemies);
+       // foreach (Collider2D enemy in EnemyCheck)
+       // {
 
-           enemy.GetComponent<Prawieworkingslime>().enabled = false;
-           yield return new WaitForSeconds(StunTime);
-            enemy.GetComponent<Prawieworkingslime>().enabled = true;
-       }
-    }
+         //  enemy.GetComponent<Prawieworkingslime>().enabled = false;
+          // yield return new WaitForSeconds(StunTime);
+//enemy.GetComponent<Prawieworkingslime>().enabled = true;
+      // }
+   // }
 
     public void Update()
     {
@@ -80,12 +80,12 @@ public class PlayerSpecialAttack : MonoBehaviour
         {
             enemy.GetComponent<Transform>();
             enemy.GetComponent<EnemyDamage>().TakeDamage(damage);
-            StartCoroutine(Stunned());
+            //StartCoroutine(Stunned());
             positione = new Vector3(enemy.transform.position.x, enemy.transform.position.y, enemy.transform.position.z - 2);
-            Instantiate(EfektEnemy, positione, Quaternion.identity);
+            //Instantiate(EfektEnemy, positione, Quaternion.identity);
 
-            //GameObject efekcik = Instantiate(EfektEnemy, enemy.transform.position, Quaternion.identity);
-            //efekcik.transform.SetParent(enemy.transform);
+            GameObject efekcik = Instantiate(EfektEnemy, positione, Quaternion.identity);
+            efekcik.transform.SetParent(enemy.transform);
         }
 
     }
