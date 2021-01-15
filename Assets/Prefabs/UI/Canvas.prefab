@@ -897,8 +897,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 350, y: 162}
-  m_SizeDelta: {x: 243.39526, y: 53.724487}
+  m_AnchoredPosition: {x: 350, y: 116.67}
+  m_SizeDelta: {x: 200.04706, y: 207.56796}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &143704431548664553
 CanvasRenderer:
@@ -934,15 +934,17 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 43
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'SPACE & SHIFT
+  m_Text: 'atak: F
 
-'
+    dash: SPACE & CTRL
+
+    akcja: E'
 --- !u!1 &143704431820488241
 GameObject:
   m_ObjectHideFlags: 0
