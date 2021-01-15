@@ -18,6 +18,9 @@ public class Presspad : MonoBehaviour
     {
         
     }
+    void OnTriggerEnter2D()
+    { soundMng.PressPad.Play(); }
+
     void OnTriggerStay2D()
     {
         

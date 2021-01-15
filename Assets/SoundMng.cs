@@ -17,20 +17,21 @@ public class SoundMng : MonoBehaviour
     public AudioSource Win;
     public AudioSource Projectile;
     public AudioSource BreakProjectile;
+   
 
 
-    private static bool audioMngExists;
-    void Start()
-    {
-        if (!audioMngExists)
-        {
-            audioMngExists = true;
-            DontDestroyOnLoad(transform.gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
+    //private static bool audioMngExists;
+    //void Start()
+   // {
+        //if (!audioMngExists)
+      //  {
+         //   audioMngExists = true;
+           // DontDestroyOnLoad(transform.gameObject);
+      //  }
+       // else
+      //  {
+           // Destroy(gameObject);
+       // }
+   // }
 
 }

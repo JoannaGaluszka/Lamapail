@@ -15,7 +15,7 @@ public class HP : MonoBehaviour
     public GameObject blood;
     public GameObject DeadMenu;
     private SoundMng soundMng;
-    public AudioSource pickupSound;
+    
 
     void Start()
     {
@@ -74,7 +74,7 @@ public class HP : MonoBehaviour
     }
     void Die()
     {
-        soundMng.playerDead.Play();
+        
         DeadMenu.SetActive(true);
         
     }
