@@ -54,7 +54,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -173,7 +173,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: {fileID: 7840574440050728188, guid: a5799cf428d5c1e4bbc65b69e042b81e, type: 3}
   DeadMenu: {fileID: 0}
-  GameOverSound: {fileID: 0}
 --- !u!82 &7901019124767631296
 AudioSource:
   m_ObjectHideFlags: 0
