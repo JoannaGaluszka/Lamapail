@@ -18,7 +18,8 @@ public class PlayerSpecialAttack : MonoBehaviour
     Animator HeroAnimCont;
     public GameObject EfektPlayer;
     public GameObject EfektEnemy;
-    public float StunTime;
+    //public float StunTime = 200f;
+    Vector3 positione; 
 
 
     void Start()
@@ -34,16 +35,17 @@ public class PlayerSpecialAttack : MonoBehaviour
         hit = false;
     }
 
-    IEnumerator Stunned()
-    {
-        Collider2D[] EnemyCheck = Physics2D.OverlapCircleAll(AttackPos.position, RangeAttack, Enemies);
-        foreach (Collider2D enemy in EnemyCheck)
-        {
-           enemy.GetComponent<Prawieworkingslime>().enabled = false;
-           yield return new WaitForSeconds(StunTime);
-            enemy.GetComponent<Prawieworkingslime>().enabled = true;
-       }
-    }
+    //IEnumerator Stunned()
+    //{
+       // Collider2D[] EnemyCheck = Physics2D.OverlapCircleAll(AttackPos.position, RangeAttack, Enemies);
+       // foreach (Collider2D enemy in EnemyCheck)
+       // {
+
+         //  enemy.GetComponent<Prawieworkingslime>().enabled = false;
+         //  yield return new WaitForSeconds(StunTime);
+         //   enemy.GetComponent<Prawieworkingslime>().enabled = true;
+      // }
+   // }
 
     public void Update()
     {
@@ -54,7 +56,8 @@ public class PlayerSpecialAttack : MonoBehaviour
                 Attack();
                 StartCoroutine(Cosbdzieje());
                 HeroAnimCont.SetBool("SA", true);
-                Instantiate(EfektPlayer, Rogi.transform.position, Quaternion.identity);
+                GameObject efektpl = Instantiate(EfektPlayer, Rogi.transform.position, Quaternion.identity);
+                efektpl.transform.SetParent(this.transform);
             }            
         }
         else
@@ -78,9 +81,12 @@ public class PlayerSpecialAttack : MonoBehaviour
         {
             enemy.GetComponent<Transform>();
             enemy.GetComponent<EnemyDamage>().TakeDamage(damage);
-            StartCoroutine(Stunned());
-            GameObject efekcik = Instantiate(EfektEnemy, enemy.transform.position, Quaternion.identity);
+            //StartCoroutine(Stunned());
+            positione = new Vector3(enemy.transform.position.x, enemy.transform.position.y, enemy.transform.position.z - 2);
+
+            GameObject efekcik = Instantiate(EfektEnemy, positione, Quaternion.identity);
             efekcik.transform.SetParent(enemy.transform);
+
         }
 
     }

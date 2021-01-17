@@ -5,16 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class switchLevel : MonoBehaviour
 {
-    public int index;
-    public string nextLevel;
+    private SoundMng soundMng;
+    private void Start()
+    {
+        soundMng = FindObjectOfType<SoundMng>();
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene(index);
+            soundMng.Win.Play();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
-        SceneManager.LoadScene(nextLevel);
+        
     }
 
 }

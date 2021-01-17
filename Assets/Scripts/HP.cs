@@ -13,10 +13,15 @@ public class HP : MonoBehaviour
     public Sprite empty;
     public GameObject effect;
     public GameObject blood;
+    public GameObject DeadMenu;
+    private SoundMng soundMng;
+    
 
     void Start()
     {
         zycie = iloscSerc;
+        soundMng = FindObjectOfType<SoundMng>();
+        
     }
 
 
@@ -56,21 +61,28 @@ public class HP : MonoBehaviour
         }
         if (zycie <= 0)
         {
+            
             Instantiate(effect, transform.position, Quaternion.identity);
+            
+
             Die();
+            
+
 
         }
 
     }
     void Die()
     {
-        //reset poziomu
-        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+        
+        DeadMenu.SetActive(true);
+        
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Point"))
         {
+            soundMng.PickUp.Play();
             Destroy(other.gameObject);
         }
     }

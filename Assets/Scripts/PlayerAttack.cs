@@ -12,7 +12,12 @@ public class PlayerAttack : MonoBehaviour
     public LayerMask Enemies;
     public float RangeAttack;
     public int damage = 40;
+    private SoundMng soundMng;
 
+    private void Start()
+    {
+        soundMng = FindObjectOfType<SoundMng>();
+    }
     private void Update()
     {
         if (CzasMiedzyAtakiem <= 0)
@@ -23,6 +28,7 @@ public class PlayerAttack : MonoBehaviour
             {
                 Attack();
                 Debug.Log("Attack");
+                
             }
 
 
@@ -53,6 +59,7 @@ public class PlayerAttack : MonoBehaviour
         foreach (Collider2D enemy in DealingDamage)
         {
             enemy.GetComponent<EnemyDamage>().TakeDamage(damage);
+            soundMng.playerAttack.Play();
         }
 
     }
