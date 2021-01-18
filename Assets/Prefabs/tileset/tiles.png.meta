@@ -134,7 +134,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 2621
-        width: 1024
+        width: 955
         height: 1219
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -155,7 +155,7 @@ TextureImporter:
         serializedVersion: 2
         x: 1025
         y: 2619
-        width: 868
+        width: 796
         height: 1221
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -176,7 +176,7 @@ TextureImporter:
         serializedVersion: 2
         x: 1895
         y: 2621
-        width: 848
+        width: 821
         height: 1219
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -197,7 +197,7 @@ TextureImporter:
         serializedVersion: 2
         x: 2744
         y: 2625
-        width: 884
+        width: 852
         height: 1215
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -239,7 +239,7 @@ TextureImporter:
         serializedVersion: 2
         x: 4573
         y: 2621
-        width: 1043
+        width: 934
         height: 1219
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -260,7 +260,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 1333
-        width: 1022
+        width: 960
         height: 1287
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -281,7 +281,7 @@ TextureImporter:
         serializedVersion: 2
         x: 1025
         y: 1331
-        width: 864
+        width: 797
         height: 1285
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -302,7 +302,7 @@ TextureImporter:
         serializedVersion: 2
         x: 1894
         y: 1334
-        width: 849
+        width: 819
         height: 1277
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -321,9 +321,9 @@ TextureImporter:
       name: tiles_9
       rect:
         serializedVersion: 2
-        x: 2748
+        x: 2751
         y: 1340
-        width: 880
+        width: 844
         height: 1274
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -365,7 +365,7 @@ TextureImporter:
         serializedVersion: 2
         x: 4578
         y: 1329
-        width: 1030
+        width: 926
         height: 1289
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -386,7 +386,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 1
-        width: 963
+        width: 774
         height: 1331
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -410,7 +410,7 @@ TextureImporter:
         width: 916
         height: 1243
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

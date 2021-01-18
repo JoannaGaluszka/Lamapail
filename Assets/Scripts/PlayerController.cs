@@ -106,11 +106,14 @@ public class PlayerController : MonoBehaviour
             Grab = Physics2D.OverlapCircle(PunktZaczepienia.position, .2f, whatIsGround);
 
             Grabbing = false;
+            HeroAnimCont.SetBool("Grabbing", false);
+
             if (Grab)
             {
                 if ((transform.localScale.x == 1f && Input.GetAxisRaw("Horizontal") > 0) || (transform.localScale.x == -1f && Input.GetAxisRaw("Horizontal") < 0))
                 {
                     Grabbing = true;
+                    HeroAnimCont.SetBool("Grabbing", true);
                 }
             }
 
@@ -119,6 +122,11 @@ public class PlayerController : MonoBehaviour
                 rb.gravityScale = 0f;
                 rb.velocity = Vector2.zero;
 
+                if ((transform.localScale.x != 1f && Input.GetAxisRaw("Horizontal") == 0) || (transform.localScale.x != -1f && Input.GetAxisRaw("Horizontal") == 0))
+                {
+                    HeroAnimCont.SetBool("Grabbing", false);
+                }
+
                 if (Input.GetButtonDown("Jump"))
                 {
                     WallJumpReverse = wallJump;
@@ -126,6 +134,7 @@ public class PlayerController : MonoBehaviour
                     rb.velocity = new Vector2(-Input.GetAxisRaw("Horizontal") * speed, ForceJump);
                     rb.gravityScale = Grawitacja;
                     Grabbing = false;
+                    HeroAnimCont.SetBool("Grabbing", false);
                 }
             }
             else
