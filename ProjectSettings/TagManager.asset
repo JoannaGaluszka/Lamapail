@@ -12,6 +12,7 @@ TagManager:
   - BouncingSlime
   - Ground
   - Point
+  - CM
   layers:
   - Default
   - TransparentFX

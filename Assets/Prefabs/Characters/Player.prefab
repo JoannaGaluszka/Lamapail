@@ -107,6 +107,7 @@ GameObject:
   - component: {fileID: 4686369159949863327}
   - component: {fileID: 4686369159949863312}
   - component: {fileID: 1677108847990485874}
+  - component: {fileID: 1442576311141396061}
   m_Layer: 13
   m_Name: Player
   m_TagString: Player
@@ -285,7 +286,6 @@ MonoBehaviour:
     type: 3}
   EfektEnemy: {fileID: 7729046139948923819, guid: 60f6c748182b60749a5734a4a3d6214a,
     type: 3}
-  StunTime: 2
 --- !u!114 &4686369159949863312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,6 +333,18 @@ MonoBehaviour:
   effect: {fileID: 7840574440050728188, guid: a5799cf428d5c1e4bbc65b69e042b81e, type: 3}
   blood: {fileID: 2864548170618101817, guid: fece93512f624c84bb7d1684f5c17f32, type: 3}
   DeadMenu: {fileID: 0}
+--- !u!114 &1442576311141396061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4686369159949863314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6a692afcfa36724fafadd7aec42aad9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4686369159956632879
 GameObject:
   m_ObjectHideFlags: 0
