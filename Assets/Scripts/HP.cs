@@ -15,13 +15,15 @@ public class HP : MonoBehaviour
     public GameObject blood;
     public GameObject DeadMenu;
     private SoundMng soundMng;
-    
+    Animator HeroAnimCont;
+
 
     void Start()
     {
         zycie = iloscSerc;
         soundMng = FindObjectOfType<SoundMng>();
-        
+        HeroAnimCont = GetComponent<Animator>();
+
     }
 
 
@@ -90,6 +92,7 @@ public class HP : MonoBehaviour
     {
         Instantiate(blood, transform.position, Quaternion.identity);
         zycie -= obrazenia;
+        HeroAnimCont.SetTrigger("beingHit");
     }
 
 }

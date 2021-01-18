@@ -13,10 +13,12 @@ public class PlayerAttack : MonoBehaviour
     public float RangeAttack;
     public int damage = 40;
     private SoundMng soundMng;
+    Animator HeroAnimCont;
 
     private void Start()
     {
         soundMng = FindObjectOfType<SoundMng>();
+        HeroAnimCont = GetComponent<Animator>();
     }
     private void Update()
     {
@@ -60,6 +62,7 @@ public class PlayerAttack : MonoBehaviour
         {
             enemy.GetComponent<EnemyDamage>().TakeDamage(damage);
             soundMng.playerAttack.Play();
+            HeroAnimCont.SetTrigger("hitting");
         }
 
     }
