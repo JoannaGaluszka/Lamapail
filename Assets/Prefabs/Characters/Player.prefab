@@ -84,7 +84,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4686369158890043543}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.58, y: -0.3, z: 0}
+  m_LocalPosition: {x: 0.466, y: -0.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4686369159990827517}
@@ -170,8 +170,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1546938395
-  m_SortingLayer: 3
+  m_SortingLayerID: 414160607
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: -4672163745296329812, guid: a774776507b787d4baba15c093303c3c,
     type: 3}
@@ -285,7 +285,6 @@ MonoBehaviour:
     type: 3}
   EfektEnemy: {fileID: 7729046139948923819, guid: 60f6c748182b60749a5734a4a3d6214a,
     type: 3}
-  StunTime: 2
 --- !u!114 &4686369159949863312
 MonoBehaviour:
   m_ObjectHideFlags: 0

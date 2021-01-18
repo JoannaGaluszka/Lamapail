@@ -7359,7 +7359,7 @@ Transform:
   - {fileID: 352624598}
   - {fileID: 65961336}
   m_Father: {fileID: 1564721794}
-  m_RootOrder: 20
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &264751246 stripped
 Transform:
@@ -41539,8 +41539,10 @@ Transform:
   - {fileID: 373873737}
   - {fileID: 867557383}
   - {fileID: 325038376}
+  - {fileID: 1660541380}
   - {fileID: 1255838553}
   - {fileID: 47473533}
+  - {fileID: 263938801}
   - {fileID: 1298631158}
   - {fileID: 330195397}
   - {fileID: 537793999}
@@ -41552,11 +41554,9 @@ Transform:
   - {fileID: 542618222}
   - {fileID: 89792086}
   - {fileID: 811531560}
-  - {fileID: 1660541380}
-  - {fileID: 263938801}
-  - {fileID: 1835176759}
   - {fileID: 883972478}
   - {fileID: 1233480557}
+  - {fileID: 1835176759}
   - {fileID: 1159618498}
   - {fileID: 56569112}
   - {fileID: 1187802010}
@@ -44784,7 +44784,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1564721794}
-  m_RootOrder: 19
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &1660541381
 MonoBehaviour:
@@ -50365,6 +50365,11 @@ PrefabInstance:
       propertyPath: heart.Array.data[5]
       value: 
       objectReference: {fileID: 1522284344}
+    - target: {fileID: 4686369159949863322, guid: 1e740386d44f48a43a748c5344c28c20,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4686369159949863327, guid: 1e740386d44f48a43a748c5344c28c20,
         type: 3}
       propertyPath: sab

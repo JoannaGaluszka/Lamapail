@@ -12,6 +12,7 @@ TagManager:
   - BouncingSlime
   - Ground
   - Point
+  - MovingPlatform
   layers:
   - Default
   - TransparentFX
@@ -61,9 +62,6 @@ TagManager:
   - name: Props
     uniqueID: 1546938395
     locked: 0
-  - name: Player
-    uniqueID: 414160607
-    locked: 0
   - name: Enemy
     uniqueID: 2425597869
     locked: 0
@@ -72,6 +70,9 @@ TagManager:
     locked: 0
   - name: BouncingSlime
     uniqueID: 3124679409
+    locked: 0
+  - name: Player
+    uniqueID: 414160607
     locked: 0
   - name: UI
     uniqueID: 2290359697
