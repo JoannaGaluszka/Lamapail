@@ -67,6 +67,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FF muszki
       objectReference: {fileID: 0}
+    - target: {fileID: 4894240537234748294, guid: 71cb919dc7abc5742ae29278ded7ed58,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5733901309373799214, guid: 71cb919dc7abc5742ae29278ded7ed58,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.r

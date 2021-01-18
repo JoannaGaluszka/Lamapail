@@ -6079,6 +6079,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FallingSpikes (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 950191316694628599, guid: bf829bf58e3071a479a97bb80c7b14a8,
+        type: 3}
+      propertyPath: DeadMenu
+      value: 
+      objectReference: {fileID: 503832227}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf829bf58e3071a479a97bb80c7b14a8, type: 3}
 --- !u!1001 &380409349
@@ -9716,6 +9721,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: spikes (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6196103652227486319, guid: f3354a274e820954693d817b77e4f36f,
+        type: 3}
+      propertyPath: DeadMenu
+      value: 
+      objectReference: {fileID: 503832227}
+    - target: {fileID: 6196103652227486319, guid: f3354a274e820954693d817b77e4f36f,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1754486118}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3354a274e820954693d817b77e4f36f, type: 3}
 --- !u!4 &609202263 stripped
@@ -11994,6 +12009,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FallingSpikes
       objectReference: {fileID: 0}
+    - target: {fileID: 950191316694628599, guid: bf829bf58e3071a479a97bb80c7b14a8,
+        type: 3}
+      propertyPath: DeadMenu
+      value: 
+      objectReference: {fileID: 503832227}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf829bf58e3071a479a97bb80c7b14a8, type: 3}
 --- !u!1001 &838493147
@@ -13994,12 +14014,12 @@ PrefabInstance:
     - target: {fileID: 4686369159990827517, guid: 1e740386d44f48a43a748c5344c28c20,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -63.16
+      value: -69.07
       objectReference: {fileID: 0}
     - target: {fileID: 4686369159990827517, guid: 1e740386d44f48a43a748c5344c28c20,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: -1.45
       objectReference: {fileID: 0}
     - target: {fileID: 4686369159990827517, guid: 1e740386d44f48a43a748c5344c28c20,
         type: 3}
@@ -14883,6 +14903,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: spikes (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6196103652227486319, guid: f3354a274e820954693d817b77e4f36f,
+        type: 3}
+      propertyPath: DeadMenu
+      value: 
+      objectReference: {fileID: 503832227}
+    - target: {fileID: 6196103652227486319, guid: f3354a274e820954693d817b77e4f36f,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1754486118}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3354a274e820954693d817b77e4f36f, type: 3}
 --- !u!4 &964584082 stripped
@@ -18481,12 +18511,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1074153310}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1301736867 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7691754837552505955, guid: 208a7ef6513b5524da069008195ca91a,
-    type: 3}
-  m_PrefabInstance: {fileID: 808812879}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1302500667
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19068,7 +19092,7 @@ PrefabInstance:
         type: 3}
       propertyPath: DeadMenu
       value: 
-      objectReference: {fileID: 1301736867}
+      objectReference: {fileID: 503832227}
     - target: {fileID: 4319130906477985043, guid: c2566809e43fdd84a91490dbe86231dc,
         type: 3}
       propertyPath: effect
@@ -29255,6 +29279,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: spikes
       objectReference: {fileID: 0}
+    - target: {fileID: 6196103652227486319, guid: f3354a274e820954693d817b77e4f36f,
+        type: 3}
+      propertyPath: DeadMenu
+      value: 
+      objectReference: {fileID: 503832227}
+    - target: {fileID: 6196103652227486319, guid: f3354a274e820954693d817b77e4f36f,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1754486118}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3354a274e820954693d817b77e4f36f, type: 3}
 --- !u!4 &1999905320 stripped

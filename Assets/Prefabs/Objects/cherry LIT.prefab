@@ -47,7 +47,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 1
   m_Color: {r: 1, g: 0, b: 0.2432208, a: 1}
-  m_Intensity: 0.47
+  m_Intensity: 0.49
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 6551be1900000000716be6a2fbc234b5df96af18adaf93902335046bf1d23eba911d8488
   m_LightCookieSprite: {fileID: 0}
@@ -79,6 +79,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2966169543010995879, guid: 08fd18e2bfb06c7489907a7264012de2,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699450113666420696, guid: 08fd18e2bfb06c7489907a7264012de2,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 8039089259306500304, guid: 08fd18e2bfb06c7489907a7264012de2,
         type: 3}
       propertyPath: m_LocalPosition.x
