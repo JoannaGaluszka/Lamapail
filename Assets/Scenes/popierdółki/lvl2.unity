@@ -2492,7 +2492,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 71255693}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.65, y: 1.46, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1053420846}
@@ -33678,12 +33678,12 @@ PrefabInstance:
     - target: {fileID: 8459801174629120889, guid: 8fc1e93d365bd69499cf8aeea5aae2d5,
         type: 3}
       propertyPath: LastCheckPos.x
-      value: -117.73
+      value: -116.63
       objectReference: {fileID: 0}
     - target: {fileID: 8459801174629120889, guid: 8fc1e93d365bd69499cf8aeea5aae2d5,
         type: 3}
       propertyPath: LastCheckPos.y
-      value: 2.11
+      value: 3.75
       objectReference: {fileID: 0}
     - target: {fileID: 8459801174629120894, guid: 8fc1e93d365bd69499cf8aeea5aae2d5,
         type: 3}
@@ -49449,7 +49449,7 @@ PrefabInstance:
     - target: {fileID: 3489956124579026362, guid: 854198060742dc848b1177745578e34f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.1132803
+      value: -5.125
       objectReference: {fileID: 0}
     - target: {fileID: 3489956124579026362, guid: 854198060742dc848b1177745578e34f,
         type: 3}
@@ -49495,6 +49495,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3489956124579026362, guid: 854198060742dc848b1177745578e34f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.9599059
       objectReference: {fileID: 0}
     - target: {fileID: 7737807232150316138, guid: 854198060742dc848b1177745578e34f,
         type: 3}
@@ -51758,12 +51763,12 @@ PrefabInstance:
     - target: {fileID: 4686369159990827517, guid: 1e740386d44f48a43a748c5344c28c20,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -117.73
+      value: -137.26
       objectReference: {fileID: 0}
     - target: {fileID: 4686369159990827517, guid: 1e740386d44f48a43a748c5344c28c20,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.11
+      value: 3.09
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e740386d44f48a43a748c5344c28c20, type: 3}
