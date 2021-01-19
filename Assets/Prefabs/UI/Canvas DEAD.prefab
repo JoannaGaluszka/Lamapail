@@ -599,6 +599,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DeadMenu: {fileID: 7691754838943159654}
+  Canvas: {fileID: 0}
+  Umar: 0
 --- !u!1 &7691754837625590286
 GameObject:
   m_ObjectHideFlags: 0
@@ -729,7 +731,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7691754837552505955}
+      - m_Target: {fileID: 7691754838943159654}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:

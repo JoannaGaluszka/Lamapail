@@ -13,6 +13,8 @@ TagManager:
   - Ground
   - Point
   - CM
+  - MovingPlatform
+  - Canvas
   layers:
   - Default
   - TransparentFX

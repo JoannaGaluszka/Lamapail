@@ -85,6 +85,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 143704431179899310}
+  punkt: 0
 --- !u!1 &143704430682916758
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,7 +249,7 @@ GameObject:
   - component: {fileID: 143704431016527662}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -898,7 +899,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 350, y: 116.67}
-  m_SizeDelta: {x: 200.04706, y: 207.56796}
+  m_SizeDelta: {x: 220.961, y: 207.56796}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &143704431548664553
 CanvasRenderer:
@@ -942,7 +943,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'atak: F
 
-    dash: SPACE & CTRL
+    dash: CTRL
 
     akcja: E'
 --- !u!1 &143704431820488241

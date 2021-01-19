@@ -31,7 +31,6 @@ public class FallingObjects : MonoBehaviour
         {
             soundMng.playerDead.Play();
             Instantiate(effect, transform.position, Quaternion.identity);
-            Destroy(other.gameObject);
        
            
 

@@ -78,6 +78,7 @@ public class HP : MonoBehaviour
     {
         
         DeadMenu.SetActive(true);
+        zycie = iloscSerc;
         
     }
     private void OnTriggerEnter2D(Collider2D other)
