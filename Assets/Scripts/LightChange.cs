@@ -9,6 +9,7 @@ public class LightChange : MonoBehaviour
     Color color0 = Color.red;
     Color color1 = Color.green;
     Light2D lamp;
+    public bool ison = false;
 
     void Start()
     {
@@ -19,9 +20,11 @@ public class LightChange : MonoBehaviour
     void OnTriggerEnter2D()
     {
         lamp.color = color1;
+        ison = true;
     }
     void OnTriggerExit2D()
     {
         lamp.color = color0;
+        ison = false;
     }
 }
