@@ -104,6 +104,56 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 0.8073072
       objectReference: {fileID: 0}
+    - target: {fileID: 4699450113666420696, guid: 08fd18e2bfb06c7489907a7264012de2,
+        type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699450113666420696, guid: 08fd18e2bfb06c7489907a7264012de2,
+        type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[1]
+      value: -1561957519
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699450113666420696, guid: 08fd18e2bfb06c7489907a7264012de2,
+        type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[2]
+      value: -1254833413
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699450113666420696, guid: 08fd18e2bfb06c7489907a7264012de2,
+        type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[3]
+      value: 1546938395
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699450113666420696, guid: 08fd18e2bfb06c7489907a7264012de2,
+        type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[4]
+      value: 414160607
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699450113666420696, guid: 08fd18e2bfb06c7489907a7264012de2,
+        type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[5]
+      value: -1869369427
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699450113666420696, guid: 08fd18e2bfb06c7489907a7264012de2,
+        type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[6]
+      value: 1795437859
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699450113666420696, guid: 08fd18e2bfb06c7489907a7264012de2,
+        type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[7]
+      value: -1170287887
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699450113666420696, guid: 08fd18e2bfb06c7489907a7264012de2,
+        type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[8]
+      value: -2004607599
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699450113666420696, guid: 08fd18e2bfb06c7489907a7264012de2,
+        type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[9]
+      value: -2132708021
+      objectReference: {fileID: 0}
     - target: {fileID: 8039089259306500304, guid: 08fd18e2bfb06c7489907a7264012de2,
         type: 3}
       propertyPath: m_LocalPosition.x

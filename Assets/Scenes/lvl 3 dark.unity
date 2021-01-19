@@ -9421,7 +9421,7 @@ PrefabInstance:
     - target: {fileID: 655267430522018225, guid: cf4b1055ace998d40b2eaf6615b0b626,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 85.17
+      value: 84.24
       objectReference: {fileID: 0}
     - target: {fileID: 655267430522018225, guid: cf4b1055ace998d40b2eaf6615b0b626,
         type: 3}
@@ -11633,6 +11633,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas DEAD
       objectReference: {fileID: 0}
+    - target: {fileID: 7691754837552505955, guid: 208a7ef6513b5524da069008195ca91a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7691754837552505980, guid: 208a7ef6513b5524da069008195ca91a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13498,6 +13503,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 143704431016527661, guid: 31254530074f5624e96afc30f144464b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 143704431206267371, guid: 31254530074f5624e96afc30f144464b,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -14049,7 +14059,7 @@ PrefabInstance:
     - target: {fileID: 1442576311141396061, guid: 1e740386d44f48a43a748c5344c28c20,
         type: 3}
       propertyPath: StartPos.x
-      value: -69.07
+      value: -65.7
       objectReference: {fileID: 0}
     - target: {fileID: 1442576311141396061, guid: 1e740386d44f48a43a748c5344c28c20,
         type: 3}
@@ -14138,11 +14148,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3605295999818465318, guid: 1e740386d44f48a43a748c5344c28c20,
         type: 3}
-      propertyPath: m_LightVolumeOpacity
-      value: 0.018
-      objectReference: {fileID: 0}
-    - target: {fileID: 3605295999818465318, guid: 1e740386d44f48a43a748c5344c28c20,
-        type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.data[5]
       value: -1869369427
       objectReference: {fileID: 0}
@@ -14175,6 +14180,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FalloffIntensity
       value: 0.729
+      objectReference: {fileID: 0}
+    - target: {fileID: 3605295999818465318, guid: 1e740386d44f48a43a748c5344c28c20,
+        type: 3}
+      propertyPath: m_LightVolumeOpacity
+      value: 0.018
+      objectReference: {fileID: 0}
+    - target: {fileID: 3605295999818465318, guid: 1e740386d44f48a43a748c5344c28c20,
+        type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[9]
+      value: 414160607
       objectReference: {fileID: 0}
     - target: {fileID: 4686369159949863312, guid: 1e740386d44f48a43a748c5344c28c20,
         type: 3}
@@ -14221,12 +14236,12 @@ PrefabInstance:
     - target: {fileID: 4686369159990827517, guid: 1e740386d44f48a43a748c5344c28c20,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 120.2
+      value: -65.7
       objectReference: {fileID: 0}
     - target: {fileID: 4686369159990827517, guid: 1e740386d44f48a43a748c5344c28c20,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.2
+      value: -0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4686369159990827517, guid: 1e740386d44f48a43a748c5344c28c20,
         type: 3}
@@ -16067,7 +16082,7 @@ PrefabInstance:
     - target: {fileID: 655267430522018225, guid: cf4b1055ace998d40b2eaf6615b0b626,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 87.63
+      value: 86.69999
       objectReference: {fileID: 0}
     - target: {fileID: 655267430522018225, guid: cf4b1055ace998d40b2eaf6615b0b626,
         type: 3}
@@ -16564,7 +16579,7 @@ PrefabInstance:
     - target: {fileID: 8142805460251716248, guid: f9119cdb1eda8c74d81cf7934d87209f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 160.39305
+      value: 158.57
       objectReference: {fileID: 0}
     - target: {fileID: 8142805460251716248, guid: f9119cdb1eda8c74d81cf7934d87209f,
         type: 3}
@@ -18839,7 +18854,7 @@ PrefabInstance:
     - target: {fileID: 1879364721506229284, guid: e8d875cc9a586f44ba2d9a3563175291,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 145.76045
+      value: 154.89
       objectReference: {fileID: 0}
     - target: {fileID: 1879364721506229284, guid: e8d875cc9a586f44ba2d9a3563175291,
         type: 3}
@@ -23784,6 +23799,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas PAUSE MENU
+      objectReference: {fileID: 0}
+    - target: {fileID: 7599727864606136713, guid: 21efa7d6cde24804490d06383adc5820,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21efa7d6cde24804490d06383adc5820, type: 3}

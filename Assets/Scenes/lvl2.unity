@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -8033,6 +8033,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PP lvl2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7874709680967311283, guid: 7642d194f98a8064782aeb71118271bb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7874709680967311285, guid: 7642d194f98a8064782aeb71118271bb,
         type: 3}
@@ -24848,8 +24853,8 @@ MonoBehaviour:
   m_LightType: 1
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.61
-  m_Color: {r: 0.7783019, g: 1, b: 0.8845885, a: 1}
-  m_Intensity: 1.13
+  m_Color: {r: 0.8453675, g: 0.8254717, b: 1, a: 1}
+  m_Intensity: 1.01
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 6551be1900000000716be6a2fbc234b51b68345cdf96af18adaf93902335046bf1d23eba911d84884b75e180
   m_LightCookieSprite: {fileID: 0}
@@ -25698,6 +25703,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Intensity
       value: 3.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699450113666420696, guid: 08fd18e2bfb06c7489907a7264012de2,
+        type: 3}
+      propertyPath: m_LightVolumeOpacity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699450113666420696, guid: 08fd18e2bfb06c7489907a7264012de2,
+        type: 3}
+      propertyPath: m_ShadowIntensity
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8039089259306500304, guid: 08fd18e2bfb06c7489907a7264012de2,
         type: 3}
@@ -28989,12 +29004,17 @@ PrefabInstance:
     - target: {fileID: 4699450113666420696, guid: 08fd18e2bfb06c7489907a7264012de2,
         type: 3}
       propertyPath: m_Intensity
-      value: 3.23
+      value: 3.75
       objectReference: {fileID: 0}
     - target: {fileID: 4699450113666420696, guid: 08fd18e2bfb06c7489907a7264012de2,
         type: 3}
       propertyPath: m_LightVolumeOpacity
-      value: 0.055
+      value: 0.137
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699450113666420696, guid: 08fd18e2bfb06c7489907a7264012de2,
+        type: 3}
+      propertyPath: m_FalloffIntensity
+      value: 0.809
       objectReference: {fileID: 0}
     - target: {fileID: 8039089259306500304, guid: 08fd18e2bfb06c7489907a7264012de2,
         type: 3}
@@ -39798,6 +39818,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1450363852}
   - component: {fileID: 1450363853}
+  - component: {fileID: 1450363854}
   m_Layer: 0
   m_Name: Point Light 2D
   m_TagString: Untagged
@@ -39860,6 +39881,19 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &1450363854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450363851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 580d31dfcf9a219449690bef9f9295ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TriggerEntered: 0
 --- !u!1 &1450836471
 GameObject:
   m_ObjectHideFlags: 0
@@ -49455,7 +49489,7 @@ PrefabInstance:
     - target: {fileID: 1113024605468029107, guid: 3c305bf7be23b954489d7a483a4ec3e4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.3624
+      value: 13.06
       objectReference: {fileID: 0}
     - target: {fileID: 1113024605468029107, guid: 3c305bf7be23b954489d7a483a4ec3e4,
         type: 3}
@@ -49811,6 +49845,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 1.9599059
+      objectReference: {fileID: 0}
+    - target: {fileID: 3920557931917852758, guid: 854198060742dc848b1177745578e34f,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7737807232150316138, guid: 854198060742dc848b1177745578e34f,
         type: 3}
