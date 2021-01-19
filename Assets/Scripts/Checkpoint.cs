@@ -7,6 +7,7 @@ public class Checkpoint : MonoBehaviour
     public bool Triggered = false;
     Animator anim;
     private SoundMng soundMng;
+    public bool Check = false;
 
     private CheckpointManager CM;
 
@@ -23,13 +24,19 @@ public class Checkpoint : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        
+
         if (other.CompareTag("Player"))
         {
             CM.LastCheckPos = transform.position;
-            soundMng.Bonfire.Play();
             anim.SetBool("Triggered", true);
+            if (!Check)
+            {
+                soundMng.Bonfire.Play();
+                Check = true;
+            }
         }
+
+        
     }
 
 

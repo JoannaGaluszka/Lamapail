@@ -18,9 +18,10 @@ public class lightSwitch : MonoBehaviour
         lamp.color = color0;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D other)
     {
-        TriggerEntered = true;
+        if (other.CompareTag("Player"))
+            TriggerEntered = true;
     }
 
     void Update()

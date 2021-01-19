@@ -7,7 +7,7 @@ public class PointMng : MonoBehaviour
 {
     public static PointMng instance;
     public Text text;
-    int punkt;
+    public int punkt;
     void Start()
     {
         if (instance == null)

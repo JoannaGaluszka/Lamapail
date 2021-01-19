@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class CHPlayerPos : MonoBehaviour
 {
-    private CheckpointManager CM;
+    public Vector3 StartPos;
     void Start()
     {
-        CM = GameObject.FindGameObjectWithTag("CM").GetComponent<CheckpointManager>();
-        transform.position = CM.LastCheckPos;
+        transform.position = StartPos;
     }
 
  

@@ -13,6 +13,9 @@ TagManager:
   - Ground
   - Point
   - CM
+  - MovingPlatform
+  - Canvas
+  - DeadCanvas
   layers:
   - Default
   - TransparentFX

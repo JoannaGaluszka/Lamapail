@@ -16,9 +16,9 @@ public class InstaKill : MonoBehaviour
     {
         
     }
-    private void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.name == "Player")
+        if(other.CompareTag("Player"))
         {
             Instantiate(effect, transform.position, Quaternion.identity);
             DeadMenu.SetActive(true);

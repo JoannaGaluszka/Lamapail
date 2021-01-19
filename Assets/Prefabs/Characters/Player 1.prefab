@@ -1,17 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &2704942802009469271
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7241982601102388357}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8ce1b20a7b19348bee5b4947bde79e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2704942802689203250
 GameObject:
   m_ObjectHideFlags: 0
@@ -44,6 +32,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2704942802009469271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7241982601102388357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf8ce1b20a7b19348bee5b4947bde79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2704942802242643223
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -228,6 +228,11 @@ PrefabInstance:
       propertyPath: startDashTime
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 1677108847990485874, guid: 1e740386d44f48a43a748c5344c28c20,
+        type: 3}
+      propertyPath: heart.Array.size
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2022181126490492465, guid: 1e740386d44f48a43a748c5344c28c20,
         type: 3}
       propertyPath: RangeAttack
@@ -326,7 +331,7 @@ PrefabInstance:
     - target: {fileID: 4686369159949863322, guid: 1e740386d44f48a43a748c5344c28c20,
         type: 3}
       propertyPath: m_SortingLayer
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4686369159949863322, guid: 1e740386d44f48a43a748c5344c28c20,
         type: 3}

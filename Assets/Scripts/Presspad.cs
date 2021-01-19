@@ -19,14 +19,16 @@ public class Presspad : MonoBehaviour
         
     }
     void OnTriggerEnter2D()
-    { soundMng.PressPad.Play(); }
+    { soundMng.PressPad.Play();
+        anim.SetBool("TransitionPad", true);
+        IsOn = true;
+        WhatToTrigger.Open();
+    }
 
     void OnTriggerStay2D()
     {
         
-        anim.SetBool("TransitionPad", true);
-        IsOn = true;
-        WhatToTrigger.Open();
+        
         
 
     }
