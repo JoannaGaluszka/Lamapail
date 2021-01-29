@@ -173,8 +173,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: {fileID: 7840574440050728188, guid: a5799cf428d5c1e4bbc65b69e042b81e, type: 3}
   DeadMenu: {fileID: 0}
-  Kolce: {fileID: 950191316694628598}
   poz: {x: 0, y: 0, z: 0}
+  mozna: 1
 --- !u!82 &7901019124767631296
 AudioSource:
   m_ObjectHideFlags: 0
