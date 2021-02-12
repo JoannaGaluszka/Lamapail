@@ -6,6 +6,8 @@ public class Presspad : MonoBehaviour
 {
     public bool IsOn = false;
     public DoorController WhatToTrigger;
+    public GameObject Strzalka;
+
     Animator anim;
     private SoundMng soundMng;
     void Start()
@@ -23,6 +25,7 @@ public class Presspad : MonoBehaviour
         anim.SetBool("TransitionPad", true);
         IsOn = true;
         WhatToTrigger.Open();
+        Strzalka.SetActive(true);
     }
 
     void OnTriggerStay2D()

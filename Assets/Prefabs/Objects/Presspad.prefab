@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8802087054001713241}
   - component: {fileID: 767010994881007542}
   - component: {fileID: 5201334088671768959}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Point Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,6 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4f572d4b4398444b86986e566402538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ison: 0
 --- !u!1 &1919695595000529199
 GameObject:
   m_ObjectHideFlags: 0
@@ -126,7 +127,7 @@ GameObject:
   - component: {fileID: 1919695595000529365}
   - component: {fileID: 7723075571304888145}
   - component: {fileID: 3163307404193330173}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Presspad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
